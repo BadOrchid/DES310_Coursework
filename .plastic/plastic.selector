@@ -1,0 +1,4 @@
+repository "DES310 - Ghost Of Mine@BadOrchid@cloud"
+  path "/"
+    br "/main"
+    co "/main"
