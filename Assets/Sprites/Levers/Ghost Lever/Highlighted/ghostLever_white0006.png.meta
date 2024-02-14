@@ -101,12 +101,12 @@ TextureImporter:
       name: ghostLever_white0006_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 61
-        width: 195
-        height: 326
+        x: 0
+        y: 0
+        width: 255
+        height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,14 +121,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d64671f3d4d6935408bbcc5ebdd616c7
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghostLever_white0006_0: -1876751322911311443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -101,12 +101,12 @@ TextureImporter:
       name: humanLever_white0009_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 16
-        width: 166
-        height: 363
+        x: 0
+        y: 0
+        width: 232
+        height: 404
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,14 +121,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5da4ba2177e746f4c9442af2a3239fb4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      humanLever_white0009_0: 1448164660739351148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
