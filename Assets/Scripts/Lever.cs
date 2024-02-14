@@ -54,14 +54,14 @@ public class Lever : MonoBehaviour
             }
 
         }
-        else if (type == PlayerType.Human) {
+        else if (type == PlayerType.Human && this.name == "Lever - Human") {
             if (Input.GetKeyDown(KeyCode.E)) {
                 on ^= true;
 
             }
 
         }
-        else if (type == PlayerType.Ghost) {
+        else if (type == PlayerType.Ghost && this.name == "Lever - Ghost") {
             if (Input.GetKeyDown(KeyCode.O)) {
                 on ^= true;
 
@@ -78,27 +78,23 @@ public class Lever : MonoBehaviour
             ChangeSprite(offSprite);
 
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        // Checks when the Player is in near
+        //Checks when the Player is in near
         if (collision.tag == "Player") {
             playerInRange = true;
-            Debug.Log("I am in range");
+            Debug.Log(this.name + " is in range");
 
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         // Checks when the Player leaves
         if (collision.tag == "Player") {
             playerInRange = false;
-            Debug.Log("I am out of range");
+            Debug.Log(this.name + " is out of range");
 
         }
-
     }
-
 }

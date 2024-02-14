@@ -21,7 +21,7 @@ public class ObjectCollider : MonoBehaviour
         objectCollider.Overlap(colliderFilter, colliders);
         foreach(var i in colliders)
         {
-            Debug.Log("Collided with " + i.name);
+            Debug.Log("Collided with " + this.name);
         }
     }
 }
