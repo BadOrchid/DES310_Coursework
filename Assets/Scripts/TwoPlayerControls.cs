@@ -10,6 +10,8 @@ public class TwoPlayerControls : MonoBehaviour
     [SerializeField] private string horAxisName;
     [SerializeField] private string verAxisName;
 
+    [SerializeField] public PlayerType type = PlayerType.None;
+
     // Start is called before the first frame update
     void Start()
     {
