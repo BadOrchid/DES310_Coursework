@@ -31,14 +31,26 @@ public class PressurePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         
+    }
+
+    void ChangeSprite(Sprite sprite) {
+        spriteRenderer.sprite = sprite;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         // Checks when the pressure plate is pressed
         if (collision.tag == "Block") {
-            on = true;
-            Debug.Log("Pressed");
+            PlayerType otherType = collision.GetComponent<PushBlock>().type;
+            if (otherType == type || type == PlayerType.None) {
+                on = true;
+                ChangeSprite(onSprite);
+                Debug.Log("Pressed");
+
+            }
 
         }
 
@@ -48,6 +60,7 @@ public class PressurePlate : MonoBehaviour
         // Checks if the pressure plate has been unpressed
         if (collision.tag == "Block") {
             on = false;
+            ChangeSprite(offSprite);
             Debug.Log("Unpressed");
 
         }
