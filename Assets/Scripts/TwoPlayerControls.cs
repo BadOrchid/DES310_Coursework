@@ -5,10 +5,12 @@ using UnityEngine;
 public class TwoPlayerControls : MonoBehaviour
 {
     private Rigidbody2D playerRB;
-    [SerializeField] public float moveSpeed = 2.0f;
+
+    [SerializeField] public float moveSpeed = 1.5f;
 
     [SerializeField] private string horAxisName;
     [SerializeField] private string verAxisName;
+    [SerializeField] private string interactAxisName;
 
     [SerializeField] public PlayerType type = PlayerType.None;
 
@@ -29,5 +31,11 @@ public class TwoPlayerControls : MonoBehaviour
         movement.Normalize();
 
         playerRB.velocity = movement * moveSpeed;
+
+        if(Input.GetButton(interactAxisName))
+        {
+            Debug.Log(this.name + "Interaction Recieved");
+        }
+
     }
 }

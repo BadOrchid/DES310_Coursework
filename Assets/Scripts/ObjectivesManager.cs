@@ -16,13 +16,11 @@ public class ObjectivesManager : MonoBehaviour
     {
         levers = GetComponentsInChildren<Lever>();
         pressurePlates = GetComponentsInChildren<PressurePlate>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         bool complete = true;
 
         // Checks if each lever is in the correct state

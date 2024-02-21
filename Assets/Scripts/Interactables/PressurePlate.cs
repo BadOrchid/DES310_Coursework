@@ -30,10 +30,7 @@ public class PressurePlate : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-
-        
+    { 
     }
 
     void ChangeSprite(Sprite sprite) {
@@ -48,7 +45,7 @@ public class PressurePlate : MonoBehaviour
             if (otherType == type || type == PlayerType.None) {
                 on = true;
                 ChangeSprite(onSprite);
-                Debug.Log("Pressed");
+                Debug.Log(this.name + " Pressed");
 
             }
 

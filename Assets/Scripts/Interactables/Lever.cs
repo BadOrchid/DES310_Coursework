@@ -47,14 +47,7 @@ public class Lever : MonoBehaviour
     }
 
     void UserInput() {
-        if (type == PlayerType.None) {
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.O)) {
-                on ^= true;
-
-            }
-
-        }
-        else if (type == PlayerType.Human && this.name == "Lever - Human") {
+        if (type == PlayerType.Human && this.name == "Lever - Human") {
             if (Input.GetKeyDown(KeyCode.E)) {
                 on ^= true;
 
@@ -82,7 +75,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         //Checks when the Player is in near
-        if (collision.tag == "Player") {
+        if (this.CompareTag(collision.tag)) {
             playerInRange = true;
             Debug.Log(this.name + " is in range");
 
@@ -91,7 +84,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision) {
         // Checks when the Player leaves
-        if (collision.tag == "Player") {
+        if (this.CompareTag(collision.tag)) {
             playerInRange = false;
             Debug.Log(this.name + " is out of range");
 

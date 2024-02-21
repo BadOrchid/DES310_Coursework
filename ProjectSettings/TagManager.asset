@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Block
+  - Human
+  - Ghost
+  - Mirror
   layers:
   - Default
   - TransparentFX
@@ -48,11 +51,11 @@ TagManager:
   - name: Walls
     uniqueID: 173226975
     locked: 0
-  - name: Interactables
-    uniqueID: 409166709
-    locked: 0
   - name: Interior Wall
     uniqueID: 780571587
+    locked: 0
+  - name: Interactables
+    uniqueID: 409166709
     locked: 0
   - name: Players
     uniqueID: 1259816099
