@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa2d27a51bd3f044fa887bfb2734f1e3
+guid: 048555b6caa14c7428b7bcde20595029
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2171537874689331096
-    second: Wall-Baseboard-2-Right-Thick-Trimmed_0
+      213: -8476441523523569675
+    second: Wall-Paint-4-Doorway-Right-Tile_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,12 +98,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Baseboard-2-Right-Thick-Trimmed_0
+      name: Wall-Paint-4-Doorway-Right-Tile_0
       rect:
         serializedVersion: 2
         x: 191
         y: 34
-        width: 579
+        width: 482
         height: 836
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 860f5daeec52dd1e0800000000000000
-      internalID: -2171537874689331096
+      spriteID: 5f7b10f2851ad5a80800000000000000
+      internalID: -8476441523523569675
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wall-Baseboard-2-Right-Thick-Trimmed_0: -2171537874689331096
+      Wall-Paint-4-Doorway-Right-Tile_0: -8476441523523569675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

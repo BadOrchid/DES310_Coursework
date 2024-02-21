@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: aa2d27a51bd3f044fa887bfb2734f1e3
+guid: d0b68ac3fd9b6774d861ed47bc72ed63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2171537874689331096
-    second: Wall-Baseboard-2-Right-Thick-Trimmed_0
+      213: 768489957764771506
+    second: Wall-Baseboard-2-Doorway-Right-Tile_0
+  - first:
+      213: 1004461898617761445
+    second: Wall-Baseboard-2-Doorway-Right-Tile_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,22 +101,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Baseboard-2-Right-Thick-Trimmed_0
+      name: Wall-Baseboard-2-Doorway-Right-Tile_0
       rect:
         serializedVersion: 2
         x: 191
-        y: 34
-        width: 579
-        height: 836
+        y: 32
+        width: 482
+        height: 838
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 860f5daeec52dd1e0800000000000000
-      internalID: -2171537874689331096
+      spriteID: 2be26028b893aaa00800000000000000
+      internalID: 768489957764771506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Baseboard-2-Doorway-Right-Tile_1
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 34
+        width: 78
+        height: 602
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aea68166c090fd00800000000000000
+      internalID: 1004461898617761445
       vertices: []
       indices: 
       edges: []
@@ -121,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 06d1b5a0b507fa141a3b9425701c307f
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wall-Baseboard-2-Right-Thick-Trimmed_0: -2171537874689331096
+      Wall-Baseboard-2-Doorway-Right-Tile_0: 768489957764771506
+      Wall-Baseboard-2-Doorway-Right-Tile_1: 1004461898617761445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

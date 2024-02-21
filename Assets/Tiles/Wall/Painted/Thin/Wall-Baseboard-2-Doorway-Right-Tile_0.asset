@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Wall-Paint-1-Left-Tile_0
+  m_Name: Wall-Baseboard-2-Doorway-Right-Tile_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -8826252438875367991, guid: f85407253319a8846bd4741cce68f069, type: 3}
+  m_Sprite: {fileID: 768489957764771506, guid: d0b68ac3fd9b6774d861ed47bc72ed63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

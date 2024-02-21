@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eeadad8c549a7ef4aa9172829e108180
+guid: 9fe85db7e7e53ed45b7647fd69c61058
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6856818478239102196
-    second: Wall-Paint-2-Left-Tiles_0
+      213: 4330361799328779457
+    second: Wall-Paint-3-Right-Tile_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 960
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,10 +98,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Paint-2-Left-Tiles_0
+      name: Wall-Paint-3-Right-Tile_0
       rect:
         serializedVersion: 2
-        x: 192
+        x: 191
         y: 34
         width: 482
         height: 836
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0b493b4cefa7d0a0800000000000000
-      internalID: -6856818478239102196
+      spriteID: 1ccc9edfc19881c30800000000000000
+      internalID: 4330361799328779457
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wall-Paint-2-Left-Tiles_0: -6856818478239102196
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

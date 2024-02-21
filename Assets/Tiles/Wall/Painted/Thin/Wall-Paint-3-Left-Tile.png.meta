@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa2d27a51bd3f044fa887bfb2734f1e3
+guid: 21ecec989835d034da1890d01a8af31f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2171537874689331096
-    second: Wall-Baseboard-2-Right-Thick-Trimmed_0
+      213: 4544840685745256611
+    second: Wall-Paint-3-Left-Tile_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 960
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,12 +98,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Baseboard-2-Right-Thick-Trimmed_0
+      name: Wall-Paint-3-Left-Tile_0
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 34
-        width: 579
+        width: 482
         height: 836
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 860f5daeec52dd1e0800000000000000
-      internalID: -2171537874689331096
+      spriteID: 3a8b69a2684821f30800000000000000
+      internalID: 4544840685745256611
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wall-Baseboard-2-Right-Thick-Trimmed_0: -2171537874689331096
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

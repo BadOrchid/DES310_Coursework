@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f85407253319a8846bd4741cce68f069
+guid: f91f4bc7d98c5b545a3b792fc1dec462
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8826252438875367991
-    second: Wall-Paint-1-Left-Tile_0
+      213: -2561170208808916277
+    second: Wall-Paint-4-Right-Tile_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,10 +98,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Paint-1-Left-Tile_0
+      name: Wall-Paint-4-Right-Tile_0
       rect:
         serializedVersion: 2
-        x: 192
+        x: 191
         y: 34
         width: 482
         height: 836
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c598ea9b2ad28580800000000000000
-      internalID: -8826252438875367991
+      spriteID: bcaa1a6c345e47cd0800000000000000
+      internalID: -2561170208808916277
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wall-Paint-1-Left-Tile_0: -8826252438875367991
+      Wall-Paint-4-Right-Tile_0: -2561170208808916277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
