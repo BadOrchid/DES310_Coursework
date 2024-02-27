@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: ee512f1fefd976947a991a8333f16272
+guid: 10d96399693444249835a2f60bca0866
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6511863434720068781
-    second: Wall-Baseboard-2-Right-Thick_0
+      213: -1700242499592117798
+    second: humanPressurePlate_block0000_0
+  - first:
+      213: 1610011461073265549
+    second: humanPressurePlate_block0000_1
+  - first:
+      213: -8346716928066697491
+    second: humanPressurePlate_block0000_2
+  - first:
+      213: 2728323781341840642
+    second: humanPressurePlate_block0000_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 960
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Baseboard-2-Right-Thick_0
+      name: humanPressurePlate_block0000_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 34
-        width: 579
-        height: 836
+        x: 6
+        y: 228
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +121,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35bb7ab15b631a5a0800000000000000
-      internalID: -6511863434720068781
+      spriteID: ad12ac374768768e0800000000000000
+      internalID: -1700242499592117798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humanPressurePlate_block0000_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 33
+        width: 515
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d836495c4e8e75610800000000000000
+      internalID: 1610011461073265549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humanPressurePlate_block0000_2
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 229
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de648dd3d218a2c80800000000000000
+      internalID: -8346716928066697491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: humanPressurePlate_block0000_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 164
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205812b1604fcd520800000000000000
+      internalID: 2728323781341840642
       vertices: []
       indices: 
       edges: []
@@ -121,15 +193,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wall-Baseboard-2-Right-Thick_0: -6511863434720068781
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

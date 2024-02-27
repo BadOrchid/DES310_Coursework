@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class TwoPlayerControls : MonoBehaviour
 {
     private Rigidbody2D playerRB;
@@ -32,7 +31,7 @@ public class TwoPlayerControls : MonoBehaviour
 
         playerRB.velocity = movement * moveSpeed;
 
-        if(Input.GetButton(interactAxisName))
+        if(Input.GetButtonDown(interactAxisName))
         {
             Debug.Log(this.name + "Interaction Recieved");
         }

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ee512f1fefd976947a991a8333f16272
+guid: ecd6de323352ae14eac1ed156992b7ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6511863434720068781
-    second: Wall-Baseboard-2-Right-Thick_0
+      213: 3450292346389337316
+    second: Wall-Baseboard-2-Doorway-Right-Thick-Trimmed_0
+  - first:
+      213: -6760025197831381869
+    second: Wall-Baseboard-2-Doorway-Right-Thick-Trimmed_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Baseboard-2-Right-Thick_0
+      name: Wall-Baseboard-2-Doorway-Right-Thick-Trimmed_0
       rect:
         serializedVersion: 2
         x: 191
-        y: 34
-        width: 579
-        height: 836
+        y: 278
+        width: 156
+        height: 614
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35bb7ab15b631a5a0800000000000000
-      internalID: -6511863434720068781
+      spriteID: 4e419cdcb96e1ef20800000000000000
+      internalID: 3450292346389337316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Baseboard-2-Doorway-Right-Thick-Trimmed_1
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 34
+        width: 176
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c129216e09f22a0800000000000000
+      internalID: -6760025197831381869
       vertices: []
       indices: 
       edges: []
@@ -129,7 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wall-Baseboard-2-Right-Thick_0: -6511863434720068781
+      Wall-Baseboard-2-Doorway-Right-Thick-Trimmed_0: 3450292346389337316
+      Wall-Baseboard-2-Doorway-Right-Thick-Trimmed_1: -6760025197831381869
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
