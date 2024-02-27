@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall-Paint-3-Doorway-Left-Tile_0: 6926030244726066169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

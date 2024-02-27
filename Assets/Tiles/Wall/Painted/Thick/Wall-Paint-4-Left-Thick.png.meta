@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall-Paint-4-Left-Thick_0: 7473699979962903247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

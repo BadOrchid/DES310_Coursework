@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall-Baseboard-2-Doorway-Left-Tile_0: 3780361853692930934
+      Wall-Baseboard-2-Doorway-Left-Tile_1: -3049146811748380669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

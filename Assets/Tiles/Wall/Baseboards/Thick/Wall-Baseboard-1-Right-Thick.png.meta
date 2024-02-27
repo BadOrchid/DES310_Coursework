@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall-Baseboard-1-Right-Thick_0: 3777589003814844415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

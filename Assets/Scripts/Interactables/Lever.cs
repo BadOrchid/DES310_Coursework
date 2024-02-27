@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Lever : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Lever : MonoBehaviour
     [SerializeField] Sprite onSprite;
 
     SpriteRenderer spriteRenderer;
+    Animator animator;
 
     bool playerInRange = false;
 
@@ -19,7 +21,8 @@ public class Lever : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        animator = GetComponent<Animator>();
+
         if (on) {
             onSprite = spriteRenderer.sprite;
 
@@ -40,16 +43,24 @@ public class Lever : MonoBehaviour
 
 
     }
-
-    void ChangeSprite(Sprite sprite) {
-        spriteRenderer.sprite = sprite;
-
-    }
-
     void UserInput() {
         if (type == PlayerType.Human && this.name == "Lever - Human") {
             if (Input.GetKeyDown(KeyCode.E)) {
                 on ^= true;
+
+                // Plays Animation
+                if (on) {
+                    //ChangeSprite(onSprite);
+                    animator.ResetTrigger("Off");
+                    animator.SetTrigger("On");
+
+                }
+                else {
+                    //ChangeSprite(offSprite);
+                    animator.ResetTrigger("On");
+                    animator.SetTrigger("Off");
+
+                }
 
             }
 
@@ -58,19 +69,24 @@ public class Lever : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.O)) {
                 on ^= true;
 
+                // Plays Animation
+                if (on) {
+                    //ChangeSprite(onSprite);
+                    animator.ResetTrigger("Off");
+                    animator.SetTrigger("On");
+
+                }
+                else {
+                    //ChangeSprite(offSprite);
+                    animator.ResetTrigger("On");
+                    animator.SetTrigger("Off");
+
+                }
+
             }
 
         }
 
-        // Updates sprites image
-        if (on) {
-            ChangeSprite(onSprite);
-
-        }
-        else {
-            ChangeSprite(offSprite);
-
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall-Paint-BlackTop-3-Right-Thick_0: 2482782389549871210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

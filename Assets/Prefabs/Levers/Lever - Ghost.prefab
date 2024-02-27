@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6528737235891464084}
   - component: {fileID: 2550272081409273570}
   - component: {fileID: -8864023493656696546}
+  - component: {fileID: 747201997646908347}
   m_Layer: 0
   m_Name: Lever - Ghost
   m_TagString: Untagged
@@ -148,3 +149,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 10}
   m_EdgeRadius: 0
+--- !u!95 &747201997646908347
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911836782271728416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c01d93878b2c2244eb83d39b0f9a184d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

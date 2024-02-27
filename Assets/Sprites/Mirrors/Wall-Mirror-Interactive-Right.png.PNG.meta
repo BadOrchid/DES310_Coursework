@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall-Mirror-Interactive-Right.png_0: -5117458022353629789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
