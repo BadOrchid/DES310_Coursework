@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Sprite openSprite;
+    public Sprite closeSprite;
+
+    SpriteRenderer spriteRenderer;
+
+    ObjectivesManager objectivesManager;
 
     // Update is called once per frame
     void Update()
     {
-        
+        //if(objectivesManager.)
     }
 }

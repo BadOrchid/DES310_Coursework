@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ObjectivesManager : MonoBehaviour
 {
-
     [SerializeField] ObjectiveType[] leverStates;
     [SerializeField] ObjectiveType[] pressureStates;
 
     Lever[] levers;
     PressurePlate[] pressurePlates;
+
+    bool complete = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,6 @@ public class ObjectivesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool complete = true;
-
         // Checks if each lever is in the correct state
         int index = 0;
         foreach (Lever lever in levers) {
@@ -88,7 +87,5 @@ public class ObjectivesManager : MonoBehaviour
             Debug.Log("COMPLETE");
 
         }
-        
     }
-
 }
