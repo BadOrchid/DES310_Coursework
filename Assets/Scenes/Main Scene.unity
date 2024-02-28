@@ -676,6 +676,7 @@ GameObject:
   - component: {fileID: 559587292}
   - component: {fileID: 559587291}
   - component: {fileID: 559587293}
+  - component: {fileID: 559587294}
   m_Layer: 0
   m_Name: Divider - Left Facing
   m_TagString: Untagged
@@ -777,7 +778,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1
   - first: {x: -1, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -877,7 +878,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1
   - first: {x: -1, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -991,14 +992,14 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!19719996 &559587293
-TilemapCollider2D:
+--- !u!68 &559587293
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559587289}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1026,9 +1027,61 @@ TilemapCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.6299826, y: -0.2714398}
+  - {x: -1.6291311, y: -0.22163594}
+  - {x: 0.5110276, y: -1.4568887}
+  - {x: 0.51106375, y: -1.5092187}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &559587294
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559587289}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.551508, y: 0.25615516}
+  - {x: -2.5517561, y: 0.30916998}
+  - {x: -1.9878317, y: -0.010726914}
+  - {x: -1.9877673, y: -0.06517513}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &733724833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1772,11 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.5010397, y: -3.1801608}
   - {x: -0.5015801, y: -3.1407738}
+  - {x: 1.4969056, y: -2.0090024}
+  - {x: 0.9070392, y: -1.6859485}
+  - {x: 0.97813976, y: -1.6416768}
+  - {x: 0.98722005, y: -1.6325428}
+  - {x: 1.589819, y: -1.9656448}
   - {x: 5.0008607, y: 0.020404685}
   - {x: 5.000657, y: -0.0030562077}
   m_AdjacentStartPoint: {x: 0, y: 0}
