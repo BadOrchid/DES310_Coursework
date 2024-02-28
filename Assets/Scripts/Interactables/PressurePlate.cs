@@ -5,7 +5,10 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
 
-    [SerializeField] PlayerType type = PlayerType.None;
+    enum PlateType { Block, Player, Either }
+
+    [SerializeField] PlayerType playerType = PlayerType.None;
+    [SerializeField] PlateType plateType = PlateType.Either;
     [SerializeField] public bool on = false;
     [SerializeField] Sprite offSprite;
     [SerializeField] Sprite onSprite;
@@ -39,13 +42,24 @@ public class PressurePlate : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        // Checks when the pressure plate is pressed
-        if (collision.tag == "Block") {
+        // Checks if collided with a Push Block when the Pressure Plate is a Block or Either type
+        if ((plateType == PlateType.Block || plateType == PlateType.Either) && collision.tag == "Block") {
             PlayerType otherType = collision.GetComponent<PushBlock>().type;
-            if (otherType == type || type == PlayerType.None) {
+            if (otherType == playerType || playerType == PlayerType.None) {
                 on = true;
                 ChangeSprite(onSprite);
-                Debug.Log(this.name + " Pressed");
+                Debug.Log(this.name + " Pressed by " + collision.tag);
+
+            }
+        
+        // Else checks if collided with a Player when the Pressure Plate is a Player or Either type
+        } else if (plateType == PlateType.Player || plateType == PlateType.Either) {
+            // Checks what kind of player
+            // This if statement works but isnt great, as it checks for Ghost and Human tags that might be used on moving non player objects in the future
+            if ((collision.tag == "Human" && (playerType == PlayerType.Human || playerType == PlayerType.None)) || (collision.tag == "Ghost" && (playerType == PlayerType.Ghost || playerType == PlayerType.None))) {
+                on = true;
+                ChangeSprite(onSprite);
+                Debug.Log(this.name + " Pressed by " + collision.tag);
 
             }
 
@@ -54,11 +68,24 @@ public class PressurePlate : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        // Checks if the pressure plate has been unpressed
-        if (collision.tag == "Block") {
-            on = false;
-            ChangeSprite(offSprite);
-            Debug.Log("Unpressed");
+        // Checks if the pressure plate has been unpressed by the block
+        if ((plateType == PlateType.Block || plateType == PlateType.Either) && collision.tag == "Block") {
+            PlayerType otherType = collision.GetComponent<PushBlock>().type;
+            if (otherType == playerType || playerType == PlayerType.None) {
+                on = false;
+                ChangeSprite(offSprite);
+                Debug.Log("Unpressed by " + collision.tag);
+
+            }
+
+        // Else checks if pressure plate has been unpressed the Player
+        } else if (plateType == PlateType.Player || plateType == PlateType.Either) {
+            if ((collision.tag == "Human" && (playerType == PlayerType.Human || playerType == PlayerType.None)) || (collision.tag == "Ghost" && (playerType == PlayerType.Ghost || playerType == PlayerType.None))) {
+                on = false;
+                ChangeSprite(offSprite);
+                Debug.Log("Unpressed by " + collision.tag);
+
+            }
 
         }
 
