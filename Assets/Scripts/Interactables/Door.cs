@@ -11,9 +11,21 @@ public class Door : MonoBehaviour
 
     ObjectivesManager objectivesManager;
 
+    void Start() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        objectivesManager = GetComponentInParent<ObjectivesManager>();
+
+    }
+
     // Update is called once per frame
-    void Update()
-    {
-        //if(objectivesManager.)
+    void Update() {
+
+        // Checks if Objective is complete
+        if (objectivesManager.complete) {
+            // Do stuff
+
+        }
+
+
     }
 }

@@ -10,7 +10,7 @@ public class ObjectivesManager : MonoBehaviour
     Lever[] levers;
     PressurePlate[] pressurePlates;
 
-    bool complete = true;
+    public bool complete = true;
 
     // Start is called before the first frame update
     void Start()
