@@ -22,6 +22,9 @@ public class ObjectivesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Sets complete to true, later to be set false if any object is not in the correct state
+        complete = true;
+
         // Checks if each lever is in the correct state
         int index = 0;
         foreach (Lever lever in levers) {
@@ -87,5 +90,7 @@ public class ObjectivesManager : MonoBehaviour
             Debug.Log("COMPLETE");
 
         }
+
     }
+
 }
