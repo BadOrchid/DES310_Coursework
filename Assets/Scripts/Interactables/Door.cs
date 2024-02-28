@@ -9,11 +9,10 @@ public class Door : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    ObjectivesManager objectivesManager;
+    [SerializeField] ObjectivesManager objectivesManager;
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        objectivesManager = GetComponentInParent<ObjectivesManager>();
 
     }
 
