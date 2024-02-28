@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class ObjectivesManager : MonoBehaviour
 {
+
+    // Arrays of the state we want each object to be in
     [SerializeField] ObjectiveType[] leverStates;
     [SerializeField] ObjectiveType[] pressureStates;
 
+    // Arrays of the gameobjects
     Lever[] levers;
     PressurePlate[] pressurePlates;
 
+    // True if objective is complete
     public bool complete = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Fills array with gameobjects
         levers = GetComponentsInChildren<Lever>();
         pressurePlates = GetComponentsInChildren<PressurePlate>();
     }
@@ -27,8 +32,8 @@ public class ObjectivesManager : MonoBehaviour
 
         // Checks if each lever is in the correct state
         int index = 0;
-        foreach (Lever lever in levers) {
-            switch (leverStates[index]) {
+        foreach (Lever lever in levers) { // Loops over gameobjects
+            switch (leverStates[index]) { // Compares the gameobject's current state to what state it should be in 
                 case ObjectiveType.Off:
                     if (lever.on) {
                         complete = false;
@@ -46,6 +51,7 @@ public class ObjectivesManager : MonoBehaviour
 
             }
 
+            // If object is not in correct state, exit loop
             if (!complete) {
                 break;
 
@@ -57,8 +63,8 @@ public class ObjectivesManager : MonoBehaviour
 
         // Checks if each pressure plate is in the correct state
         index = 0;
-        foreach (PressurePlate plate in pressurePlates) {
-            switch (pressureStates[index]) {
+        foreach (PressurePlate plate in pressurePlates) { // Loops over gameobjects
+            switch (pressureStates[index]) { // Compares the gameobject's current state to what state it should be in
                 case ObjectiveType.Off:
                     if (plate.on) {
                         complete = false;
@@ -76,6 +82,7 @@ public class ObjectivesManager : MonoBehaviour
 
             }
 
+            // If object is not in correct state, exit loop
             if (!complete) {
                 break;
 
@@ -87,7 +94,7 @@ public class ObjectivesManager : MonoBehaviour
 
         // Objectives Completed
         if (complete) {
-            Debug.Log("COMPLETE");
+            Debug.Log(this.name + " completed");
 
         }
 
