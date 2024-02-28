@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      humanWalk_left0018_0: -4185561103639420107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

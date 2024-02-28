@@ -200,7 +200,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      humanPressurePlate_block0000_0: -1700242499592117798
+      humanPressurePlate_block0000_1: 1610011461073265549
+      humanPressurePlate_block0000_2: -8346716928066697491
+      humanPressurePlate_block0000_3: 2728323781341840642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

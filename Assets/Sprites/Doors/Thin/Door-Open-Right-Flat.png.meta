@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Door-Open-Right-Flat_0: 7073502525455191807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

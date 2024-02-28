@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pressurePlate_ghost0005_0: 1711581610067380200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

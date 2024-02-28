@@ -296,7 +296,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghostWalk_left0021_0: -5900487263139102511
+      ghostWalk_left0021_1: 93624139069248899
+      ghostWalk_left0021_2: 7411857080004601999
+      ghostWalk_left0021_3: -2832740533194764585
+      ghostWalk_left0021_4: 22669172458599822
+      ghostWalk_left0021_5: -6540943190659160594
+      ghostWalk_left0021_6: -6951707045692961444
+      ghostWalk_left0021_7: 6425091557476124349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
