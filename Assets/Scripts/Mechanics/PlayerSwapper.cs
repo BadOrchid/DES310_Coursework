@@ -33,13 +33,19 @@ public class PlayerSwapper : MonoBehaviour
 
     private void Update()
     {
-        if(mirror1.player1Input == true && mirror2.player2Input == true)
-        { 
-            SwapPlayerPositions();
+        if (mirror1.player1Input == true && mirror2.player2Input == true)
+        {
+            SwapPlayerPositions(); 
+            
+            mirror1.player1Input = false;
+            mirror2.player2Input = false;
         }
-        else if(mirror2.player1Input == true && mirror1.player2Input == true) 
+        else if (mirror1.player2Input == true && mirror2.player1Input == true) 
         {
             SwapPlayerPositions();
+
+            mirror1.player2Input = false;
+            mirror2.player1Input = false;          
         }
     }
 }

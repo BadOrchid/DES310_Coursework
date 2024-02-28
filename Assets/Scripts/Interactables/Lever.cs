@@ -28,7 +28,6 @@ public class Lever : MonoBehaviour
 
         } else { 
             offSprite = spriteRenderer.sprite;
-
         }
 
     }
@@ -38,15 +37,13 @@ public class Lever : MonoBehaviour
     {
        if (playerInRange) {
             UserInput();
-
         }
-
-
     }
     void UserInput() {
         if (type == PlayerType.Human && this.name == "Lever - Human") {
             if (Input.GetKeyDown(KeyCode.E)) {
                 on ^= true;
+                Debug.Log("Human flipped " + this.name);
 
                 // Plays Animation
                 if (on) {
@@ -68,6 +65,7 @@ public class Lever : MonoBehaviour
         else if (type == PlayerType.Ghost && this.name == "Lever - Ghost") {
             if (Input.GetKeyDown(KeyCode.O)) {
                 on ^= true;
+                Debug.Log("Ghost flipped " + this.name);
 
                 // Plays Animation
                 if (on) {
