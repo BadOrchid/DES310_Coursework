@@ -1110,7 +1110,7 @@ Transform:
   m_GameObject: {fileID: 733724833}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099, y: 0.02, z: 0}
+  m_LocalPosition: {x: -0.134, y: 0.038, z: 0}
   m_LocalScale: {x: 1.0013, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4669,10 +4669,6 @@ PrefabInstance:
     - target: {fileID: 7336672902471186496, guid: baaed3c311ce11c478e97fe3e595f26e, type: 3}
       propertyPath: m_Name
       value: Push Block - Human
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336672902471186496, guid: baaed3c311ce11c478e97fe3e595f26e, type: 3}
-      propertyPath: m_TagString
-      value: Block
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
