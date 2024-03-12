@@ -101,12 +101,12 @@ TextureImporter:
       name: Door-Open-Right-Flat_0
       rect:
         serializedVersion: 2
-        x: 356
-        y: 74
-        width: 302
-        height: 870
+        x: 355
+        y: 73
+        width: 304
+        height: 873
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 80b20aaa83abfa34496bea8e7b1465f2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

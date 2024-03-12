@@ -101,12 +101,12 @@ TextureImporter:
       name: Door-Closed-Right-Flat_0
       rect:
         serializedVersion: 2
-        x: 328
-        y: 55
-        width: 302
-        height: 871
+        x: 327
+        y: 54
+        width: 304
+        height: 873
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f79f30c7e31f67c49ab102f769362108
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
