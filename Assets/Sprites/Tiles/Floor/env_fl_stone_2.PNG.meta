@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 62f1c0dbeda843d47b7fccd78864cfa9
+guid: 2a7dfb72569d9cb44a8abdae49dd8038
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3008345612930382997
-    second: env_fl_wood_3_0
+      213: -7823992822901017131
+    second: env_fl_stone_2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: env_fl_wood_3_0
+      name: env_fl_stone_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b630eab9a953046d0800000000000000
-      internalID: -3008345612930382997
+      spriteID: 5d577c91bf79b6390800000000000000
+      internalID: -7823992822901017131
       vertices: []
       indices: 
       edges: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 38910d1e1dc85d446b980d3bd59ebe42
+    spriteID: 5e4863d3ccd8ba04fa8825d3049f7b03
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      env_fl_wood_3_0: -3008345612930382997
+      env_fl_stone_2_0: -7823992822901017131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
