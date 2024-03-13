@@ -5,7 +5,7 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
 
-    enum PlateType { Block, Player, Either }
+    enum PlateType { Block, Pillar, Player, Either }
 
     [SerializeField] PlayerType playerType = PlayerType.None;
     [SerializeField] PlateType plateType = PlateType.Either;
@@ -51,6 +51,15 @@ public class PressurePlate : MonoBehaviour
                 Debug.Log(this.name + " Pressed by " + collision.tag);
 
             }
+
+        //else if ((plateType == PlateType.Pillar || plateType == PlateType.Either) && collision.tag == "Pillar") {
+        //        PlayerType oppType = collision.GetComponent<PushBlock>().type;
+        //        if(oppType == playerType || oppType == PlayerType.None) {
+        //            on = true;
+        //            ChangeSprite(onSprite);
+        //            Debug.Log(this.name + " Pressed by " + collision.tag);
+        //        }
+        //    }
         
         // Else checks if collided with a Player when the Pressure Plate is a Player or Either type
         } else if (plateType == PlateType.Player || plateType == PlateType.Either) {
