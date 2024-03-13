@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      env_fl_rug_left_3_0: -1617541225613055413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

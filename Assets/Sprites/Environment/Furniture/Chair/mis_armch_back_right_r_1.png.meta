@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mis_armch_back_right_r_1_0: 4962289366335722575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
