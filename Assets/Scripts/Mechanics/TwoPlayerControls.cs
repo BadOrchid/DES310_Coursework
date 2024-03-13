@@ -40,12 +40,10 @@ public class TwoPlayerControls : MonoBehaviour
         // Sets player to be facing left or right
         if (playerRB.velocity.x != 0) {
             if (playerRB.velocity.x > 0) {
-                animator.ResetTrigger("isFacingLeft");
                 animator.SetBool("isFacingLeft", false);
 
             }
             else {
-                animator.SetTrigger("isFacingLeft");
                 animator.SetBool("isFacingLeft", true);
 
             }
