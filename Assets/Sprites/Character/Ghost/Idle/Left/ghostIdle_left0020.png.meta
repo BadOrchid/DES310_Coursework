@@ -368,7 +368,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghostIdle_left0020_0: -1202803694883359770
+      ghostIdle_left0020_1: -692405706426753725
+      ghostIdle_left0020_10: -8927462355982308117
+      ghostIdle_left0020_2: -516784859514087558
+      ghostIdle_left0020_3: 467801880807120086
+      ghostIdle_left0020_4: 1934859500819123271
+      ghostIdle_left0020_5: -8030095123196246093
+      ghostIdle_left0020_6: -7680782588215772680
+      ghostIdle_left0020_7: -3127368692837647143
+      ghostIdle_left0020_8: -2861086881530134271
+      ghostIdle_left0020_9: -2170307062638406060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

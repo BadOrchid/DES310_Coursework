@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ani_idle_right_p1_0014_0: 5404468048080381199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
