@@ -9,6 +9,7 @@ TagManager:
   - Ghost
   - Mirror
   - CrystalPodium
+  - CrystalBall
   layers:
   - Default
   - TransparentFX
