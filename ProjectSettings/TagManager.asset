@@ -8,6 +8,7 @@ TagManager:
   - Human
   - Ghost
   - Mirror
+  - CrystalPodium
   layers:
   - Default
   - TransparentFX
