@@ -5,8 +5,7 @@
 //using Unity.VisualScripting;
 //using UnityEngine;
 
-//public class CrystalLight : MonoBehaviour
-//{
+//public class CrystalLight : MonoBehaviour {
 
 //    [SerializeField] float lightLength = 5.0f;
 //    [SerializeField] int x, y = 0;
@@ -22,8 +21,7 @@
 
 
 //    // Start is called before the first frame update
-//    void Start()
-//    {
+//    void Start() {
 
 //        lineRenderer = GetComponent<LineRenderer>();
 //        crystalPodiumIds = new List<int>();
@@ -34,8 +32,7 @@
 //    }
 
 //    // Update is called once per frame
-//    void Update()
-//    {
+//    void Update() {
 
 //        crystalPodiumIds.Clear();
 //        positions.Clear();
@@ -74,15 +71,17 @@
 
 //                //ProcessRaycast(hit);
 
-//            // Checks if ray hits the lights goal
-//            } else if (hit.collider.tag == "LightGoal") {
+//                // Checks if ray hits the lights goal
+//            }
+//            else if (hit.collider.tag == "LightGoal") {
 //                Debug.Log("Light Win!");
 //                //positions.Add(hit.transform.position);
 
-//            } else {
-//            // Curently does not work as intended, light is angled off and gets closer as lightLength is increased // May not be needed if there are colliders on all sides
-//            // Adds a position lightLength ahead of the ray origin
-//            //positions.Add(new Vector3(transform.forward.x * lightLength, transform.forward.y * lightLength, transform.forward.z * lightLength));
+//            }
+//            else {
+//                // Curently does not work as intended, light is angled off and gets closer as lightLength is increased // May not be needed if there are colliders on all sides
+//                // Adds a position lightLength ahead of the ray origin
+//                //positions.Add(new Vector3(transform.forward.x * lightLength, transform.forward.y * lightLength, transform.forward.z * lightLength));
 
 //            }
 
@@ -144,24 +143,142 @@
 
 //}
 
-using System.Collections;
+//using System.Collections;
+//using System.Collections.Generic;
+//using System.Linq;
+//using Unity.Burst.CompilerServices;
+//using Unity.VisualScripting;
+//using UnityEngine;
+
+//public class PuzzleLight : MonoBehaviour {
+
+//    //[SerializeField] bool isSource = false;
+//    [SerializeField] float lightLength = 5.0f;
+
+//    LineRenderer lineRenderer;
+
+//    List<int> crystalPodiumIds;
+//    List<Vector3> positions;
+
+//    Quaternion rotation = Quaternion.Euler(0, 0, 45);
+
+//    // Start is called before the first frame update
+//    void Start() {
+
+//        lineRenderer = GetComponent<LineRenderer>();
+//        crystalPodiumIds = new List<int>();
+//        positions = new List<Vector3>();
+
+//    }
+
+//    // Update is called once per frame
+//    void Update() {
+
+//        crystalPodiumIds.Clear();
+//        positions.Clear();
+//        positions.Add(transform.position);
+
+//        RaycastHit hit;
+//        Debug.DrawRay(transform.position,rotation * -transform.up * lightLength);
+
+//        if (Physics.Raycast(transform.position, rotation * -transform.up, out hit)) {
+//            Debug.Log("Hit something!");
+
+
+
+//            // Adds the position of the hit
+//            positions.Add(hit.point);
+
+//            // Checks if ray hits a CrystalPodium
+//            if (hit.collider.tag == "CrystalPodium") {
+//                Debug.Log("Hit first Crystal Podium!");
+
+//                crystalPodiumIds.Add(hit.colliderInstanceID);
+//                //positions.Add(hit.transform.position);
+
+//                ProcessRaycast(hit);
+
+//                // Checks if ray hits the Crystal Ball
+//            }
+//            else if (hit.collider.tag == "CrystalBall") {
+//                Debug.Log("Light Win!");
+//                //positions.Add(hit.transform.position);
+
+//            }
+
+//        }
+//        else {
+//            // Curently does not work as intended, light is angled off and gets closer as lightLength is increased // May not be needed if there are colliders on all sides
+//            // Adds a position lightLength ahead of the ray origin
+//            //positions.Add(new Vector3(transform.forward.x * lightLength, transform.forward.y * lightLength, transform.forward.z * lightLength));
+
+//        }
+
+//        DrawLight();
+
+//    }
+
+//    void ProcessRaycast(RaycastHit hit) {
+//        Debug.DrawRay(hit.transform.position, -hit.transform.forward * lightLength);
+
+
+
+//        if (Physics.Raycast(hit.transform.position, -hit.transform.forward, out hit)) {
+
+//            // Adds position of the hit
+//            positions.Add(hit.point);
+
+//            // Checks if ray hits a CrystalPodium
+//            if (hit.collider.tag == "CrystalPodium") {
+//                // Checks if reflector has not already been hit in this frame
+//                if (!crystalPodiumIds.Contains(hit.colliderInstanceID)) {
+//                    Debug.Log("Hit Crystal Podium!");
+
+//                    crystalPodiumIds.Add(hit.colliderInstanceID);
+//                    //positions.Add(hit.transform.position);
+
+//                    ProcessRaycast(hit);
+
+//                }
+
+//                // Checks if ray hits the Crystal Ball
+//            }
+//            else if (hit.collider.tag == "CrystalBall") {
+//                Debug.Log("Light Win!");
+//                //positions.Add(hit.transform.position);
+
+//            }
+
+//        }
+
+//    }
+
+
+//    void DrawLight() {
+//        lineRenderer.positionCount = positions.Count;
+//        lineRenderer.SetPositions(positions.ToArray<Vector3>());
+
+//    }
+
+
+//}
+
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PuzzleLight : MonoBehaviour {
+public class CrystalLight : MonoBehaviour {
 
-    //[SerializeField] bool isSource = false;
-    [SerializeField] float lightLength = 5.0f;
-
+    [SerializeField] public bool crystalBallHit = false;
+    [SerializeField] float rayLength = 5.0f;
     LineRenderer lineRenderer;
 
     List<int> crystalPodiumIds;
     List<Vector3> positions;
+    
+    int tempCounter;
 
-    Quaternion rotation = Quaternion.Euler(0, 0, 45);
 
     // Start is called before the first frame update
     void Start() {
@@ -174,44 +291,21 @@ public class PuzzleLight : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        tempCounter = 0;
 
         crystalPodiumIds.Clear();
         positions.Clear();
+
         positions.Add(transform.position);
 
-        RaycastHit hit;
-        Debug.DrawRay(transform.position,rotation * -transform.up * lightLength);
+        Ray ray = new Ray(transform.position, transform.up);
 
-        if (Physics.Raycast(transform.position, rotation * -transform.up, out hit)) {
-            Debug.Log("Hit something!");
+        Debug.DrawRay(ray.origin, ray.direction * rayLength);
 
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-
-            // Adds the position of the hit
-            positions.Add(hit.point);
-
-            // Checks if ray hits a CrystalPodium
-            if (hit.collider.tag == "CrystalPodium") {
-                Debug.Log("Hit first Crystal Podium!");
-
-                crystalPodiumIds.Add(hit.colliderInstanceID);
-                //positions.Add(hit.transform.position);
-
-                ProcessRaycast(hit);
-
-                // Checks if ray hits the Crystal Ball
-            }
-            else if (hit.collider.tag == "CrystalBall") {
-                Debug.Log("Light Win!");
-                //positions.Add(hit.transform.position);
-
-            }
-
-        }
-        else {
-            // Curently does not work as intended, light is angled off and gets closer as lightLength is increased // May not be needed if there are colliders on all sides
-            // Adds a position lightLength ahead of the ray origin
-            //positions.Add(new Vector3(transform.forward.x * lightLength, transform.forward.y * lightLength, transform.forward.z * lightLength));
+        if (hit.collider != null ) {
+            ProcessHit(hit);
 
         }
 
@@ -219,47 +313,49 @@ public class PuzzleLight : MonoBehaviour {
 
     }
 
-    void ProcessRaycast(RaycastHit hit) {
-        Debug.DrawRay(hit.transform.position, -hit.transform.forward * lightLength);
+    void ProcessHit(RaycastHit2D hit) {
+        Debug.Log(tempCounter + " hit " + hit.collider.name);
 
-        
+        // Adds the position of the hit
+        positions.Add(new Vector3(hit.point.x, hit.point.y, transform.position.z));
 
-        if (Physics.Raycast(hit.transform.position, -hit.transform.forward, out hit)) {
+        // Checks if it hit a Crystal Podium and that it hasn't previously been hit in the same frame
+        if (hit.collider.tag == "CrystalPodium" && !crystalPodiumIds.Contains(hit.collider.GetInstanceID())) {
+            
+            // Adds crystal podium to Id's
+            crystalPodiumIds.Add(hit.collider.GetInstanceID());
 
-            // Adds position of the hit
-            positions.Add(hit.point);
+            // Adds position of crystal podium
+            positions.Add(hit.transform.position);
 
-            // Checks if ray hits a CrystalPodium
-            if (hit.collider.tag == "CrystalPodium") {
-                // Checks if reflector has not already been hit in this frame
-                if (!crystalPodiumIds.Contains(hit.colliderInstanceID)) {
-                    Debug.Log("Hit Crystal Podium!");
+            Ray ray = new Ray(hit.transform.rotation * new Vector3(0, 0.5f, 0) + hit.transform.position, Quaternion.Euler(0, 0, 90) * Vector3.Cross(hit.transform.up, hit.transform.forward));
+            Debug.DrawRay(ray.origin, ray.direction * rayLength);
 
-                    crystalPodiumIds.Add(hit.colliderInstanceID);
-                    //positions.Add(hit.transform.position);
+            hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-                    ProcessRaycast(hit);
-
-                }
-
-                // Checks if ray hits the Crystal Ball
-            }
-            else if (hit.collider.tag == "CrystalBall") {
-                Debug.Log("Light Win!");
-                //positions.Add(hit.transform.position);
+            if (hit.collider != null) {
+                tempCounter++;
+                ProcessHit(hit);
 
             }
+
+        // Else checks if it hits the Crystal Ball
+        } else if (hit.collider.tag == "CrystalBall") {
+            Debug.Log("Crystal Ball Win!");
+
+            crystalBallHit = true;
+
+        } else {
+            crystalBallHit = false;
 
         }
 
     }
-
 
     void DrawLight() {
         lineRenderer.positionCount = positions.Count;
         lineRenderer.SetPositions(positions.ToArray<Vector3>());
 
     }
-
 
 }

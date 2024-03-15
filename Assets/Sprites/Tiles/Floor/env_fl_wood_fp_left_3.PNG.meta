@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      env_fl_wood_fp_left_3_0: -1796018890763958312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

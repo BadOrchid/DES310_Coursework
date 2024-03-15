@@ -8,10 +8,12 @@ public class ObjectivesManager : MonoBehaviour
     // Arrays of the state we want each object to be in
     [SerializeField] ObjectiveType[] leverStates;
     [SerializeField] ObjectiveType[] pressureStates;
+    [SerializeField] ObjectiveType[] crystalStates;
 
     // Arrays of the gameobjects
     Lever[] levers;
     PressurePlate[] pressurePlates;
+    CrystalLight[] crystalLights; 
 
     // True if objective is complete
     public bool complete = true;
@@ -22,6 +24,7 @@ public class ObjectivesManager : MonoBehaviour
         // Fills array with gameobjects
         levers = GetComponentsInChildren<Lever>();
         pressurePlates = GetComponentsInChildren<PressurePlate>();
+        crystalLights = GetComponentsInChildren<CrystalLight>();
     }
 
     // Update is called once per frame
@@ -73,6 +76,37 @@ public class ObjectivesManager : MonoBehaviour
                     break;
                 case ObjectiveType.On:
                     if (!plate.on) {
+                        complete = false;
+
+                    }
+                    break;
+                case ObjectiveType.Either:
+                    break;
+
+            }
+
+            // If object is not in correct state, exit loop
+            if (!complete) {
+                break;
+
+            }
+
+            index++;
+
+        }
+
+        // Checks if each crystal ball is in the correct state
+        index = 0;
+        foreach (CrystalLight crystal in crystalLights) { // Loops over gameobjects
+            switch (crystalStates[index]) { // Compares the gameobject's current state to what state it should be in 
+                case ObjectiveType.Off:
+                    if (crystal.crystalBallHit) {
+                        complete = false;
+
+                    }
+                    break;
+                case ObjectiveType.On:
+                    if (!crystal.crystalBallHit) {
                         complete = false;
 
                     }

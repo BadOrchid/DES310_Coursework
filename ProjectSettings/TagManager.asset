@@ -62,3 +62,6 @@ TagManager:
   - name: Players
     uniqueID: 1259816099
     locked: 0
+  - name: Puzzle Lights
+    uniqueID: 828777045
+    locked: 0
