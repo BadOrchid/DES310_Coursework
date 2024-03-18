@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5080503546302906605}
   m_Layer: 0
   m_Name: Lever - Human
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,8 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   on: 0
-  offSprite: {fileID: 0}
-  onSprite: {fileID: -8080742976323695095, guid: d7be3d8ee65e88845a8c79ce0525ed43, type: 3}
+  offSprite: {fileID: 21300000, guid: 97f774cd63ecca3459c0efdcbae2ce9e, type: 3}
+  onSprite: {fileID: 21300000, guid: d7be3d8ee65e88845a8c79ce0525ed43, type: 3}
+  offSpriteHighlighted: {fileID: -3518060285260721034, guid: 444203f319de31b47b98f859140d1d4b, type: 3}
+  onSpriteHighlighted: {fileID: 1448164660739351148, guid: 79807549b758afb4bbee200399e28355, type: 3}
 --- !u!61 &6745387903723143140
 BoxCollider2D:
   m_ObjectHideFlags: 0

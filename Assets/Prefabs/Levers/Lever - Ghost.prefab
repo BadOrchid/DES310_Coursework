@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 747201997646908347}
   m_Layer: 0
   m_Name: Lever - Ghost
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,8 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   on: 0
-  offSprite: {fileID: 0}
+  offSprite: {fileID: 4215940914638398781, guid: 544670420296fff4eb0f3b9a3061f8a8, type: 3}
   onSprite: {fileID: 9036718197009406142, guid: c365b94409a319140bdde691d2e2f594, type: 3}
+  offSpriteHighlighted: {fileID: -4686151367074348612, guid: d2a8e36ab370a664f9252d7992635f13, type: 3}
+  onSpriteHighlighted: {fileID: -7548796954551425675, guid: 4f524a5cc6cf3cd4aacda5b87c35e8e2, type: 3}
 --- !u!61 &-8864023493656696546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +139,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -2}
+  m_Offset: {x: 1.6814077, y: -4.2250776}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -147,7 +149,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 10}
+  m_Size: {x: 5.0505567, y: 2.992837}
   m_EdgeRadius: 0
 --- !u!95 &747201997646908347
 Animator:

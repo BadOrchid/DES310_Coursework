@@ -9,10 +9,7 @@ public class Lever : MonoBehaviour
 
     [SerializeField] PlayerType type = PlayerType.None;
     [SerializeField] public bool on = false;
-    [SerializeField] Sprite offSprite;
-    [SerializeField] Sprite onSprite;
 
-    SpriteRenderer spriteRenderer;
     Animator animator;
 
     bool playerInRange = false;
@@ -20,15 +17,7 @@ public class Lever : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
-        if (on) {
-            onSprite = spriteRenderer.sprite;
-
-        } else { 
-            offSprite = spriteRenderer.sprite;
-        }
 
     }
 
@@ -37,27 +26,20 @@ public class Lever : MonoBehaviour
     {
        if (playerInRange) {
             UserInput();
+
         }
+
+        animator.SetBool("playerInRange", playerInRange);
+        animator.SetBool("on", on);
+
     }
+
+
     void UserInput() {
         if (type == PlayerType.Human && this.name == "Lever - Human") {
             if (Input.GetKeyDown(KeyCode.E)) {
                 on ^= true;
                 Debug.Log("Human flipped " + this.name);
-
-                // Plays Animation
-                if (on) {
-                    //ChangeSprite(onSprite);
-                    animator.ResetTrigger("Off");
-                    animator.SetTrigger("On");
-
-                }
-                else {
-                    //ChangeSprite(offSprite);
-                    animator.ResetTrigger("On");
-                    animator.SetTrigger("Off");
-
-                }
 
             }
 
@@ -67,25 +49,12 @@ public class Lever : MonoBehaviour
                 on ^= true;
                 Debug.Log("Ghost flipped " + this.name);
 
-                // Plays Animation
-                if (on) {
-                    //ChangeSprite(onSprite);
-                    animator.ResetTrigger("Off");
-                    animator.SetTrigger("On");
-
-                }
-                else {
-                    //ChangeSprite(offSprite);
-                    animator.ResetTrigger("On");
-                    animator.SetTrigger("Off");
-
-                }
-
             }
 
         }
 
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision) {
         //Checks when the Player is in near
