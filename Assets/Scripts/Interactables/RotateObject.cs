@@ -6,7 +6,6 @@ using UnityEngine;
 public class RotateObject : MonoBehaviour
 {
 
-    [SerializeField] bool playerInRange = false;
     [SerializeField] float radius = 0.5f;
     [SerializeField] PlayerType type = PlayerType.None;
 
@@ -27,16 +26,13 @@ public class RotateObject : MonoBehaviour
     void Update()
     {
 
-        playerInRange = PlayerInRange();
-        
-
-        if (playerInRange) {
+        if (PlayerInRange()) {
             UserInput();
 
         }
 
+        // Rotates object
         rotation = Quaternion.Euler(0, 0, angles[angleIndex]);
-
         transform.rotation = rotation;
 
 
@@ -44,15 +40,19 @@ public class RotateObject : MonoBehaviour
 
     // Checks if Human Player is in range
     bool PlayerInRange() {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        // Gets all colliders the circle overlaps
         //Debug.DrawRay(transform.position, new Vector3(1, 0, 0) * radius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
 
+        // Checks if any of the colliders is a player
         foreach (Collider2D collider in colliders) {
             TwoPlayerControls player = collider.transform.GetComponent<TwoPlayerControls>();
             if (player) {
 
+                // Sets the colliderType to Human or Ghost
                 colliderType = player.type;
 
+                // If this scripts type matches the colliders type, Player is in range
                 if (colliderType == type || type == PlayerType.None) {
                     return true;
 
@@ -67,8 +67,10 @@ public class RotateObject : MonoBehaviour
     }
 
     void UserInput() {
+        // If Player is Human
         if (colliderType == PlayerType.Human) {
 
+            // Move to next angle when Interact is pressed
             if (Input.GetButtonDown("Player1Interact")) {
                 angleIndex++;
 
@@ -79,8 +81,10 @@ public class RotateObject : MonoBehaviour
 
             }
 
+        // If Player is Ghost
         } else if (colliderType == PlayerType.Ghost) {
 
+            // Move to next angle when Interact is pressed
             if (Input.GetButtonDown("Player2Interact")) {
                 angleIndex++;
 
