@@ -69,7 +69,7 @@ public class RotateObject : MonoBehaviour
     void UserInput() {
         if (colliderType == PlayerType.Human) {
 
-            if (Input.GetKeyDown(KeyCode.E)) {
+            if (Input.GetButtonDown("Player1Interact")) {
                 angleIndex++;
 
                 if (angleIndex == angles.Length) {
@@ -81,7 +81,7 @@ public class RotateObject : MonoBehaviour
 
         } else if (colliderType == PlayerType.Ghost) {
 
-            if (Input.GetKeyDown(KeyCode.O)) {
+            if (Input.GetButtonDown("Player2Interact")) {
                 angleIndex++;
 
                 if (angleIndex == angles.Length) {
@@ -90,24 +90,6 @@ public class RotateObject : MonoBehaviour
                 }
 
             }
-
-        }
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Hello");
-
-        if (collision.transform.tag == "Human" && collision.transform.GetComponent<TwoPlayerControls>()) {
-            playerInRange = true;
-
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.transform.tag == "Human" && collision.transform.GetComponent<TwoPlayerControls>()) {
-            playerInRange = false;
 
         }
 

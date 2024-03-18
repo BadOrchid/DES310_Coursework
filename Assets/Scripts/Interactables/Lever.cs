@@ -37,7 +37,7 @@ public class Lever : MonoBehaviour
 
     void UserInput() {
         if (type == PlayerType.Human && this.name == "Lever - Human") {
-            if (Input.GetKeyDown(KeyCode.E)) {
+            if (Input.GetButtonDown("Player1Interact")) {
                 on ^= true;
                 Debug.Log("Human flipped " + this.name);
 
@@ -45,7 +45,7 @@ public class Lever : MonoBehaviour
 
         }
         else if (type == PlayerType.Ghost && this.name == "Lever - Ghost") {
-            if (Input.GetKeyDown(KeyCode.O)) {
+            if (Input.GetButtonDown("Player2Interact")) {
                 on ^= true;
                 Debug.Log("Ghost flipped " + this.name);
 

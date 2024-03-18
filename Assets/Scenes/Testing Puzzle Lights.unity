@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal Podium (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8476917463541786484, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -800,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 4525951321411637380, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
       propertyPath: m_Name
       value: Crystal Podium (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476917463541786484, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1964,6 +1972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal Podium (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8476917463541786484, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2171,6 +2183,10 @@ PrefabInstance:
     - target: {fileID: 4525951321411637380, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
       propertyPath: m_Name
       value: Crystal Podium (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476917463541786484, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2995,6 +3011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal Podium (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8476917463541786484, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3108,6 +3128,10 @@ PrefabInstance:
     - target: {fileID: 4525951321411637380, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
       propertyPath: m_Name
       value: Crystal Podium
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476917463541786484, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
