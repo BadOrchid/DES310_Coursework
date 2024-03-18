@@ -263,6 +263,7 @@
 
 //}
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -278,7 +279,6 @@ public class CrystalLight : MonoBehaviour {
     List<Vector3> positions;
     
     int tempCounter;
-
 
     // Start is called before the first frame update
     void Start() {
@@ -314,14 +314,14 @@ public class CrystalLight : MonoBehaviour {
     }
 
     void ProcessHit(RaycastHit2D hit) {
-        Debug.Log(tempCounter + " hit " + hit.collider.name);
+        //Debug.Log(tempCounter + " hit " + hit.collider.name);
 
         // Adds the position of the hit
         positions.Add(new Vector3(hit.point.x, hit.point.y, transform.position.z));
 
         // Checks if it hit a Crystal Podium and that it hasn't previously been hit in the same frame
         if (hit.collider.tag == "CrystalPodium" && !crystalPodiumIds.Contains(hit.collider.GetInstanceID())) {
-            
+
             // Adds crystal podium to Id's
             crystalPodiumIds.Add(hit.collider.GetInstanceID());
 
@@ -339,11 +339,14 @@ public class CrystalLight : MonoBehaviour {
 
             }
 
-        // Else checks if it hits the Crystal Ball
+            // Else checks if it hits the Crystal Ball
         } else if (hit.collider.tag == "CrystalBall") {
             Debug.Log("Crystal Ball Win!");
 
             crystalBallHit = true;
+
+        } else if (hit.collider.tag == "Ghost" && hit.collider.GetComponent<TwoPlayerControls>()) {
+            Debug.Log("Ghost died to light beam");
 
         } else {
             crystalBallHit = false;

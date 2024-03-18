@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
 
     [SerializeField] bool playerInRange = false;
+    [SerializeField] float radius = 0.5f;
+    [SerializeField] PlayerType type = PlayerType.None;
+
+    PlayerType colliderType;
 
     int[] angles = { 0, 60, 90, 120, 180, 240, 270, 300 };
     int angleIndex = 0;
@@ -22,6 +27,9 @@ public class RotateObject : MonoBehaviour
     void Update()
     {
 
+        playerInRange = PlayerInRange();
+        
+
         if (playerInRange) {
             UserInput();
 
@@ -31,16 +39,75 @@ public class RotateObject : MonoBehaviour
 
         transform.rotation = rotation;
 
+
+    }
+
+    // Checks if Human Player is in range
+    bool PlayerInRange() {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        //Debug.DrawRay(transform.position, new Vector3(1, 0, 0) * radius);
+
+        foreach (Collider2D collider in colliders) {
+            TwoPlayerControls player = collider.transform.GetComponent<TwoPlayerControls>();
+            if (player) {
+
+                colliderType = player.type;
+
+                if (colliderType == type || type == PlayerType.None) {
+                    return true;
+
+                }
+
+            }
+
+        }
+
+        return false;
+
     }
 
     void UserInput() {
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.O)) {
-            angleIndex++;
+        if (colliderType == PlayerType.Human) {
 
-            if (angleIndex == angles.Length) {
-                angleIndex = 0;
+            if (Input.GetKeyDown(KeyCode.E)) {
+                angleIndex++;
+
+                if (angleIndex == angles.Length) {
+                    angleIndex = 0;
+
+                }
 
             }
+
+        } else if (colliderType == PlayerType.Ghost) {
+
+            if (Input.GetKeyDown(KeyCode.O)) {
+                angleIndex++;
+
+                if (angleIndex == angles.Length) {
+                    angleIndex = 0;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Hello");
+
+        if (collision.transform.tag == "Human" && collision.transform.GetComponent<TwoPlayerControls>()) {
+            playerInRange = true;
+
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.transform.tag == "Human" && collision.transform.GetComponent<TwoPlayerControls>()) {
+            playerInRange = false;
 
         }
 
