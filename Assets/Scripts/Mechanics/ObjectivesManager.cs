@@ -9,11 +9,13 @@ public class ObjectivesManager : MonoBehaviour
     [SerializeField] ObjectiveType[] leverStates;
     [SerializeField] ObjectiveType[] pressureStates;
     [SerializeField] ObjectiveType[] crystalStates;
+    [SerializeField] int[] rotPillarStates;
 
     // Arrays of the gameobjects
     Lever[] levers;
     PressurePlate[] pressurePlates;
-    CrystalLight[] crystalLights; 
+    CrystalLight[] crystalLights;
+    RotatingPillar[] rotatingPillars;
 
     // True if objective is complete
     public bool complete = true;
@@ -25,6 +27,7 @@ public class ObjectivesManager : MonoBehaviour
         levers = GetComponentsInChildren<Lever>();
         pressurePlates = GetComponentsInChildren<PressurePlate>();
         crystalLights = GetComponentsInChildren<CrystalLight>();
+        rotatingPillars = GetComponentsInChildren<RotatingPillar>();
     }
 
     // Update is called once per frame
@@ -123,6 +126,36 @@ public class ObjectivesManager : MonoBehaviour
             }
 
             index++;
+
+        }
+
+        // Checks if each rotating pillar is in the correct state
+        index = 0;
+        foreach (RotatingPillar pillar in rotatingPillars) {
+            // Compares the gameobject's current state to what state it should be in
+            if (pillar.spritesIndex != rotPillarStates[index]) {
+                complete = false;
+                break;
+
+            }
+
+            index++;
+
+        }
+
+        // If pillars are in correct state
+        bool temp;
+        if (index == rotPillarStates.Length) {
+            temp = true;
+
+        } else {
+            temp = false;
+
+        }
+
+        // Tells each pillar that all pillars are in correct state
+        foreach (RotatingPillar pillar in rotatingPillars) {
+            pillar.complete = temp;
 
         }
 
