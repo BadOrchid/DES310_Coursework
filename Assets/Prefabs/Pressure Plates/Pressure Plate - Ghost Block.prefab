@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4713636051498797478}
   - component: {fileID: 371478610923479096}
   - component: {fileID: 422559529212956675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pressure Plate - Ghost Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.08, y: 3.15}
+    oldSize: {x: 5.11, y: 3.24}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

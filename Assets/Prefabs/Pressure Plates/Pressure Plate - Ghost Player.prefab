@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4713636051498797478}
   - component: {fileID: 371478610923479096}
   - component: {fileID: 422559529212956675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pressure Plate - Ghost Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
