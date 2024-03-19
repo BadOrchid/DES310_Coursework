@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class PushBlockDragger : MonoBehaviour
 {
     public string interactAxisName;
 
-    private bool isDragging = false;
+    [SerializeField] private bool isDragging = false;
+    [SerializeField] private bool isTouching = false;
+    [SerializeField] private bool isMatching = false;
 
     private Rigidbody2D pushBlockRB;
     private GameObject playerGameObject;
@@ -14,7 +17,35 @@ public class PushBlockDragger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerGameObject = GameObject.FindGameObjectWithTag("Player");
+        playerGameObject = this.gameObject;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(this.name + " is touching " + collision.name);
+
+        pushBlockRB = collision.GetComponent<Rigidbody2D>();
+
+        if ((this.name == "Human") && (collision.name == "Push Block - Human"))
+        {
+            isMatching = true;
+        }
+        else if ((this.name == "Ghost") && (collision.name == "Push Block - Ghost"))
+        {
+            isMatching = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+    
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log(this.name + " is no longer touching " + collision.name);
+        
+        isMatching = false;
     }
 
     // Update is called once per frame
@@ -31,20 +62,11 @@ public class PushBlockDragger : MonoBehaviour
             }
             else
             {
-                // Otherwise, check if player collider is touching a pushable block
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(playerGameObject.transform.position, 0.5f); // Adjust radius as needed
-
-                foreach (Collider2D collider in colliders)
+                if (isMatching)
                 {
-                    if (collider.CompareTag("PushBlock"))
-                    {
-                        // Start dragging the block
-                        isDragging = true;
-                        pushBlockRB = collider.GetComponent<Rigidbody2D>();
-                        break;
-                    }
+                    isDragging = true;
+                    Debug.Log("Player grabbed block");
                 }
-                Debug.Log("Player grabbed block");
             }
         }
 
