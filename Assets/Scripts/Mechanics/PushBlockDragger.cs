@@ -8,7 +8,6 @@ public class PushBlockDragger : MonoBehaviour
     public string interactAxisName;
 
     [SerializeField] private bool isDragging = false;
-    [SerializeField] private bool isTouching = false;
     [SerializeField] private bool isMatching = false;
 
     private Rigidbody2D pushBlockRB;
@@ -20,25 +19,20 @@ public class PushBlockDragger : MonoBehaviour
         playerGameObject = this.gameObject;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log(this.name + " is touching " + collision.name);
-
-        pushBlockRB = collision.GetComponent<Rigidbody2D>();
-
-        if ((this.name == "Human") && (collision.name == "Push Block - Human"))
-        {
-            isMatching = true;
-        }
-        else if ((this.name == "Ghost") && (collision.name == "Push Block - Ghost"))
-        {
-            isMatching = true;
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-    
+        Debug.Log(this.name + " is touching " + collision.gameObject.name);
+
+        pushBlockRB = collision.gameObject.GetComponent<Rigidbody2D>();
+
+        if ((this.tag == "Human") && (collision.gameObject.name == "Push Block - Human"))
+        {
+            isMatching = true;
+        }
+        else if ((this.tag == "Ghost") && (collision.gameObject.name == "Push Block - Ghost"))
+        {
+            isMatching = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -74,7 +68,7 @@ public class PushBlockDragger : MonoBehaviour
         if (isDragging && pushBlockRB != null)
         {
             // Calculate the position where the block should be dragged to (e.g., in front of the player)
-            Vector2 newPosition = playerGameObject.transform.position + (playerGameObject.transform.right * 1.5f); // Adjust 1.5f as needed
+            Vector2 newPosition = this.transform.position;
 
             // Move the block to the new position
             pushBlockRB.MovePosition(newPosition);
