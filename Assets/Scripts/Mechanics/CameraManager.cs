@@ -8,6 +8,8 @@ public class CameraManager : MonoBehaviour
 
     public float padding = 1.0f;
     public float zoomSpeed = 2.0f;
+    public float minOrthographicSize = 2.0f; // Minimum camera size
+    public float maxOrthographicSize = 10.0f; // Maximum camera size
 
     private Camera playerCam;
 
@@ -25,7 +27,9 @@ public class CameraManager : MonoBehaviour
         float distance = Vector3.Distance(playerPos[0].position, playerPos[1].position);
 
         // Smoothly adjust the camera size
-        playerCam.orthographicSize = Mathf.Lerp(playerCam.orthographicSize, distance, Time.deltaTime * zoomSpeed);
+        float targetOrthographicSize = Mathf.Lerp(playerCam.orthographicSize, distance, Time.deltaTime * zoomSpeed);
+        targetOrthographicSize = Mathf.Clamp(targetOrthographicSize, minOrthographicSize, maxOrthographicSize);
+        playerCam.orthographicSize = targetOrthographicSize;
 
         Vector3 cameraTargetPosition = centrePoint;
 
