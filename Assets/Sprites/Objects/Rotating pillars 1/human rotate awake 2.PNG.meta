@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c1891f13d517e245aa844cfc874eb72
+guid: 70ef5633b13d4d740b2c0cb907b25d5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1881642925744374141
-    second: Wall-Mirror-Interactive-Left.png_0
+      213: -7273257095232779238
+    second: human rotate awake 2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 960
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Mirror-Interactive-Left.png_0
+      name: human rotate awake 2_0
       rect:
         serializedVersion: 2
-        x: 230
-        y: 189
-        width: 570
-        height: 709
+        x: 274
+        y: 181
+        width: 485
+        height: 856
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38e31e87abf03e5e0800000000000000
-      internalID: -1881642925744374141
+      spriteID: a1c8f8e0533301b90800000000000000
+      internalID: -7273257095232779238
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wall-Mirror-Interactive-Left.png_0: -1881642925744374141
+      human rotate awake 2_0: -7273257095232779238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c1891f13d517e245aa844cfc874eb72
+guid: 271393cbc60461c419ddf014e5b98276
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1881642925744374141
-    second: Wall-Mirror-Interactive-Left.png_0
+      213: -8172540607931398721
+    second: env_df_wood_right_tt_1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wall-Mirror-Interactive-Left.png_0
+      name: env_df_wood_right_tt_1_0
       rect:
         serializedVersion: 2
-        x: 230
-        y: 189
-        width: 570
-        height: 709
+        x: 379
+        y: 34
+        width: 359
+        height: 637
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38e31e87abf03e5e0800000000000000
-      internalID: -1881642925744374141
+      spriteID: fb54bc7fd9d459e80800000000000000
+      internalID: -8172540607931398721
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wall-Mirror-Interactive-Left.png_0: -1881642925744374141
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
