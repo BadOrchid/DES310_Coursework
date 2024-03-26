@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      env_df_paint_right_t_1_0: 2320826264011753033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      env_corn_wg_right_1_0: -9105838602776569741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

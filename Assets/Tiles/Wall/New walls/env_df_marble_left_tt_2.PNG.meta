@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      env_df_marble_left_tt_2_0: -2361202964082078917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
