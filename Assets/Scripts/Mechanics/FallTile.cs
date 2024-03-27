@@ -7,84 +7,67 @@ using UnityEngine.Tilemaps;
 public class FallTile : MonoBehaviour
 {
 
-    Tilemap tilemap;
+    //Tilemap tilemap;
+
+    public bool isFilled = false;
+    SpriteRenderer spriteRenderer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        tilemap = GetComponent<Tilemap>();
-        
+        //tilemap = GetComponent<Tilemap>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spriteRenderer.enabled = isFilled;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        spriteRenderer.enabled = isFilled;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         //Debug.Log("Pitfall collision trigger");
 
-        TwoPlayerControls player = collision.GetComponent<TwoPlayerControls>();
+        if (!isFilled) {
 
-        if (player && collision.tag == "Human") {
-            Debug.Log("Human fell from a high place");
+            TwoPlayerControls player = collision.GetComponent<TwoPlayerControls>();
 
-        }
-        else if (collision.tag == "Block") {
-            Debug.Log("Block fell into place");
+            if (player && collision.tag == "Human") {
+                Debug.Log("Human fell from a high place");
 
-            Debug.Log(collision.bounds);
+            }
+            else if (collision.tag == "Block") {
+                Debug.Log("Block fell into place");
 
-            //float top = collision.offset.y + (collision.bounds.size.y / 2.0f);
-            //float bottom = collision.offset.y - (collision.bounds.size.y / 2.0f);
-            //float left = collision.offset.x - (collision.bounds.size.x / 2.0f);
-            //float right = collision.offset.x + (collision.bounds.size.x / 2.0f);
+                //Debug.Log(collision.bounds);
 
-            //Vector2 topLeft = collision.transform.TransformPoint(new Vector2(left, top));
-            //Vector2 topRight = collision.transform.TransformPoint(new Vector2(right, top));
-            //Vector2 bottomLeft = collision.transform.TransformPoint(new Vector2(left, bottom));
-            //Vector2 bottomRight = collision.transform.TransformPoint(new Vector2(right, bottom));
+                isFilled = true;
+                Destroy(collision.gameObject);
 
-            //TileBase tile;
-
-            //if (tilemap.HasTile(tilemap.layoutGrid.WorldToCell(topLeft))) {
-            //    tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(topLeft));
-            //    Debug.Log("Top Left");
-
-            //} else if (tilemap.HasTile(tilemap.layoutGrid.WorldToCell(topRight))) {
-            //    tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(topRight));
-            //    Debug.Log("Top Right");
-
-            //} else if (tilemap.HasTile(tilemap.layoutGrid.WorldToCell(bottomLeft))) {
-            //    tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(bottomLeft));
-            //    Debug.Log("Bottom Left");
-
-            //} else if (tilemap.HasTile(tilemap.layoutGrid.WorldToCell(bottomRight))) {
-            //    tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(bottomRight));
-            //    Debug.Log("Bottom Right");
-
-            //} else {
-            //    Debug.Log("None?");
-
-            //}
+            }
 
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        List<ContactPoint2D> contacts = new List<ContactPoint2D>();
-        collision.GetContacts(contacts);
+    //private void OnCollisionEnter2D(Collision2D collision) {
+    //    List<ContactPoint2D> contacts = new List<ContactPoint2D>();
+    //    collision.GetContacts(contacts);
 
-        TileBase tile;
+    //    TileBase tile;
 
-        foreach (ContactPoint2D contact in contacts) {
-            tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(contact.point));
-            Debug.Log(tile.GameObject().transform.position);
+    //    foreach (ContactPoint2D contact in contacts) {
+    //        tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(contact.point));
+    //        Debug.Log(tile.GameObject().transform.position);
 
-        }
+    //    }
 
-    }
+    //}
 
 }
