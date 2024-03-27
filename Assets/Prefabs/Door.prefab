@@ -49,9 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   playersPastDoor: 0
+  facingNextRoomAngle: 300
   objectivesManager: {fileID: 0}
-  player1Crossed: 0
-  player2Crossed: 0
 --- !u!68 &2116880485855440704
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -189,7 +188,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3715837183770171709}
   - component: {fileID: 4646634164802154871}
-  - component: {fileID: 3769701439311058543}
   m_Layer: 0
   m_Name: Door-Closed-Right-Flat_0
   m_TagString: Untagged
@@ -264,46 +262,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &3769701439311058543
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6234222492824682464}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.5536045, y: -2.6379259}
-  - {x: 1.5031983, y: -4.3853416}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0

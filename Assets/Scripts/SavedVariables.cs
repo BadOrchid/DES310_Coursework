@@ -7,7 +7,7 @@ public class SavedVariables : MonoBehaviour
 
     public static Vector2 humanPos;
     public static Vector2 ghostPos;
-    public static Door nextDoor;
+    public static int checkpointNum;
 
     static bool firstLoad = true;
 
@@ -31,17 +31,18 @@ public class SavedVariables : MonoBehaviour
 
             }
 
-            Invoke("OpenNextDoor", 1);
+            Checkpoint[] checkpoints = FindObjectsByType<Checkpoint>(FindObjectsSortMode.None);
 
+            foreach (Checkpoint checkpoint in checkpoints) {
 
-            Debug.Log("Loaded");
+                if (checkpoint.checkpointNum == checkpointNum) {
+                    checkpoint.secondDoor.isOpen = true;
+
+                }
+
+            }
 
         }
-
-    }
-
-    void OpenNextDoor() {
-        nextDoor.isOpen = true;
 
     }
 
