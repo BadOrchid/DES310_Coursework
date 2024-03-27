@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 public class TwoPlayerControls : MonoBehaviour
 {
@@ -18,6 +19,18 @@ public class TwoPlayerControls : MonoBehaviour
     [SerializeField] private string verAxisKeyboard;
 
     Animator animator;
+
+    private void Awake() {
+        if (type == PlayerType.Human) {
+            SavedVariables.humanPos = transform.position;
+
+        }
+        else {
+            SavedVariables.ghostPos = transform.position;
+
+        }
+
+    }
 
     // Start is called before the first frame update
     void Start()
