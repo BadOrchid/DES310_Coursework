@@ -11,8 +11,8 @@ public class Door : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
 
-    [SerializeField] bool isOpen = false;
-    [SerializeField] bool playersPastDoor = false;
+    [SerializeField] public bool isOpen = false;
+    [SerializeField] public bool playersPastDoor = false;
     [SerializeField] float facingNextRoomAngle = 300;
     [SerializeField] ObjectivesManager objectivesManager;
 
@@ -50,8 +50,11 @@ public class Door : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        if (objectivesManager == null) {
+            
+
         // If players are past door stop checking objectives
-        if (humanPassed && ghostPased) {
+        } else if (humanPassed && ghostPased) {
             playersPastDoor = true;
             isOpen = false;
 
