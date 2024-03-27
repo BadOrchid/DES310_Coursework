@@ -29,6 +29,8 @@ public class Door : MonoBehaviour {
     Vector2 ghostPos1;
 
     void Start() {
+        Debug.Log("I won...");
+
         closeRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         openRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
 

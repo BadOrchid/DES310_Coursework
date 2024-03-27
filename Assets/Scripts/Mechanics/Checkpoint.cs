@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    [SerializeField] public int checkpointNum;
     [SerializeField] Door firstDoor;
-    [SerializeField] Door secondDoor;
+    [SerializeField] public Door secondDoor;
     [SerializeField] float openAfter = 5.0f;
 
     TwoPlayerControls[] players;
@@ -44,7 +45,7 @@ public class Checkpoint : MonoBehaviour
 
         }
 
-        SavedVariables.nextDoor = secondDoor;
+        SavedVariables.checkpointNum = checkpointNum;
 
     }
 
