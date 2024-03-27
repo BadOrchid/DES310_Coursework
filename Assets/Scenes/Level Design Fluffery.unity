@@ -2039,17 +2039,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6890867883316927306, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
   m_PrefabInstance: {fileID: 338547384}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &338547386 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
-  m_PrefabInstance: {fileID: 338547384}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefbabffe003a994187787cb160d5048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &346900426
 GameObject:
   m_ObjectHideFlags: 0
@@ -6146,6 +6135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699702300}
   - component: {fileID: 699702299}
+  - component: {fileID: 699702301}
   m_Layer: 0
   m_Name: Hallway
   m_TagString: Untagged
@@ -6192,6 +6182,21 @@ Transform:
   - {fileID: 152614099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &699702301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699702298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e01c0890539144580b02a920bb032d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstDoor: {fileID: 1123356445}
+  secondDoor: {fileID: 1775870258}
+  openAfter: 5
 --- !u!1 &701761264
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,6 +9256,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1123356445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
+  m_PrefabInstance: {fileID: 42983835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe622415cc1c34899b498b8071d9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1138754903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11702,7 +11718,7 @@ PrefabInstance:
     - target: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
       propertyPath: objectivesManager
       value: 
-      objectReference: {fileID: 338547386}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17193,6 +17209,17 @@ Transform:
   - {fileID: 1959668163}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775870258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
+  m_PrefabInstance: {fileID: 1256903583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe622415cc1c34899b498b8071d9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783306071
 GameObject:
   m_ObjectHideFlags: 0
