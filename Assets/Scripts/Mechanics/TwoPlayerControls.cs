@@ -13,6 +13,10 @@ public class TwoPlayerControls : MonoBehaviour
 
     [SerializeField] public PlayerType type = PlayerType.None;
 
+    [SerializeField] bool useKeyboard = true;
+    [SerializeField] private string horAxisKeyboard;
+    [SerializeField] private string verAxisKeyboard;
+
     Animator animator;
 
     // Start is called before the first frame update
@@ -25,8 +29,19 @@ public class TwoPlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveHor = Input.GetAxis(horAxisName);
-        float moveVer = Input.GetAxis(verAxisName);
+
+        float moveHor;
+        float moveVer;
+
+        if (useKeyboard) {
+            moveHor = Input.GetAxis(horAxisKeyboard);
+            moveVer = Input.GetAxis(verAxisKeyboard);
+
+        } else {
+            moveHor = Input.GetAxis(horAxisName);
+            moveVer = Input.GetAxis(verAxisName);
+
+        }
 
         Vector2 movement = new Vector2(moveHor, moveVer);
         movement = Camera.main.transform.TransformDirection(movement);
