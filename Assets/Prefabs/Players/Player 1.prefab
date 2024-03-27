@@ -179,6 +179,9 @@ MonoBehaviour:
   verAxisName: Vertical
   interactAxisName: Player1Interact
   type: 1
+  useKeyboard: 1
+  horAxisKeyboard: Horizontal
+  verAxisKeyboard: Vertical
 --- !u!95 &6941172979358736616
 Animator:
   serializedVersion: 7

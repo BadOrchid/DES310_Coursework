@@ -637,6 +637,10 @@ PrefabInstance:
       value: Objectives
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: checkRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: leverStates.Array.size
       value: 0
       objectReference: {fileID: 0}

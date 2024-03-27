@@ -132,6 +132,9 @@ MonoBehaviour:
   verAxisName: Player2Vertical
   interactAxisName: Player2Interact
   type: 2
+  useKeyboard: 1
+  horAxisKeyboard: Player2KeyboardHorizontal
+  verAxisKeyboard: Player2KeyboardVertical
 --- !u!61 &1820576154855742666
 BoxCollider2D:
   m_ObjectHideFlags: 0

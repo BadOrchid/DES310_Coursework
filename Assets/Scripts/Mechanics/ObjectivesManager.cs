@@ -5,11 +5,15 @@ using UnityEngine;
 public class ObjectivesManager : MonoBehaviour
 {
 
+    [SerializeField] float checkRate = 0.5f;
+
     // Arrays of the state we want each object to be in
     [SerializeField] ObjectiveType[] leverStates;
     [SerializeField] ObjectiveType[] pressureStates;
     [SerializeField] ObjectiveType[] crystalStates;
     [SerializeField] int[] rotPillarStates;
+
+    
 
     // Arrays of the gameobjects
     Lever[] levers;
@@ -28,11 +32,18 @@ public class ObjectivesManager : MonoBehaviour
         pressurePlates = GetComponentsInChildren<PressurePlate>();
         crystalLights = GetComponentsInChildren<CrystalLight>();
         rotatingPillars = GetComponentsInChildren<RotatingPillar>();
+
+        InvokeRepeating("CheckObjectives", 2, checkRate);
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        
+    
+    }
+
+    void CheckObjectives() {
         // Sets complete to true, later to be set false if any object is not in the correct state
         complete = true;
 
@@ -148,7 +159,8 @@ public class ObjectivesManager : MonoBehaviour
         if (index == rotPillarStates.Length) {
             temp = true;
 
-        } else {
+        }
+        else {
             temp = false;
 
         }

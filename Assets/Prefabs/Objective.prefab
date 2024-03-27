@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefbabffe003a994187787cb160d5048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkRate: 0.5
   leverStates: 
   pressureStates: 
   crystalStates: 
