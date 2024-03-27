@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5a9bdeffdf17cd14781ca7bf8972bbba
+guid: bfb2284223927f7438518eb20b06289e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8566677862410041495
-    second: Ghost-Block_0
+      213: -4171025061725289082
+    second: interact_cp_1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 960
+  spritePixelsToUnits: 1080
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ghost-Block_0
+      name: interact_cp_1_0
       rect:
         serializedVersion: 2
-        x: 188
-        y: 144
-        width: 584
-        height: 673
+        x: 243
+        y: 50
+        width: 474
+        height: 969
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 967c8d15fdb0d1980800000000000000
-      internalID: -8566677862410041495
+      spriteID: 685cc9e2eca8d16c0800000000000000
+      internalID: -4171025061725289082
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ghost-Block_0: -8566677862410041495
+      interact_cp_1_0: -4171025061725289082
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
