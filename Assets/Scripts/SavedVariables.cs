@@ -31,11 +31,17 @@ public class SavedVariables : MonoBehaviour
 
             }
 
-            nextDoor.isOpen = true;
+            Invoke("OpenNextDoor", 1);
+
 
             Debug.Log("Loaded");
 
         }
+
+    }
+
+    void OpenNextDoor() {
+        nextDoor.isOpen = true;
 
     }
 

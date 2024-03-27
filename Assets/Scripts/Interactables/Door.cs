@@ -11,7 +11,7 @@ public class Door : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
 
-    [SerializeField] public bool isOpen = false;
+    public bool isOpen = false;
     [SerializeField] public bool playersPastDoor = false;
     [SerializeField] float facingNextRoomAngle = 300;
     [SerializeField] ObjectivesManager objectivesManager;
