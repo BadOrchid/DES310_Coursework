@@ -99,7 +99,7 @@ public class Door : MonoBehaviour {
         if (collision.GetComponent<TwoPlayerControls>()) {
             if (collision.tag == "Human") {
                 float angle = CalcAngle(humanPos1, collision.transform.position);
-                Debug.Log(angle);
+
                 if (angle < 90 && angle > -90) {
                     humanPassed = true;
 
