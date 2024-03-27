@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 937015ba297f2d949bd5809979501527
+guid: 467535bed95b29c469822fb05fdb846a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1795977601952325450
-    second: mis_footst_g_2_0
+      213: 994049568164069548
+    second: human rotate 2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mis_footst_g_2_0
+      name: human rotate 2_0
       rect:
         serializedVersion: 2
-        x: 286
-        y: 304
-        width: 392
-        height: 360
+        x: 274
+        y: 181
+        width: 485
+        height: 856
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4f1dec0d189ce810800000000000000
-      internalID: 1795977601952325450
+      spriteID: ca0cc87c0d29bcd00800000000000000
+      internalID: 994049568164069548
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mis_footst_g_2_0: 1795977601952325450
+      human rotate 2_0: 994049568164069548
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
