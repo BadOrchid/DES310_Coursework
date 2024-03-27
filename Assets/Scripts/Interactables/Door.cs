@@ -11,18 +11,29 @@ public class Door : MonoBehaviour {
     [SerializeField] bool isOpen = false;
     [SerializeField] ObjectivesManager objectivesManager;
 
+    SpriteRenderer openRenderer;
+    SpriteRenderer closeRenderer;
+
+    Collider2D openCollider;
+    Collider2D closeCollider;
+
     void Start() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
+
+        closeRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        openRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
+
+        closeCollider = transform.GetChild(0).GetComponent<Collider2D>();
+        //openCollider = transform.GetChild(1).GetComponent<Collider2D>();
+
 
         // Sets whether closed or open door is active
         if (isOpen) {
-            transform.GetChild(0).gameObject.SetActive(false);
-            transform.GetChild(1).gameObject.SetActive(true);
+            OpenDoor();
 
         }
         else {
-            transform.GetChild(0).gameObject.SetActive(true);
-            transform.GetChild(1).gameObject.SetActive(false);
+            CloseDoor();
 
         }
 
@@ -45,15 +56,31 @@ public class Door : MonoBehaviour {
 
         // Sets whether closed or open door is active
         if (isOpen) {
-            transform.GetChild(0).gameObject.SetActive(false);
-            transform.GetChild(1).gameObject.SetActive(true);
+            OpenDoor();
 
         }
         else {
-            transform.GetChild(0).gameObject.SetActive(true);
-            transform.GetChild(1).gameObject.SetActive(false);
+            CloseDoor();
 
         }
+
+    }
+
+    void OpenDoor() {
+        closeRenderer.enabled = false;
+        closeCollider.enabled = false;
+
+        openRenderer.enabled = true;
+        //openCollider.enabled = true;
+
+    }
+
+    void CloseDoor() {
+        closeRenderer.enabled = true;
+        closeCollider.enabled = true;
+
+        openRenderer.enabled = false;
+        //openCollider.enabled = false;
 
     }
 
