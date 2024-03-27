@@ -33,7 +33,7 @@ public class ObjectivesManager : MonoBehaviour
         crystalLights = GetComponentsInChildren<CrystalLight>();
         rotatingPillars = GetComponentsInChildren<RotatingPillar>();
 
-        InvokeRepeating("CheckObjectives", 2, checkRate);
+        InvokeRepeating("CheckObjectives", 1, checkRate);
 
     }
 
