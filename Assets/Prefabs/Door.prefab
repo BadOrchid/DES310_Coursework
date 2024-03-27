@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2546778238866415997}
   - component: {fileID: 7122831747272047121}
+  - component: {fileID: 2116880485855440704}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -47,7 +48,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
+  playersPastDoor: 0
   objectivesManager: {fileID: 0}
+  player1Crossed: 0
+  player2Crossed: 0
+--- !u!68 &2116880485855440704
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066021737153931347}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.18828326, y: -0.31475782}
+  - {x: 0.17763934, y: -0.5276375}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &6007954312480384829
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3715837183770171709}
   - component: {fileID: 4646634164802154871}
-  - component: {fileID: 3084026521101666899}
+  - component: {fileID: 3769701439311058543}
   m_Layer: 0
   m_Name: Door-Closed-Right-Flat_0
   m_TagString: Untagged
@@ -217,14 +264,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3084026521101666899
-PolygonCollider2D:
+--- !u!68 &3769701439311058543
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234222492824682464}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -252,55 +299,11 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.04, y: 8.73}
-    newSize: {x: 3.04, y: 8.73}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_EdgeRadius: 0
   m_Points:
-    m_Paths:
-    - - {x: 1.3299999, y: 2.7649999}
-      - {x: 0.71, y: 3.125}
-      - {x: 0.65999997, y: 3.155}
-      - {x: 0.42, y: 3.2949998}
-      - {x: 0.049999997, y: 3.5049999}
-      - {x: -0.17, y: 3.635}
-      - {x: -0.59, y: 3.875}
-      - {x: -0.81, y: 4.005}
-      - {x: -1.1, y: 4.165}
-      - {x: -1.22, y: 4.235}
-      - {x: -1.38, y: 4.335}
-      - {x: -1.4399999, y: 4.365}
-      - {x: -1.48, y: 4.365}
-      - {x: -1.52, y: 4.325}
-      - {x: -1.52, y: -2.665}
-      - {x: -1.4499999, y: -2.715}
-      - {x: -1.4, y: -2.745}
-      - {x: -1.2099999, y: -2.855}
-      - {x: -1.06, y: -2.935}
-      - {x: -0.96999997, y: -2.995}
-      - {x: -0.69, y: -3.155}
-      - {x: -0.57, y: -3.225}
-      - {x: -0.42999998, y: -3.3049998}
-      - {x: -0.32, y: -3.375}
-      - {x: -0.17, y: -3.455}
-      - {x: 0.02, y: -3.5649998}
-      - {x: 0.14, y: -3.635}
-      - {x: 0.22999999, y: -3.685}
-      - {x: 0.38, y: -3.7749999}
-      - {x: 0.42, y: -3.7949998}
-      - {x: 0.59, y: -3.895}
-      - {x: 0.79999995, y: -4.015}
-      - {x: 0.98999995, y: -4.125}
-      - {x: 1.11, y: -4.1949997}
-      - {x: 1.3199999, y: -4.315}
-      - {x: 1.41, y: -4.365}
-      - {x: 1.48, y: -4.365}
-      - {x: 1.52, y: -4.335}
-      - {x: 1.52, y: 2.625}
-      - {x: 1.48, y: 2.675}
-  m_UseDelaunayMesh: 0
+  - {x: -1.5536045, y: -2.6379259}
+  - {x: 1.5031983, y: -4.3853416}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
