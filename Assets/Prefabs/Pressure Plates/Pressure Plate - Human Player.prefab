@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 1
-  plateType: 1
+  plateType: 2
   on: 0
   offSprite: {fileID: -1507860899442358339, guid: f8207392fe1bea8438f810a9c6250b6e, type: 3}
   onSprite: {fileID: 1963841771417796940, guid: ec4619571bc8cb542a76d1c56203acd2, type: 3}
@@ -116,7 +116,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
