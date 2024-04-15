@@ -50,7 +50,7 @@ public class Door : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (objectivesManagers == null) {
+        if (objectivesManagers.Length == 0) {
             
 
         // If players are past door stop checking objectives
@@ -64,8 +64,8 @@ public class Door : MonoBehaviour {
 
             // If statements split up for if in future we want to check every x frames and change active door only when isOpen changes
 
-            // Checks if all Objectives are complete
             isOpen = true;
+            // Checks if all Objectives are complete
             foreach (ObjectivesManager manager in objectivesManagers) {
                 if (!manager.complete) {
                     isOpen = false;

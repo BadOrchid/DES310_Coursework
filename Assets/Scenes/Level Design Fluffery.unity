@@ -9428,6 +9428,10 @@ PrefabInstance:
       value: Objective - Study Plates
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: isToggle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: pressureStates.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9459,6 +9463,14 @@ PrefabInstance:
       propertyPath: 'rotPillarStates.Array.data[3]'
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: neededObjectivesManagers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: 'neededObjectivesManagers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1372006138}
     - target: {fileID: 6890867883316927306, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
