@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ani_pull_right_p1_0012_0: 6883312845378300442
+      ani_pull_right_p1_0012_1: -305791557813674042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -320,7 +320,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ani_pull_left_p2_0003_0: 2898856533851004249
+      ani_pull_left_p2_0003_1: 6634695325088755394
+      ani_pull_left_p2_0003_2: -3041705304851956332
+      ani_pull_left_p2_0003_3: 4698321160263648132
+      ani_pull_left_p2_0003_4: 5205160331474966253
+      ani_pull_left_p2_0003_5: 5225299344347705788
+      ani_pull_left_p2_0003_6: 3021893075566990623
+      ani_pull_left_p2_0003_7: -5356705489589764459
+      ani_pull_left_p2_0003_8: 8627008035596243059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chara_right_seated_p1_0: 8566841014889883534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

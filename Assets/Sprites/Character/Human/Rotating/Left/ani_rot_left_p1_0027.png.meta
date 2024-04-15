@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ani_rot_left_p1_0027_0: 3916969050727047344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
