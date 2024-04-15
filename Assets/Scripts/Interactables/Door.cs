@@ -14,7 +14,7 @@ public class Door : MonoBehaviour {
     public bool isOpen = false;
     [SerializeField] public bool playersPastDoor = false;
     [SerializeField] float facingNextRoomAngle = 300;
-    [SerializeField] ObjectivesManager objectivesManager;
+    [SerializeField] ObjectivesManager[] objectivesManagers;
 
     SpriteRenderer openRenderer;
     SpriteRenderer closeRenderer;
@@ -50,7 +50,7 @@ public class Door : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (objectivesManager == null) {
+        if (objectivesManagers == null) {
             
 
         // If players are past door stop checking objectives
@@ -64,13 +64,14 @@ public class Door : MonoBehaviour {
 
             // If statements split up for if in future we want to check every x frames and change active door only when isOpen changes
 
-            // Checks if Objective is complete
-            if (objectivesManager.complete) {
-                isOpen = true;
+            // Checks if all Objectives are complete
+            isOpen = true;
+            foreach (ObjectivesManager manager in objectivesManagers) {
+                if (!manager.complete) {
+                    isOpen = false;
+                    break;
 
-            }
-            else {
-                isOpen = false;
+                }
 
             }
 
