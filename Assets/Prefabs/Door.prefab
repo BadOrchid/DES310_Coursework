@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4593478993229425671}
   - component: {fileID: 5569802295704321462}
   m_Layer: 0
-  m_Name: Door-Open-Right-Flat_0
+  m_Name: Door Open Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 3715837183770171709}
   - component: {fileID: 4646634164802154871}
   m_Layer: 0
-  m_Name: Door-Closed-Right-Flat_0
+  m_Name: Door Closed Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
