@@ -20,7 +20,7 @@ public class DontDestroyOnLoad : MonoBehaviour
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(myTag);
         if (gameObjects.Length > 1) {
             Destroy(gameObject);
-            
+
         }
         else {
             DontDestroyOnLoad(gameObject);

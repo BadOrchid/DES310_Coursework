@@ -14283,9 +14283,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 575143612940654633, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
+      propertyPath: tag
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 575143612940654633, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
+      propertyPath: myTag
+      value: Music
+      objectReference: {fileID: 0}
     - target: {fileID: 3753531132393299145, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
       propertyPath: m_Name
       value: MusicPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753531132393299145, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
+      propertyPath: m_TagString
+      value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 5564043693931031467, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
       propertyPath: m_LocalPosition.x
