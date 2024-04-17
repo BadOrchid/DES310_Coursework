@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3899048247915259088}
   m_Layer: 0
   m_Name: AmbientSounds
-  m_TagString: Untagged
+  m_TagString: AmbientSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf120399f05ce64e85c42457c37802f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTag: 
+  myTag: AmbientSound
 --- !u!114 &3899048247915259088
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14524,6 +14524,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 57951905799036688, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
+      propertyPath: playMusic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3753531132393299145, guid: 55747f19e16ec0c49a50f967f06c38cf, type: 3}
       propertyPath: m_Name
       value: MusicPlayer
@@ -31255,6 +31259,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
+      propertyPath: volumes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
+      propertyPath: 'volumes.Array.data[0]'
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
+      propertyPath: 'volumes.Array.data[1]'
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
+      propertyPath: 'volumes.Array.data[2]'
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
+      propertyPath: 'volumes.Array.data[3]'
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4583421802070673760, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
       propertyPath: m_Name
       value: AmbientSounds
