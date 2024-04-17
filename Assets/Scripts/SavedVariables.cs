@@ -36,7 +36,7 @@ public class SavedVariables : MonoBehaviour
             foreach (Checkpoint checkpoint in checkpoints) {
 
                 if (checkpoint.checkpointNum == checkpointNum) {
-                    checkpoint.secondDoor.isOpen = true;
+                    checkpoint.secondDoor.SetIsOpen(true);
 
                 }
 

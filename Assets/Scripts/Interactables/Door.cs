@@ -6,20 +6,24 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Door : MonoBehaviour {
-    //public Sprite openSprite;
-    //public Sprite closeSprite;
-
-    SpriteRenderer spriteRenderer;
-
-    public bool isOpen = false;
     [SerializeField] public bool playersPastDoor = false;
     [SerializeField] float facingNextRoomAngle = 300;
     [SerializeField] ObjectivesManager[] objectivesManagers;
+
+    [Range(0, 1)][SerializeField] float sfxOpenVolume;
+    [Range(0, 1)][SerializeField] float sfxCloseVolume;
+    [SerializeField] AudioClip sfxOpen;
+    [SerializeField] AudioClip sfxClose;
 
     SpriteRenderer openRenderer;
     SpriteRenderer closeRenderer;
 
     EdgeCollider2D doorCollider;
+    AudioSource audioSource;
+
+    bool isOpen = false;
+    bool lastState;
+
 
     bool humanPassed = false;
     bool ghostPased = false;
@@ -34,6 +38,7 @@ public class Door : MonoBehaviour {
 
         doorCollider = GetComponent<EdgeCollider2D>();
 
+        audioSource = GetComponent<AudioSource>();
 
         // Sets whether closed or open door is active
         if (isOpen) {
@@ -44,6 +49,8 @@ public class Door : MonoBehaviour {
             CloseDoor();
 
         }
+
+        lastState = isOpen;
 
     }
 
@@ -56,6 +63,7 @@ public class Door : MonoBehaviour {
         // If players are past door stop checking objectives
         } else if (humanPassed && ghostPased) {
             playersPastDoor = true;
+            lastState = isOpen;
             isOpen = false;
 
 
@@ -64,6 +72,7 @@ public class Door : MonoBehaviour {
 
             // If statements split up for if in future we want to check every x frames and change active door only when isOpen changes
 
+            lastState = isOpen;
             isOpen = true;
             // Checks if all Objectives are complete
             foreach (ObjectivesManager manager in objectivesManagers) {
@@ -77,7 +86,10 @@ public class Door : MonoBehaviour {
 
         }
 
-        OpenOrCloseDoor();
+        if (lastState != isOpen) {
+            OpenOrCloseDoor();
+
+        }
 
     }
 
@@ -141,13 +153,21 @@ public class Door : MonoBehaviour {
         closeRenderer.enabled = false;
         openRenderer.enabled = true;
 
+        audioSource.clip = sfxOpen;
+        audioSource.volume = sfxOpenVolume;
+        audioSource.Play();
+
     }
 
     void CloseDoor() {
         doorCollider.isTrigger = false;
 
         closeRenderer.enabled = true;
-        openRenderer.enabled = false;      
+        openRenderer.enabled = false;
+
+        audioSource.clip = sfxClose;
+        audioSource.volume = sfxCloseVolume;
+        audioSource.Play();
 
     }
 
@@ -159,6 +179,11 @@ public class Door : MonoBehaviour {
             CloseDoor();
 
         }
+
+    }
+
+    public void SetIsOpen(bool isOpen) {
+        this.isOpen = isOpen;
 
     }
 

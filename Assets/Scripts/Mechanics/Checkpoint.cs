@@ -50,7 +50,7 @@ public class Checkpoint : MonoBehaviour
     }
 
     void OpenSecondDoor() {
-        secondDoor.isOpen = true;
+        secondDoor.SetIsOpen(true);
 
     }
 
