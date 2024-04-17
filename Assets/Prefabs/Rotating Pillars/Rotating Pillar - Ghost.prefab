@@ -103,6 +103,6 @@ MonoBehaviour:
   - {fileID: 8633583918076603648, guid: ba4553d7113e09044b4b557614bc5b87, type: 3}
   completeSprite: {fileID: 0}
   radius: 0.7
-  type: 0
+  type: 2
   spritesIndex: 0
   complete: 0

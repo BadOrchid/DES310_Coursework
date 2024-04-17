@@ -18,7 +18,11 @@ public class TwoPlayerControls : MonoBehaviour
     [SerializeField] private string horAxisKeyboard;
     [SerializeField] private string verAxisKeyboard;
 
+    [Range(0, 1)][SerializeField] float playerStepsVolume = 0.3f;
+    [SerializeField] AudioClip sfxPlayerSteps;
+
     Animator animator;
+    AudioSource audioSource;
 
     private void Awake() {
         if (type == PlayerType.Human) {
@@ -37,6 +41,11 @@ public class TwoPlayerControls : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.clip = sfxPlayerSteps;
+        audioSource.volume = playerStepsVolume;
+
     }
 
     // Update is called once per frame
@@ -78,7 +87,20 @@ public class TwoPlayerControls : MonoBehaviour
 
         }
 
-        if(Input.GetButtonDown(interactAxisName))
+        // If player is moving, play step SFX
+        if (playerRB.velocity.magnitude > 0 || playerRB.velocity.magnitude < 0) {
+            if (!audioSource.isPlaying) {
+                audioSource.Play();
+
+            }
+
+        }
+        else
+        {
+            audioSource.Stop();
+        }
+
+        if (Input.GetButtonDown(interactAxisName))
         {
             Debug.Log(this.name + "Interaction Recieved");
         }

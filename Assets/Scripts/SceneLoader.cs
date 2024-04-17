@@ -17,11 +17,17 @@ public class SceneLoader : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.G)) {
-            SceneManager.LoadScene("Level Design Fluffery");
+            ReloadScene();
 
 
 
         }
 
     }
+
+    static void ReloadScene() {
+        SceneManager.LoadScene("Level Design Fluffery");
+
+    }
+
 }
