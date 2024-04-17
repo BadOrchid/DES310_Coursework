@@ -5,7 +5,7 @@ using UnityEngine;
 public class AmbientSound : MonoBehaviour
 {
 
-    [SerializeField] bool playSound;
+    [SerializeField] bool playSound = true;
     [SerializeField] AudioClip[] sounds;
     [Range(0, 1)][SerializeField] float[] volumes;
 
@@ -18,7 +18,7 @@ public class AmbientSound : MonoBehaviour
 
         if (playSound) {
             InvokeRepeating("Storm", 5, 20);
-            InvokeRepeating("Rain", 5, sounds[0].length);
+            InvokeRepeating("Rain", 2.5f, sounds[0].length);
 
         }
 

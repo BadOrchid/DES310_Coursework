@@ -31260,6 +31260,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
+      propertyPath: playSound
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899048247915259088, guid: 91d16abf8d141a7459ad9c62ccb98a7b, type: 3}
       propertyPath: volumes.Array.size
       value: 4
       objectReference: {fileID: 0}

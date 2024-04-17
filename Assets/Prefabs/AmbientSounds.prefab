@@ -155,8 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad584a6284ed67449cb5aea7d34cce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSound: 1
   sounds:
   - {fileID: 8300000, guid: c6ef71b6782434c479f0d7991812a9d3, type: 3}
   - {fileID: 8300000, guid: 51b1063144436b04f87e979e7299b5db, type: 3}
   - {fileID: 8300000, guid: ddd88b803dc0bec448a4d018dcf773a2, type: 3}
   - {fileID: 8300000, guid: df1565832ec554843bc46db385d80cf3, type: 3}
+  volumes: []
