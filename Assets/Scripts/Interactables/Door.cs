@@ -183,6 +183,7 @@ public class Door : MonoBehaviour {
     }
 
     public void SetIsOpen(bool isOpen) {
+        lastState = isOpen;
         this.isOpen = isOpen;
 
     }

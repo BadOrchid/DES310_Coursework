@@ -20,6 +20,8 @@ public class PressurePlate : MonoBehaviour
 
     AudioSource audioSource;
 
+    bool lastState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,13 @@ public class PressurePlate : MonoBehaviour
 
         }
 
+        lastState = on;
+
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
     }
 
     void ChangeSprite(Sprite sprite) {
@@ -55,7 +59,14 @@ public class PressurePlate : MonoBehaviour
         if ((plateType == PlateType.Block || plateType == PlateType.Either) && collision.tag == "Block") {
             PlayerType otherType = collision.GetComponent<PushBlock>().type;
             if (otherType == playerType || playerType == PlayerType.None) {
+                lastState = on;
                 on = true;
+
+                if (lastState != on) {
+                    audioSource.Play();
+
+                }
+
                 ChangeSprite(onSprite);
                 Debug.Log(this.name + " Pressed by " + collision.tag);
 
@@ -75,7 +86,9 @@ public class PressurePlate : MonoBehaviour
             // Checks what kind of player
             // This if statement works but isnt great, as it checks for Ghost and Human tags that might be used on moving non player objects in the future
             if ((collision.tag == "Human" && (playerType == PlayerType.Human || playerType == PlayerType.None)) || (collision.tag == "Ghost" && (playerType == PlayerType.Ghost || playerType == PlayerType.None))) {
+                lastState = on;
                 on = true;
+
                 ChangeSprite(onSprite);
                 Debug.Log(this.name + " Pressed by " + collision.tag);
 
@@ -90,6 +103,7 @@ public class PressurePlate : MonoBehaviour
         if ((plateType == PlateType.Block || plateType == PlateType.Either) && collision.tag == "Block") {
             PlayerType otherType = collision.GetComponent<PushBlock>().type;
             if (otherType == playerType || playerType == PlayerType.None) {
+                lastState = on;
                 on = false;
                 ChangeSprite(offSprite);
                 Debug.Log("Unpressed by " + collision.tag);
@@ -99,6 +113,7 @@ public class PressurePlate : MonoBehaviour
         // Else checks if pressure plate has been unpressed the Player
         } else if (plateType == PlateType.Player || plateType == PlateType.Either) {
             if ((collision.tag == "Human" && (playerType == PlayerType.Human || playerType == PlayerType.None)) || (collision.tag == "Ghost" && (playerType == PlayerType.Ghost || playerType == PlayerType.None))) {
+                lastState = on;
                 on = false;
                 ChangeSprite(offSprite);
                 Debug.Log("Unpressed by " + collision.tag);

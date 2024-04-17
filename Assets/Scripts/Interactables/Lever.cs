@@ -61,7 +61,7 @@ public class Lever : MonoBehaviour
                 
                 animator.SetBool("on", !on);
 
-                PlaySfx();
+                audioSource.Play();
 
                 Debug.Log("Human flipped " + this.name);
 
@@ -75,7 +75,7 @@ public class Lever : MonoBehaviour
 
                 animator.SetBool("on", !on);
 
-                PlaySfx();
+                audioSource.Play();
 
                 Debug.Log("Ghost flipped " + this.name);
 
@@ -87,11 +87,6 @@ public class Lever : MonoBehaviour
 
     void FlipLever() {
         on ^= true;
-
-    }
-
-    void PlaySfx() {
-        audioSource.Play();
 
     }
 
