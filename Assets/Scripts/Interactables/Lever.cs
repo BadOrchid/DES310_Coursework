@@ -13,6 +13,8 @@ public class Lever : MonoBehaviour
     [Range(0, 1)][SerializeField] float sfxVolume = 1.0f;
     [SerializeField] AudioClip sfx;
 
+    public bool freeze = false;
+
     PlayerType colliderType;
 
     Animator animator;
@@ -35,12 +37,18 @@ public class Lever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (playerInRange) {
-            UserInput();
+        if (!freeze) {
+            if (playerInRange) {
+                UserInput();
+
+            }
+
+            animator.SetBool("playerInRange", playerInRange);
+
+        } else {
+            animator.SetBool("playerInRange", false);
 
         }
-
-        animator.SetBool("playerInRange", playerInRange);
 
     }
 

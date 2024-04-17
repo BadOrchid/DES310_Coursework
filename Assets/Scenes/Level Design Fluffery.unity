@@ -283,6 +283,14 @@ PrefabInstance:
       value: Objective - Library
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: isToggle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: freezeLeversOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: leverStates.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -9869,6 +9877,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: freezeOnComplete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: pressureStates.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -11684,6 +11696,10 @@ PrefabInstance:
     - target: {fileID: 1381322756218810740, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: m_Name
       value: Objective - Starter Room 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: freezeLeversOnComplete
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: leverStates.Array.size
@@ -20169,6 +20185,10 @@ PrefabInstance:
     - target: {fileID: 1381322756218810740, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: m_Name
       value: Objective - Starter Room 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: isToggle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: pressureStates.Array.size

@@ -7,7 +7,8 @@ public class ObjectivesManager : MonoBehaviour
 {
 
     [SerializeField] float checkRate = 0.5f;
-    [SerializeField] bool isToggle = false;
+    [SerializeField] bool freezeOnComplete = false;
+    [SerializeField] bool freezeLeversOnComplete = false;
     [SerializeField] ObjectivesManager[] neededObjectivesManagers;
 
     // Arrays of the state we want each object to be in
@@ -200,10 +201,18 @@ public class ObjectivesManager : MonoBehaviour
 
             // Objectives Completed
             if (complete) {
+                if (freezeLeversOnComplete) {
+                    foreach (Lever lever in levers) {
+                        lever.freeze = true;
+
+                    }
+
+                }
+
                 Debug.Log(this.name + " completed");
 
                 // Stops checking objectives once completed and is set to toggle
-                if (isToggle) {
+                if (freezeOnComplete) {
                     CancelInvoke("CheckObjectives");
 
                 }

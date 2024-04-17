@@ -13,12 +13,21 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] Sprite offSprite;
     [SerializeField] Sprite onSprite;
 
+    [Range(0, 1)][SerializeField] float sfxVolume = 1.0f;
+    [SerializeField] AudioClip sfx;
+
     SpriteRenderer spriteRenderer;
+
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.clip = sfx;
+        audioSource.volume = sfxVolume;
 
         if (on) {
             onSprite = spriteRenderer.sprite;
