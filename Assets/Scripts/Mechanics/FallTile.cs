@@ -11,6 +11,7 @@ public class FallTile : MonoBehaviour
 
     public bool isFilled = false;
     SpriteRenderer spriteRenderer;
+    [SerializeField] Failstates failstate;
 
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class FallTile : MonoBehaviour
 
             if (player && collision.tag == "Human") {
                 Debug.Log("Human fell from a high place");
+                failstate.humanFail = true;
 
             }
             else if (collision.tag == "Block") {

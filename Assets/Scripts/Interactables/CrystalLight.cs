@@ -274,6 +274,7 @@ public class CrystalLight : MonoBehaviour {
     [SerializeField] public bool crystalBallHit = false;
     [SerializeField] float rayLength = 5.0f;
     LineRenderer lineRenderer;
+    [SerializeField] Failstates failstate;
 
     List<int> crystalPodiumIds;
     List<Vector3> positions;
@@ -347,6 +348,7 @@ public class CrystalLight : MonoBehaviour {
 
         } else if (hit.collider.tag == "Ghost" && hit.collider.GetComponent<TwoPlayerControls>()) {
             Debug.Log("Ghost died to light beam");
+            failstate.ghostFail = true;
 
         } else {
             crystalBallHit = false;
