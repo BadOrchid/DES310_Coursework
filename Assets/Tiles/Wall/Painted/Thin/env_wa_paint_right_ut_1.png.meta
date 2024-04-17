@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      env_wa_paint_right_ut_1_0: 3662709721438060418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
