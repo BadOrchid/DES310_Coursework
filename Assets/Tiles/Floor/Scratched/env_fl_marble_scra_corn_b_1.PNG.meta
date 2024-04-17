@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1689e12be5f127241b5227e87fb66493
+guid: a0e322c1d6c5edb4db5d49cbb64ae838
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8893769051514256893
-    second: Human-Block_0
+      213: 9076668660493385441
+    second: env_fl_marble_scra_corn_b_1_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Human-Block_0
+      name: env_fl_marble_scra_corn_b_1_0
       rect:
         serializedVersion: 2
-        x: 188
-        y: 144
-        width: 584
-        height: 673
+        x: 0
+        y: 145
+        width: 960
+        height: 667
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 302412a3b2cf29480800000000000000
-      internalID: -8893769051514256893
+      spriteID: 1eef0a47e0ec6fd70800000000000000
+      internalID: 9076668660493385441
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Human-Block_0: -8893769051514256893
+      env_fl_marble_scra_corn_b_1_0: 9076668660493385441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
