@@ -265,6 +265,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -277,7 +278,9 @@ public class CrystalLight : MonoBehaviour {
 
     List<int> crystalPodiumIds;
     List<Vector3> positions;
-    
+
+    SpriteRenderer spriteRenderer;
+
     int tempCounter;
 
     // Start is called before the first frame update
@@ -286,6 +289,7 @@ public class CrystalLight : MonoBehaviour {
         lineRenderer = GetComponent<LineRenderer>();
         crystalPodiumIds = new List<int>();
         positions = new List<Vector3>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -296,9 +300,18 @@ public class CrystalLight : MonoBehaviour {
         crystalPodiumIds.Clear();
         positions.Clear();
 
-        positions.Add(transform.position);
+        
+        // Should be circle so length = width
+        float radius = spriteRenderer.sprite.bounds.extents.y;
+        radius *= transform.localScale.y;
 
-        Ray ray = new Ray(transform.position, transform.up);
+        Debug.Log(radius);
+
+        Vector3 offset = new Vector3(0, radius, 0);
+
+        positions.Add(transform.position + transform.rotation * offset);
+
+        Ray ray = new Ray(transform.position + transform.rotation * offset, transform.up);
 
         Debug.DrawRay(ray.origin, ray.direction * rayLength);
 
