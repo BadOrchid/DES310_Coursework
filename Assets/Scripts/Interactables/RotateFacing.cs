@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class RotateObject : MonoBehaviour
-{
+public class RotateFacing : MonoBehaviour {
 
+    [SerializeField] float faceByDefault = 0.0f;
     [SerializeField] float radius = 0.5f;
     [SerializeField] PlayerType type = PlayerType.None;
 
@@ -14,27 +14,21 @@ public class RotateObject : MonoBehaviour
     int[] angles = { 0, 60, 90, 120, 180, 240, 270, 300 };
     int angleIndex = 0;
 
-    Quaternion rotation;
+    public Quaternion rotation;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        rotation = Quaternion.Euler(0, 0, faceByDefault);
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
         if (PlayerInRange()) {
             UserInput();
 
         }
-
-        // Rotates object
-        rotation = Quaternion.Euler(0, 0, angles[angleIndex]);
-        transform.rotation = rotation;
-
 
     }
 
@@ -79,10 +73,14 @@ public class RotateObject : MonoBehaviour
 
                 }
 
+                // Calculate Rotation
+                rotation = Quaternion.Euler(0, 0, angles[angleIndex]);
+
             }
 
-        // If Player is Ghost
-        } else if (colliderType == PlayerType.Ghost) {
+            // If Player is Ghost
+        }
+        else if (colliderType == PlayerType.Ghost) {
 
             // Move to next angle when Interact is pressed
             if (Input.GetButtonDown("Player2Interact")) {
@@ -92,6 +90,9 @@ public class RotateObject : MonoBehaviour
                     angleIndex = 0;
 
                 }
+
+                // Calculate Rotation
+                rotation = Quaternion.Euler(0, 0, angles[angleIndex]);
 
             }
 

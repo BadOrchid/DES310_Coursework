@@ -305,13 +305,12 @@ public class CrystalLight : MonoBehaviour {
         float radius = spriteRenderer.sprite.bounds.extents.y;
         radius *= transform.localScale.y;
 
-        Debug.Log(radius);
-
+        // Offsets ray to edge of Crystal Light
         Vector3 offset = new Vector3(0, radius, 0);
 
-        positions.Add(transform.position + transform.rotation * offset);
-
         Ray ray = new Ray(transform.position + transform.rotation * offset, transform.up);
+
+        positions.Add(ray.origin);
 
         Debug.DrawRay(ray.origin, ray.direction * rayLength);
 
@@ -334,15 +333,29 @@ public class CrystalLight : MonoBehaviour {
 
         // Checks if it hit a Crystal Podium and that it hasn't previously been hit in the same frame
         if (hit.collider.tag == "CrystalPodium" && !crystalPodiumIds.Contains(hit.collider.GetInstanceID())) {
+            Quaternion rotation = hit.transform.GetComponent<RotateFacing>().rotation;
 
             // Adds crystal podium to Id's
             crystalPodiumIds.Add(hit.collider.GetInstanceID());
 
-            // Adds position of crystal podium
-            positions.Add(hit.transform.position);
+            // Offsets ray origin to collider origin
+            Vector3 colliderOffset = new Vector3(hit.collider.offset.x * hit.transform.localScale.x, hit.collider.offset.y * hit.transform.localScale.y, 0);
 
-            Ray ray = new Ray(hit.transform.rotation * new Vector3(0, 0.5f, 0) + hit.transform.position, Quaternion.Euler(0, 0, 90) * Vector3.Cross(hit.transform.up, hit.transform.forward));
+            // Adds position of colliders origin
+            positions.Add(hit.transform.position + colliderOffset);
+
+            // Should be circle so length = width
+            float radius = hit.collider.bounds.extents.y;
+            radius *= hit.transform.localScale.y;
+
+            // Offsets ray to edge of Crystal Light
+            Vector3 offset = new Vector3(0, radius, 0);
+
+            Ray ray = new Ray(hit.transform.position + colliderOffset + rotation * offset, rotation * hit.transform.up);
             Debug.DrawRay(ray.origin, ray.direction * rayLength);
+
+            // Adds position of crystal podium
+            positions.Add(ray.origin);
 
             hit = Physics2D.Raycast(ray.origin, ray.direction);
 
