@@ -8,6 +8,8 @@ public class RotatingPillar : MonoBehaviour
     [SerializeField] Sprite[] sprites;
     [SerializeField] Sprite completeSprite;
 
+    [SerializeField] public bool waitForAllComplete = false;
+
     [SerializeField] float radius = 0.7f;
     [SerializeField] PlayerType type = PlayerType.None;
 

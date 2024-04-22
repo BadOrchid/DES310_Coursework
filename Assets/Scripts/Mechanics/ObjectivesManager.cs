@@ -170,11 +170,21 @@ public class ObjectivesManager : MonoBehaviour
 
             // Checks if each rotating pillar is in the correct state
             index = 0;
+            bool temp = true;
             foreach (RotatingPillar pillar in rotatingPillars) {
                 // Compares the gameobject's current state to what state it should be in
-                if (pillar.spritesIndex != rotPillarStates[index]) {
-                    complete = false;
-                    break;
+                if (pillar.spritesIndex == rotPillarStates[index]) {
+                    if (!pillar.waitForAllComplete) {
+                        pillar.complete = true;
+                        Debug.Log(index + " Complete?");
+
+                    }
+
+                } else {
+                    temp = false;
+                    pillar.complete = false;
+                    
+                    Debug.Log(index + " Not Complete");
 
                 }
 
@@ -182,22 +192,18 @@ public class ObjectivesManager : MonoBehaviour
 
             }
 
-            // If pillars are in correct state
-            bool temp;
-            if (index == rotPillarStates.Length) {
-                temp = true;
+            // If all pillars are completed, set all pillars to completed
+            if (temp) {
+                foreach (RotatingPillar pillar in rotatingPillars) {
+                    pillar.complete = true;
+
+                }
+
+            } else {
+                complete = false;
 
             }
-            else {
-                temp = false;
 
-            }
-
-            // Tells each pillar that all pillars are in correct state
-            foreach (RotatingPillar pillar in rotatingPillars) {
-                pillar.complete = temp;
-
-            }
 
             // Objectives Completed
             if (complete) {
