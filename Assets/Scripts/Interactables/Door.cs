@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class Door : MonoBehaviour {
     [SerializeField] public bool playersPastDoor = false;
+    [SerializeField] float playersPastDelay = 2.0f;
     [SerializeField] float facingNextRoomAngle = 300;
     [SerializeField] ObjectivesManager[] objectivesManagers;
 
@@ -57,17 +58,17 @@ public class Door : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        // If no objectives managers, skip
         if (objectivesManagers.Length == 0) {
             
 
         // If players are past door stop checking objectives
         } else if (humanPassed && ghostPased) {
-            playersPastDoor = true;
-            lastState = isOpen;
-            isOpen = false;
+            Invoke("PlayersPast", playersPastDelay);
 
 
         } else {
+            CancelInvoke();
             playersPastDoor = false;
 
             // If statements split up for if in future we want to check every x frames and change active door only when isOpen changes
@@ -90,6 +91,15 @@ public class Door : MonoBehaviour {
             OpenOrCloseDoor();
 
         }
+
+    }
+
+    void PlayersPast() {
+        playersPastDoor = true;
+        lastState = isOpen;
+        isOpen = false;
+
+        CloseDoor();
 
     }
 

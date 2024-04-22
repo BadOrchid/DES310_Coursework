@@ -176,15 +176,12 @@ public class ObjectivesManager : MonoBehaviour
                 if (pillar.spritesIndex == rotPillarStates[index]) {
                     if (!pillar.waitForAllComplete) {
                         pillar.complete = true;
-                        Debug.Log(index + " Complete?");
 
                     }
 
                 } else {
                     temp = false;
                     pillar.complete = false;
-                    
-                    Debug.Log(index + " Not Complete");
 
                 }
 
