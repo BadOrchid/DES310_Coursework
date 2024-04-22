@@ -16773,13 +16773,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36379ff2e8cbd547a0debf12940fe8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endscreen: {fileID: 138128890}
+  endScreen: {fileID: 138128890}
+  finalDoor: {fileID: 2052134750}
+  manager: {fileID: 0}
   testBool: 0
   endOne: {fileID: 376539264}
   endTwo: {fileID: 885173314}
   endThree: {fileID: 30188686}
   endFour: {fileID: 1217059799}
   sceneSeconds: 3
+  lmaoSeconds: 7
+  lolSeconds: 2
 --- !u!114 &1372482555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33282,6 +33286,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2052134750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
+  m_PrefabInstance: {fileID: 1435532024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe622415cc1c34899b498b8071d9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2062030532
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,15 +1,21 @@
  using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Endscreen : MonoBehaviour
 {
-    public GameObject endscreen;
+    public GameObject endScreen;
+
+    public Door finalDoor;
+    [SerializeField] ObjectivesManager manager;
 
     public bool testBool;
+    bool brainDead = false;
+    bool lolBool = true;
 
     public GameObject endOne;
     public GameObject endTwo;
@@ -17,6 +23,8 @@ public class Endscreen : MonoBehaviour
     public GameObject endFour;
 
     public float sceneSeconds;
+    public float lmaoSeconds;
+    public float lolSeconds;
     float baseSceneSeconds;
     float nextScene = 0;
 
@@ -29,6 +37,10 @@ public class Endscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (lmaoSeconds > 0)
+        {
+            IfItWorks();
+        }
         EndScreenEnable();
         if (testBool)
         {
@@ -57,13 +69,14 @@ public class Endscreen : MonoBehaviour
                 StartScreen();
             }
         }
+        DoorKun();
     }
 
     public void EndScreenEnable()
     {
         if (testBool)
         {
-            endscreen.SetActive(true);
+            endScreen.SetActive(true);
         }
     }
 
@@ -100,8 +113,42 @@ public class Endscreen : MonoBehaviour
         }
     }
 
+    void DoorKun()
+    {
+        if (brainDead == true)
+        {
+            if (finalDoor.isOpen)
+            {
+                lolBool = true;
+                testBool = true;
+            }
+        }
+    }
+
     void StartScreen()
     {
         SceneManager.LoadScene("StartScene");
+    }
+
+    void IfItWorks()
+    {
+        lmaoSeconds -= Time.unscaledDeltaTime;
+        if (lmaoSeconds <= 0)
+        {
+            brainDead = true;
+            ItWorks();
+        }
+    }
+
+    void ItWorks()
+    {
+        if(lolSeconds >= 0 && lolBool == true)
+        {
+            lolSeconds -= Time.unscaledDeltaTime;
+        }
+        else if (lolSeconds >= 0 && lolBool == false)
+        {
+            lolBool = false;
+        }
     }
 }
