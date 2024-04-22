@@ -89,6 +89,11 @@ public class PressurePlate : MonoBehaviour
                 lastState = on;
                 on = true;
 
+                if (lastState != on) {
+                    audioSource.Play();
+
+                }
+
                 ChangeSprite(onSprite);
                 Debug.Log(this.name + " Pressed by " + collision.tag);
 
