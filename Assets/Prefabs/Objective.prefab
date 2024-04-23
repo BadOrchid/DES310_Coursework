@@ -49,11 +49,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkRate: 0.5
+  freezeOnComplete: 0
+  freezeLeversOnComplete: 0
+  exitDoor: {fileID: 0}
+  neededObjectivesManagers: []
   leverStates: 
   pressureStates: 
   crystalStates: 
   rotPillarStates: 
-  complete: 1
+  complete: 0
 --- !u!1 &2643040932177197524
 GameObject:
   m_ObjectHideFlags: 0

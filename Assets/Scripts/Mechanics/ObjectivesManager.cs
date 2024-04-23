@@ -25,7 +25,7 @@ public class ObjectivesManager : MonoBehaviour
     RotatingPillar[] rotatingPillars;
 
     // True if objective is complete
-    public bool complete = true;
+    public bool complete = false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +55,13 @@ public class ObjectivesManager : MonoBehaviour
         else {
 
             // Sets complete to true, later to be set false if any object is not in the correct state
-            complete = true;
+            bool tempComplete = true;
             int index = 0;
 
             // Checks if all needed Objectives Managers are complete
             foreach (ObjectivesManager manager in neededObjectivesManagers) {
                 if (!manager.complete) {
-                    complete = false;
+                    tempComplete = false;
                     break;
 
                 }
@@ -69,9 +69,9 @@ public class ObjectivesManager : MonoBehaviour
             }
 
             // Skips if needed Objectives Managers are not complete
-            if (complete) {
+            if (tempComplete) {
 
-                if (complete) {
+                if (tempComplete) {
 
                     // Checks if each lever is in the correct state
                     index = 0;
@@ -79,13 +79,13 @@ public class ObjectivesManager : MonoBehaviour
                         switch (leverStates[index]) { // Compares the gameobject's current state to what state it should be in 
                             case ObjectiveType.Off:
                                 if (lever.on) {
-                                    complete = false;
+                                    tempComplete = false;
 
                                 }
                                 break;
                             case ObjectiveType.On:
                                 if (!lever.on) {
-                                    complete = false;
+                                    tempComplete = false;
 
                                 }
                                 break;
@@ -95,7 +95,7 @@ public class ObjectivesManager : MonoBehaviour
                         }
 
                         // If object is not in correct state, exit loop
-                        if (!complete) {
+                        if (!tempComplete) {
                             break;
 
                         }
@@ -106,7 +106,7 @@ public class ObjectivesManager : MonoBehaviour
 
                 }
 
-                if (complete) {
+                if (tempComplete) {
 
                     // Checks if each pressure plate is in the correct state
                     index = 0;
@@ -114,13 +114,13 @@ public class ObjectivesManager : MonoBehaviour
                         switch (pressureStates[index]) { // Compares the gameobject's current state to what state it should be in
                             case ObjectiveType.Off:
                                 if (plate.on) {
-                                    complete = false;
+                                    tempComplete = false;
 
                                 }
                                 break;
                             case ObjectiveType.On:
                                 if (!plate.on) {
-                                    complete = false;
+                                    tempComplete = false;
 
                                 }
                                 break;
@@ -130,7 +130,7 @@ public class ObjectivesManager : MonoBehaviour
                         }
 
                         // If object is not in correct state, exit loop
-                        if (!complete) {
+                        if (!tempComplete) {
                             break;
 
                         }
@@ -141,7 +141,7 @@ public class ObjectivesManager : MonoBehaviour
 
                 }
 
-                if (complete) {
+                if (tempComplete) {
 
                     // Checks if each crystal ball is in the correct state
                     index = 0;
@@ -149,13 +149,13 @@ public class ObjectivesManager : MonoBehaviour
                         switch (crystalStates[index]) { // Compares the gameobject's current state to what state it should be in 
                             case ObjectiveType.Off:
                                 if (crystal.crystalBallHit) {
-                                    complete = false;
+                                    tempComplete = false;
 
                                 }
                                 break;
                             case ObjectiveType.On:
                                 if (!crystal.crystalBallHit) {
-                                    complete = false;
+                                    tempComplete = false;
 
                                 }
                                 break;
@@ -207,12 +207,14 @@ public class ObjectivesManager : MonoBehaviour
 
                 }
                 else {
-                    complete = false;
+                    tempComplete = false;
 
                 }
 
 
                 // Objectives Completed
+                complete = tempComplete;
+
                 if (complete) {
                     if (freezeLeversOnComplete) {
                         foreach (Lever lever in levers) {
