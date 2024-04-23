@@ -10,11 +10,9 @@ public class Endscreen : MonoBehaviour
 {
     public GameObject endScreen;
 
-    public Door finalDoor;
     [SerializeField] ObjectivesManager[] objectiveManagers;
 
     public bool testBool;
-    bool doorOpen = false;
     bool isReady = true;
 
     public GameObject endOne;
@@ -123,18 +121,6 @@ public class Endscreen : MonoBehaviour
         }
     }
 
-    void FinalDoor()
-    {
-        if (doorOpen == true)
-        {
-            if (finalDoor.isOpen)
-            {
-                isReady = true;
-                testBool = true;
-            }
-        }
-    }
-
     void StartScreen()
     {
         SceneManager.LoadScene("StartScene");
@@ -145,7 +131,6 @@ public class Endscreen : MonoBehaviour
         startTimer -= Time.unscaledDeltaTime;
         if (startTimer <= 0)
         {
-            doorOpen = true;
             EndTimer();
         }
     }
