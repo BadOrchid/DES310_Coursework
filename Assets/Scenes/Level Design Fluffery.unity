@@ -1799,6 +1799,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.39499998
       objectReference: {fileID: 0}
+    - target: {fileID: 520984169641553802, guid: 2a30602af4e40324c83f855a6c9d4da7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 643143597669352096, guid: 2a30602af4e40324c83f855a6c9d4da7, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -8864,7 +8868,7 @@ GameObject:
   - component: {fileID: 652611221}
   - component: {fileID: 652611220}
   - component: {fileID: 652611219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pillar - Human - 2
   m_TagString: Pillar
   m_Icon: {fileID: 0}
@@ -8880,7 +8884,7 @@ Transform:
   m_GameObject: {fileID: 652611217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.981, y: 2.887, z: -1.6036993}
+  m_LocalPosition: {x: -6.981, y: 2.887, z: 0}
   m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17800,7 +17804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3419989513969409870, guid: 1a05ef5db4f4afa498d9361f61137069, type: 3}
       propertyPath: plateType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5825040816926809820, guid: 1a05ef5db4f4afa498d9361f61137069, type: 3}
       propertyPath: m_Name
@@ -19687,7 +19691,7 @@ Transform:
   m_GameObject: {fileID: 1408629545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.465, y: 6.078, z: -1.6036993}
+  m_LocalPosition: {x: -4.465, y: 6.078, z: 0}
   m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -21151,7 +21155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3419989513969409870, guid: 1a05ef5db4f4afa498d9361f61137069, type: 3}
       propertyPath: plateType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5825040816926809820, guid: 1a05ef5db4f4afa498d9361f61137069, type: 3}
       propertyPath: m_Name
@@ -24160,7 +24164,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 371478610923479096, guid: 9e26c62f1b3f1e848a08593cd801d4e4, type: 3}
       propertyPath: plateType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5553885699428032993, guid: 9e26c62f1b3f1e848a08593cd801d4e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32334,7 +32338,7 @@ Transform:
   m_GameObject: {fileID: 1876445094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.944, y: 5.789, z: -1.6036993}
+  m_LocalPosition: {x: -11.944, y: 5.789, z: 0}
   m_LocalScale: {x: 0.8500001, y: 0.8500001, z: 0.8500001}
   m_ConstrainProportionsScale: 1
   m_Children: []
