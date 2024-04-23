@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mis_boocas_front_right_2_0: 3762202864881933739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
