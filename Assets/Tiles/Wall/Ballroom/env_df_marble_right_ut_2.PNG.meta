@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3a9de7020d448d84fbdc2acdcf6247ec
+guid: b78f845018fd7af47b7ecfe8c54035b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3652456435311541944
-    second: env_df_wood_right_ut_1_0
+      213: 5391848934437325266
+    second: env_df_marble_right_ut_2_0
+  - first:
+      213: -2220970159893973737
+    second: env_df_marble_right_ut_2_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,38 +97,47 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: env_df_wood_right_ut_1_0
+      name: env_df_marble_right_ut_2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 40
-        width: 375
-        height: 650
+        x: 287
+        y: 277
+        width: 62
+        height: 595
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8418aaf393edf4dc0800000000000000
-      internalID: -3652456435311541944
+      spriteID: 2d984b3e902b3da40800000000000000
+      internalID: 5391848934437325266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: env_df_marble_right_ut_2_1
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 34
+        width: 79
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715f6c228678d21e0800000000000000
+      internalID: -2220970159893973737
       vertices: []
       indices: 
       edges: []
@@ -133,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ad5447d4ca7e31247ae820e7d25668aa
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -141,7 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      env_df_wood_right_ut_1_0: -3652456435311541944
+      env_df_marble_right_ut_2_0: 5391848934437325266
+      env_df_marble_right_ut_2_1: -2220970159893973737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
