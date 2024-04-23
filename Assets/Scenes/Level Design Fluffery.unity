@@ -2684,7 +2684,7 @@ TilemapCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1544
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -6743,7 +6743,7 @@ EdgeCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -13444,11 +13444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6454719574428939560, guid: 9e45d6fb6772a3747aecbeca0f3c3b77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.47
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 6454719574428939560, guid: 9e45d6fb6772a3747aecbeca0f3c3b77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.32
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 6454719574428939560, guid: 9e45d6fb6772a3747aecbeca0f3c3b77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19481,7 +19481,7 @@ EdgeCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -31037,11 +31037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5793594257354404974, guid: cd698b2637196f844bbeb70da0b5422c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.94
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5793594257354404974, guid: cd698b2637196f844bbeb70da0b5422c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.39
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 5793594257354404974, guid: cd698b2637196f844bbeb70da0b5422c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34022,17 +34022,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36379ff2e8cbd547a0debf12940fe8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endScreen: {fileID: 0}
+  endScreen: {fileID: 3942028951905988936}
   finalDoor: {fileID: 1435532026}
   manager: {fileID: 0}
   testBool: 0
-  endOne: {fileID: 0}
-  endTwo: {fileID: 0}
-  endThree: {fileID: 0}
-  endFour: {fileID: 0}
-  sceneSeconds: 0
-  lmaoSeconds: 0
-  lolSeconds: 0
+  endOne: {fileID: 6444971061670437136}
+  endTwo: {fileID: 5375506476217959001}
+  endThree: {fileID: 9186332894911881924}
+  endFour: {fileID: 124298727478597055}
+  sceneSeconds: 3
+  startTimer: 20
+  lastTimer: 5
 --- !u!1 &8764604369255345347
 GameObject:
   m_ObjectHideFlags: 0

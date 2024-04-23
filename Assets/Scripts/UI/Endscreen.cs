@@ -14,8 +14,8 @@ public class Endscreen : MonoBehaviour
     [SerializeField] ObjectivesManager manager;
 
     public bool testBool;
-    bool brainDead = false;
-    bool lolBool = true;
+    bool doorOpen = false;
+    bool isReady = true;
 
     public GameObject endOne;
     public GameObject endTwo;
@@ -23,8 +23,8 @@ public class Endscreen : MonoBehaviour
     public GameObject endFour;
 
     public float sceneSeconds;
-    public float lmaoSeconds;
-    public float lolSeconds;
+    public float startTimer;
+    public float lastTimer;
     float baseSceneSeconds;
     float nextScene = 0;
 
@@ -37,9 +37,9 @@ public class Endscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lmaoSeconds > 0)
+        if (startTimer > 0)
         {
-            IfItWorks();
+            StartTimer();
         }
         EndScreenEnable();
         if (testBool)
@@ -69,7 +69,7 @@ public class Endscreen : MonoBehaviour
                 StartScreen();
             }
         }
-        DoorKun();
+        FinalDoor();
     }
 
     public void EndScreenEnable()
@@ -113,15 +113,15 @@ public class Endscreen : MonoBehaviour
         }
     }
 
-    void DoorKun()
+    void FinalDoor()
     {
-        if (brainDead == true)
+        if (doorOpen == true)
         {
-            //if (finalDoor.isOpen)
-            //{
-            //    lolBool = true;
-            //    testBool = true;
-            //}
+            if (finalDoor.isOpen)
+            {
+                isReady = true;
+                testBool = true;
+            }
         }
     }
 
@@ -130,25 +130,25 @@ public class Endscreen : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
-    void IfItWorks()
+    void StartTimer()
     {
-        lmaoSeconds -= Time.unscaledDeltaTime;
-        if (lmaoSeconds <= 0)
+        startTimer -= Time.unscaledDeltaTime;
+        if (startTimer <= 0)
         {
-            brainDead = true;
-            ItWorks();
+            doorOpen = true;
+            EndTimer();
         }
     }
 
-    void ItWorks()
+    void EndTimer()
     {
-        if(lolSeconds >= 0 && lolBool == true)
+        if(lastTimer >= 0 && isReady == true)
         {
-            lolSeconds -= Time.unscaledDeltaTime;
+            lastTimer -= Time.unscaledDeltaTime;
         }
-        else if (lolSeconds >= 0 && lolBool == false)
+        else if (lastTimer >= 0 && isReady == false)
         {
-            lolBool = false;
+            isReady = false;
         }
     }
 }

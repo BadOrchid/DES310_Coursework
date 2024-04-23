@@ -22,7 +22,7 @@ public class Door : MonoBehaviour {
     EdgeCollider2D doorCollider;
     AudioSource audioSource;
 
-    bool isOpen = false;
+    public bool isOpen = false;
     bool lastState;
 
 
