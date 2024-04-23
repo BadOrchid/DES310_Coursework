@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SavedVariables : MonoBehaviour
 {
+    public static bool humanStartPosSet;
+    public static bool ghostStartPosSet;
+    public static Vector2 humanStartPos;
+    public static Vector2 ghostStartPos;
 
     public static Vector2 humanPos;
     public static Vector2 ghostPos;
@@ -17,7 +21,6 @@ public class SavedVariables : MonoBehaviour
 
         }
         else {
-
             TwoPlayerControls[] players = PlayerHelper.Find();
 
             if (PlayerHelper.CheckType(PlayerType.Human, players[0])) {
