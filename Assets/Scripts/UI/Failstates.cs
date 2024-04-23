@@ -59,6 +59,8 @@ public class Failstates : MonoBehaviour
         imgGhostFail.SetActive(false);
         Time.timeScale = 1.0f;
 
+        Debug.Log("Chat: This does work");
+
         SceneLoader.ReloadScene();
 
     }
