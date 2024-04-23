@@ -8866,7 +8866,7 @@ GameObject:
   - component: {fileID: 652611219}
   m_Layer: 0
   m_Name: Pillar - Human - 2
-  m_TagString: Block
+  m_TagString: Pillar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19765,7 +19765,7 @@ GameObject:
   - component: {fileID: 1408629547}
   m_Layer: 0
   m_Name: Pillar - Human
-  m_TagString: Block
+  m_TagString: Pillar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32412,7 +32412,7 @@ GameObject:
   - component: {fileID: 1876445096}
   m_Layer: 6
   m_Name: Pillar - Ghost
-  m_TagString: Block
+  m_TagString: Pillar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33983,7 +33983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4d940f4d07ff87a4abb2c2c7359246ff, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3a712568c52346e4e98e25fa965811c9, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -35032,7 +35032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 3a712568c52346e4e98e25fa965811c9, type: 3}
+  m_Texture: {fileID: 2800000, guid: 4d940f4d07ff87a4abb2c2c7359246ff, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
