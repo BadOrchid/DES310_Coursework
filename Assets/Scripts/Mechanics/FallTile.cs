@@ -12,15 +12,16 @@ public class FallTile : MonoBehaviour
     public bool isFilled = false;
     SpriteRenderer spriteRenderer;
 
+    Failstates failState;
 
     // Start is called before the first frame update
     void Start()
     {
-        //tilemap = GetComponent<Tilemap>();
-
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         spriteRenderer.enabled = isFilled;
+
+        failState = FindAnyObjectByType<Failstates>();
 
     }
 
@@ -40,6 +41,7 @@ public class FallTile : MonoBehaviour
 
             if (player && collision.tag == "Human") {
                 Debug.Log("Human fell from a high place");
+                failState.humanFail = true;
 
             }
             else if (collision.tag == "Block") {
@@ -55,19 +57,5 @@ public class FallTile : MonoBehaviour
         }
 
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision) {
-    //    List<ContactPoint2D> contacts = new List<ContactPoint2D>();
-    //    collision.GetContacts(contacts);
-
-    //    TileBase tile;
-
-    //    foreach (ContactPoint2D contact in contacts) {
-    //        tile = tilemap.GetTile(tilemap.layoutGrid.WorldToCell(contact.point));
-    //        Debug.Log(tile.GameObject().transform.position);
-
-    //    }
-
-    //}
 
 }

@@ -58,6 +58,9 @@ public class Failstates : MonoBehaviour
         imgHumanFail.SetActive(false);
         imgGhostFail.SetActive(false);
         Time.timeScale = 1.0f;
+
+        SceneLoader.ReloadScene();
+
     }
 
     public void Exit()

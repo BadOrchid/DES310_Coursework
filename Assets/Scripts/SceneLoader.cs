@@ -25,7 +25,7 @@ public class SceneLoader : MonoBehaviour
 
     }
 
-    static void ReloadScene() {
+    public static void ReloadScene() {
         SceneManager.LoadScene("Level Design Fluffery");
 
     }

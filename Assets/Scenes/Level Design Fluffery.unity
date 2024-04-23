@@ -33906,6 +33906,7 @@ GameObject:
   - component: {fileID: 1710421839157938472}
   - component: {fileID: 6032224643070857738}
   - component: {fileID: 6581746536809932119}
+  - component: {fileID: 8336517338293225015}
   m_Layer: 5
   m_Name: Failstates
   m_TagString: Untagged
@@ -33913,6 +33914,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8336517338293225015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336517338293225014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc19637bee761542a55cedb81a16518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  humanFail: 0
+  ghostFail: 0
+  overlordPanel: {fileID: 5704362120794937865}
+  imgHumanFail: {fileID: 3265232764611827973}
+  imgGhostFail: {fileID: 201319110434802839}
+  lastCheckpoint: {fileID: 3347896404206432410}
+  exit: {fileID: 1571293174142773909}
 --- !u!1 &8403572525011194302
 GameObject:
   m_ObjectHideFlags: 0

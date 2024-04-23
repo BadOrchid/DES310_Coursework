@@ -281,6 +281,8 @@ public class CrystalLight : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
 
+    Failstates failState;
+
     int tempCounter;
 
     // Start is called before the first frame update
@@ -290,6 +292,8 @@ public class CrystalLight : MonoBehaviour {
         crystalPodiumIds = new List<int>();
         positions = new List<Vector3>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        failState = FindAnyObjectByType<Failstates>();
 
     }
 
@@ -373,6 +377,7 @@ public class CrystalLight : MonoBehaviour {
 
         } else if (hit.collider.tag == "Ghost" && hit.collider.GetComponent<TwoPlayerControls>()) {
             Debug.Log("Ghost died to light beam");
+            failState.ghostFail = true;
 
         } else {
             crystalBallHit = false;
