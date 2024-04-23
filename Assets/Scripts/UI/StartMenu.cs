@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 
 public class StartMenu : MonoBehaviour
@@ -27,6 +28,9 @@ public class StartMenu : MonoBehaviour
 
     public void StartGame()
     {
+        SavedVariables.humanPos = SavedVariables.humanStartPos;
+        SavedVariables.ghostPos = SavedVariables.ghostStartPos;
+        SavedVariables.checkpointNum = -1;
         SceneManager.LoadScene("Level Design Fluffery");
     }
 
