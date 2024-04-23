@@ -283,6 +283,10 @@ PrefabInstance:
       value: Objective - Library
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 548877760}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: isToggle
       value: 1
       objectReference: {fileID: 0}
@@ -3553,6 +3557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objective - Observatory
       objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 1821241762}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: crystalStates.Array.size
       value: 1
@@ -6868,6 +6876,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 14929481}
     - target: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
+      propertyPath: facingNextRoomAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
       propertyPath: objectivesManagers.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -6885,6 +6897,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2546778238866415997, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
   m_PrefabInstance: {fileID: 548877756}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &548877760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
+  m_PrefabInstance: {fileID: 548877756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe622415cc1c34899b498b8071d9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551280315
 GameObject:
   m_ObjectHideFlags: 0
@@ -10361,6 +10384,10 @@ PrefabInstance:
       value: Objective - Study Plates
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 1435532026}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: isToggle
       value: 1
       objectReference: {fileID: 0}
@@ -12993,6 +13020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objective - Starter Room 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 1285915098}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: freezeLeversOnComplete
       value: 1
@@ -16186,6 +16217,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1285915098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7122831747272047121, guid: 4979aba2c262b7544af0f31743d8a688, type: 3}
+  m_PrefabInstance: {fileID: 1231970532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe622415cc1c34899b498b8071d9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1293348480
 GameObject:
   m_ObjectHideFlags: 0
@@ -21580,6 +21622,10 @@ PrefabInstance:
       value: Objective - Starter Room 1
       objectReference: {fileID: 0}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 1285915098}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: isToggle
       value: 1
       objectReference: {fileID: 0}
@@ -22370,6 +22416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objective - Study Pillars
       objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 1435532026}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: rotPillarStates.Array.size
       value: 4
@@ -31659,6 +31709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objective - Ballroom
       objectReference: {fileID: 0}
+    - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
+      propertyPath: exitDoor
+      value: 
+      objectReference: {fileID: 1123356445}
     - target: {fileID: 6029984795091769961, guid: f5f58354ec52081489d4288796bacfb9, type: 3}
       propertyPath: pressureStates.Array.size
       value: 3

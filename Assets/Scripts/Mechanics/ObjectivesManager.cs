@@ -9,6 +9,7 @@ public class ObjectivesManager : MonoBehaviour
     [SerializeField] float checkRate = 0.5f;
     [SerializeField] bool freezeOnComplete = false;
     [SerializeField] bool freezeLeversOnComplete = false;
+    [SerializeField] Door exitDoor;
     [SerializeField] ObjectivesManager[] neededObjectivesManagers;
 
     // Arrays of the state we want each object to be in
@@ -46,49 +47,150 @@ public class ObjectivesManager : MonoBehaviour
     }
 
     void CheckObjectives() {
-        // Sets complete to true, later to be set false if any object is not in the correct state
-        complete = true;
-        int index = 0;
-
-        // Checks if all needed Objectives Managers are complete
-        foreach (ObjectivesManager manager in neededObjectivesManagers) {
-            if (!manager.complete) {
-                complete = false;
-                break;
-
-            }
+        // Stop checking objectives if both players are past the door
+        if (exitDoor != null && exitDoor.playersPastDoor) {
+            CancelInvoke();
 
         }
+        else {
 
-        // Skips if needed Objectives Managers are not complete
-        if (complete) {
+            // Sets complete to true, later to be set false if any object is not in the correct state
+            complete = true;
+            int index = 0;
 
+            // Checks if all needed Objectives Managers are complete
+            foreach (ObjectivesManager manager in neededObjectivesManagers) {
+                if (!manager.complete) {
+                    complete = false;
+                    break;
+
+                }
+
+            }
+
+            // Skips if needed Objectives Managers are not complete
             if (complete) {
 
-                // Checks if each lever is in the correct state
-                index = 0;
-                foreach (Lever lever in levers) { // Loops over gameobjects
-                    switch (leverStates[index]) { // Compares the gameobject's current state to what state it should be in 
-                        case ObjectiveType.Off:
-                            if (lever.on) {
-                                complete = false;
+                if (complete) {
 
-                            }
-                            break;
-                        case ObjectiveType.On:
-                            if (!lever.on) {
-                                complete = false;
+                    // Checks if each lever is in the correct state
+                    index = 0;
+                    foreach (Lever lever in levers) { // Loops over gameobjects
+                        switch (leverStates[index]) { // Compares the gameobject's current state to what state it should be in 
+                            case ObjectiveType.Off:
+                                if (lever.on) {
+                                    complete = false;
 
-                            }
+                                }
+                                break;
+                            case ObjectiveType.On:
+                                if (!lever.on) {
+                                    complete = false;
+
+                                }
+                                break;
+                            case ObjectiveType.Either:
+                                break;
+
+                        }
+
+                        // If object is not in correct state, exit loop
+                        if (!complete) {
                             break;
-                        case ObjectiveType.Either:
-                            break;
+
+                        }
+
+                        index++;
 
                     }
 
-                    // If object is not in correct state, exit loop
-                    if (!complete) {
-                        break;
+                }
+
+                if (complete) {
+
+                    // Checks if each pressure plate is in the correct state
+                    index = 0;
+                    foreach (PressurePlate plate in pressurePlates) { // Loops over gameobjects
+                        switch (pressureStates[index]) { // Compares the gameobject's current state to what state it should be in
+                            case ObjectiveType.Off:
+                                if (plate.on) {
+                                    complete = false;
+
+                                }
+                                break;
+                            case ObjectiveType.On:
+                                if (!plate.on) {
+                                    complete = false;
+
+                                }
+                                break;
+                            case ObjectiveType.Either:
+                                break;
+
+                        }
+
+                        // If object is not in correct state, exit loop
+                        if (!complete) {
+                            break;
+
+                        }
+
+                        index++;
+
+                    }
+
+                }
+
+                if (complete) {
+
+                    // Checks if each crystal ball is in the correct state
+                    index = 0;
+                    foreach (CrystalLight crystal in crystalLights) { // Loops over gameobjects
+                        switch (crystalStates[index]) { // Compares the gameobject's current state to what state it should be in 
+                            case ObjectiveType.Off:
+                                if (crystal.crystalBallHit) {
+                                    complete = false;
+
+                                }
+                                break;
+                            case ObjectiveType.On:
+                                if (!crystal.crystalBallHit) {
+                                    complete = false;
+
+                                }
+                                break;
+                            case ObjectiveType.Either:
+                                break;
+
+                        }
+
+                        // If object is not in correct state, exit loop
+                        if (!complete) {
+                            break;
+
+                        }
+
+                        index++;
+
+                    }
+
+                }
+
+                // Checks if each rotating pillar is in the correct state
+                index = 0;
+                bool temp = true;
+                foreach (RotatingPillar pillar in rotatingPillars) {
+                    // Compares the gameobject's current state to what state it should be in
+                    if (pillar.spritesIndex == rotPillarStates[index]) {
+                        if (!pillar.waitForAllComplete) {
+                            pillar.complete = true;
+
+                        }
+
+                    }
+                    else {
+                        temp = false;
+                        pillar.complete = false;
 
                     }
 
@@ -96,127 +198,37 @@ public class ObjectivesManager : MonoBehaviour
 
                 }
 
-            }
-
-            if (complete) {
-
-                // Checks if each pressure plate is in the correct state
-                index = 0;
-                foreach (PressurePlate plate in pressurePlates) { // Loops over gameobjects
-                    switch (pressureStates[index]) { // Compares the gameobject's current state to what state it should be in
-                        case ObjectiveType.Off:
-                            if (plate.on) {
-                                complete = false;
-
-                            }
-                            break;
-                        case ObjectiveType.On:
-                            if (!plate.on) {
-                                complete = false;
-
-                            }
-                            break;
-                        case ObjectiveType.Either:
-                            break;
-
-                    }
-
-                    // If object is not in correct state, exit loop
-                    if (!complete) {
-                        break;
-
-                    }
-
-                    index++;
-
-                }
-
-            }
-
-            if (complete) {
-
-                // Checks if each crystal ball is in the correct state
-                index = 0;
-                foreach (CrystalLight crystal in crystalLights) { // Loops over gameobjects
-                    switch (crystalStates[index]) { // Compares the gameobject's current state to what state it should be in 
-                        case ObjectiveType.Off:
-                            if (crystal.crystalBallHit) {
-                                complete = false;
-
-                            }
-                            break;
-                        case ObjectiveType.On:
-                            if (!crystal.crystalBallHit) {
-                                complete = false;
-
-                            }
-                            break;
-                        case ObjectiveType.Either:
-                            break;
-
-                    }
-
-                    // If object is not in correct state, exit loop
-                    if (!complete) {
-                        break;
-
-                    }
-
-                    index++;
-
-                }
-
-            }
-
-            // Checks if each rotating pillar is in the correct state
-            index = 0;
-            bool temp = true;
-            foreach (RotatingPillar pillar in rotatingPillars) {
-                // Compares the gameobject's current state to what state it should be in
-                if (pillar.spritesIndex == rotPillarStates[index]) {
-                    if (!pillar.waitForAllComplete) {
+                // If all pillars are completed, set all pillars to completed
+                if (temp) {
+                    foreach (RotatingPillar pillar in rotatingPillars) {
                         pillar.complete = true;
 
                     }
 
-                } else {
-                    temp = false;
-                    pillar.complete = false;
+                }
+                else {
+                    complete = false;
 
                 }
 
-                index++;
 
-            }
+                // Objectives Completed
+                if (complete) {
+                    if (freezeLeversOnComplete) {
+                        foreach (Lever lever in levers) {
+                            lever.freeze = true;
 
-            // If all pillars are completed, set all pillars to completed
-            if (temp) {
-                foreach (RotatingPillar pillar in rotatingPillars) {
-                    pillar.complete = true;
-
-                }
-
-            } else {
-                complete = false;
-
-            }
-
-
-            // Objectives Completed
-            if (complete) {
-                if (freezeLeversOnComplete) {
-                    foreach (Lever lever in levers) {
-                        lever.freeze = true;
+                        }
 
                     }
 
-                }
+                    Debug.Log(this.name + " completed");
 
-                Debug.Log(this.name + " completed");
+                    // Stops checking objectives once completed and is set to toggle
+                    if (freezeOnComplete) {
+                        CancelInvoke("CheckObjectives");
 
-                // Stops checking objectives once completed and is set to toggle
-                if (freezeOnComplete) {
-                    CancelInvoke("CheckObjectives");
+                    }
 
                 }
 
