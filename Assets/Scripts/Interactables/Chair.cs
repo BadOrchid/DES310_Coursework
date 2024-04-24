@@ -8,6 +8,7 @@ public class Chair : MonoBehaviour
 
     [SerializeField] float radius = 0.5f;
     [SerializeField] bool isFacingLeft;
+    [SerializeField] Vector2 offset;
 
     bool playerInChair = false;
 
@@ -85,7 +86,8 @@ public class Chair : MonoBehaviour
                     // If chair is empty
                     if (!playerInChair) {
                         playerStandingPos = player.transform.position;
-                        player.transform.position = transform.position;
+
+                        player.transform.position = transform.position + Quaternion.Euler(0, 0, 60) * new Vector2(offset.x * transform.localScale.x, offset.y * transform.localScale.y);
 
                         player.animator.SetBool("isFacingLeft", isFacingLeft);
                         player.animator.SetBool("isSitting", true);
