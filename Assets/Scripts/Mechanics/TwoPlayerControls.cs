@@ -21,7 +21,7 @@ public class TwoPlayerControls : MonoBehaviour
     [Range(0, 1)][SerializeField] float playerStepsVolume = 0.3f;
     [SerializeField] AudioClip sfxPlayerSteps;
 
-    Animator animator;
+    public Animator animator;
     AudioSource audioSource;
 
     private void Awake() {
