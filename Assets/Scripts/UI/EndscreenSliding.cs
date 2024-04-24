@@ -11,6 +11,8 @@ public class EndscreenSliding : MonoBehaviour
     public RawImage endThree;
     public RawImage endFour;
 
+    public bool stopMoving = false;
+
     public Endscreen endscreen;
 
     public float xAxis;
@@ -27,10 +29,16 @@ public class EndscreenSliding : MonoBehaviour
     {
         if (endscreen.testBool)
         {
+            if (stopMoving == false)
+            {
             endOne.uvRect = new Rect(endOne.uvRect.position + new Vector2(xAxis, yAxis) * Time.deltaTime, endOne.uvRect.size);
-            endTwo.uvRect = new Rect(endTwo.uvRect.position + new Vector2(xAxis, yAxis) * Time.deltaTime, endTwo.uvRect.size);
-            endThree.uvRect = new Rect(endThree.uvRect.position + new Vector2(xAxis, yAxis) * Time.deltaTime, endThree.uvRect.size);
-            endFour.uvRect = new Rect(endFour.uvRect.position + new Vector2(xAxis, yAxis) * Time.deltaTime, endFour.uvRect.size);
+            }
+    }
+        if(endOne.uvRect.x >= 0.75)
+        {
+            stopMoving = true;
+
+
         }
     }
 }
