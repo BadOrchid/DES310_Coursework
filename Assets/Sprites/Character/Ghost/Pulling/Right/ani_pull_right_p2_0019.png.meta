@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ani_pull_right_p2_0019_0
+      name: ani_pull_right_p2_0019
       rect:
         serializedVersion: 2
         x: 78
@@ -133,7 +133,7 @@ TextureImporter:
         width: 609
         height: 926
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,199 +145,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_1
-      rect:
-        serializedVersion: 2
-        x: 483
-        y: 107
-        width: 18
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a1d091592824b490800000000000000
-      internalID: -7731510502361083486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_2
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 86
-        width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ecd5c84bd4e173fd0800000000000000
-      internalID: -2362386160442122802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_3
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 94
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 929b6017ac7d84630800000000000000
-      internalID: 3911613540850907433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_4
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 87
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0f4f945814822150800000000000000
-      internalID: 5846380506314133260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_5
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 80
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16e1bbf9f98ef3090800000000000000
-      internalID: -8052461836437873055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_6
-      rect:
-        serializedVersion: 2
-        x: 438
-        y: 66
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6316e6f5bd5a90d80800000000000000
-      internalID: -8283907677953826506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_7
-      rect:
-        serializedVersion: 2
-        x: 399
-        y: 52
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d61d84659a3112e0800000000000000
-      internalID: -2156878333222250800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_8
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 64
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b38f5772fc10d7f0800000000000000
-      internalID: -589939723475123275
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_pull_right_p2_0019_9
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 59
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7659c1a355b18660800000000000000
-      internalID: 7386384234665563770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fd1f39481cc2fb941b39521838b04e7a
     internalID: 0
     vertices: []
     indices: 
@@ -345,7 +156,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ani_pull_right_p2_0019_0: 2974661965936816611
+      ani_pull_right_p2_0019: 2974661965936816611
       ani_pull_right_p2_0019_1: -7731510502361083486
       ani_pull_right_p2_0019_2: -2362386160442122802
       ani_pull_right_p2_0019_3: 3911613540850907433

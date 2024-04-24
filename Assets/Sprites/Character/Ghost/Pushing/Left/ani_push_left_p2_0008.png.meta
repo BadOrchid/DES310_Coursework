@@ -122,28 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ani_push_left_p2_0008_0
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 1000
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bf6b350cfd679b10800000000000000
-      internalID: 1988178689694330800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_1
+      name: ani_push_left_p2_0008
       rect:
         serializedVersion: 2
         x: 153
@@ -151,7 +130,7 @@ TextureImporter:
         width: 551
         height: 872
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,157 +142,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_2
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 107
-        width: 16
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94e7483103b1ff980800000000000000
-      internalID: -8503047678152376759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_3
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 87
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7094351ef01248310800000000000000
-      internalID: 1406285335734995207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_4
-      rect:
-        serializedVersion: 2
-        x: 346
-        y: 86
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68d4169b29c674df0800000000000000
-      internalID: -196068681336140410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_5
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 59
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dafb89a53a3be2f60800000000000000
-      internalID: 8011538301319692205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_6
-      rect:
-        serializedVersion: 2
-        x: 371
-        y: 66
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7445ac2322a62c110800000000000000
-      internalID: 1279701939240195143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_7
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 64
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97b06a355cb7de840800000000000000
-      internalID: 5254992427653401465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_left_p2_0008_8
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 52
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fc97665b13994810800000000000000
-      internalID: 1750091675833179382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e44e276390cb99f47955a6ca14fcb96d
     internalID: 0
     vertices: []
     indices: 
@@ -321,8 +153,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      ani_push_left_p2_0008: 6773785292579151898
       ani_push_left_p2_0008_0: 1988178689694330800
-      ani_push_left_p2_0008_1: 6773785292579151898
       ani_push_left_p2_0008_2: -8503047678152376759
       ani_push_left_p2_0008_3: 1406285335734995207
       ani_push_left_p2_0008_4: -196068681336140410

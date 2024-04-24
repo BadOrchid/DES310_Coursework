@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ani_push_right_p2_0016_0
+      name: ani_push_right_p2_0016
       rect:
         serializedVersion: 2
         x: 152
@@ -127,7 +127,7 @@ TextureImporter:
         width: 561
         height: 888
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,157 +139,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_1
-      rect:
-        serializedVersion: 2
-        x: 485
-        y: 107
-        width: 16
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43e27bfd470f7f710800000000000000
-      internalID: 1727113366880071220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_2
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 86
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8945163f8b92a81f0800000000000000
-      internalID: -1041974489448885096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_3
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 87
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cb0178b6b6ee4700800000000000000
-      internalID: 526611878901779400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_4
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 64
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e971934a96d656c30800000000000000
-      internalID: 4352004915417651102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_5
-      rect:
-        serializedVersion: 2
-        x: 438
-        y: 66
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b5179667cadafc430800000000000000
-      internalID: 3805451166383960411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_6
-      rect:
-        serializedVersion: 2
-        x: 447
-        y: 59
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fe7dfaa38c4544930800000000000000
-      internalID: 4126516377533011951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0016_7
-      rect:
-        serializedVersion: 2
-        x: 399
-        y: 52
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1ebcbb693b76d150800000000000000
-      internalID: 5897036248639127066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 366f1744c586da14dabd8d36761d6ed5
     internalID: 0
     vertices: []
     indices: 
@@ -297,7 +150,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ani_push_right_p2_0016_0: -2613799149899631951
+      ani_push_right_p2_0016: -2613799149899631951
       ani_push_right_p2_0016_1: 1727113366880071220
       ani_push_right_p2_0016_2: -1041974489448885096
       ani_push_right_p2_0016_3: 526611878901779400

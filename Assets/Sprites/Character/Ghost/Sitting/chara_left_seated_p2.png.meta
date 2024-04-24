@@ -101,28 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chara_left_seated_p2_0
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 156
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e9218fd8e902a25a0800000000000000
-      internalID: -6545383243070827874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chara_left_seated_p2_1
+      name: chara_left_seated_p2
       rect:
         serializedVersion: 2
         x: 163
@@ -130,7 +109,7 @@ TextureImporter:
         width: 532
         height: 952
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,7 +124,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 35616f1f81f331a4284f38dec50346d4
     internalID: 0
     vertices: []
     indices: 
@@ -153,8 +132,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      chara_left_seated_p2: 1579167234447531075
       chara_left_seated_p2_0: -6545383243070827874
-      chara_left_seated_p2_1: 1579167234447531075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
