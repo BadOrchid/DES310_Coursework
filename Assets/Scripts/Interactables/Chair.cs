@@ -37,7 +37,7 @@ public class Chair : MonoBehaviour
     // Checks if Human Player is in range
     bool PlayerInRange() {
         // Gets all colliders the circle overlaps
-        Debug.DrawRay(transform.position, new Vector3(1, 0, 0) * radius);
+        //Debug.DrawRay(transform.position, new Vector3(1, 0, 0) * radius);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
 
         players.Clear();
