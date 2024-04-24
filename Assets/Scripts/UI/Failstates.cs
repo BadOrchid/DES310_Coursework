@@ -16,6 +16,10 @@ public class Failstates : MonoBehaviour
     [SerializeField] Button lastCheckpoint;
     [SerializeField] Button exit;
 
+    private void Awake() {
+        Time.timeScale = 1.0f;
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -58,8 +62,6 @@ public class Failstates : MonoBehaviour
         imgHumanFail.SetActive(false);
         imgGhostFail.SetActive(false);
         Time.timeScale = 1.0f;
-
-        Debug.Log("Chat: This does work");
 
         SceneLoader.ReloadScene();
 

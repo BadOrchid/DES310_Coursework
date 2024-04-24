@@ -52,6 +52,18 @@ public class FallTile : MonoBehaviour
                 isFilled = true;
                 Destroy(collision.gameObject);
 
+            } else if (collision.tag == "Pillar") {
+                PushBlock pillar = collision.GetComponent<PushBlock>();
+                if (pillar.type == PlayerType.Human || pillar.GetComponent<PushBlock>().type == PlayerType.None) {
+                    Destroy(collision.gameObject);
+                    failState.humanFail = true;
+
+                } else {
+                    Destroy(collision.gameObject);
+                    failState.ghostFail = true;
+
+                }
+
             }
 
         }

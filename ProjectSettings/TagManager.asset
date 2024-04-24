@@ -12,6 +12,7 @@ TagManager:
   - CrystalBall
   - Music
   - AmbientSound
+  - Pillar
   layers:
   - Default
   - TransparentFX
