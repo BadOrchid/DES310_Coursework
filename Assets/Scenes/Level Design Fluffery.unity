@@ -6781,6 +6781,7 @@ GameObject:
   - component: {fileID: 506707670}
   - component: {fileID: 506707672}
   - component: {fileID: 506707671}
+  - component: {fileID: 506707673}
   m_Layer: 0
   m_Name: Armchair
   m_TagString: Untagged
@@ -6901,6 +6902,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &506707673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506707669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abca7289f77f4b24a919e0f523062ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.5
+  isFacingLeft: 1
 --- !u!1001 &514240444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14644,11 +14659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6454719574428939560, guid: 9e45d6fb6772a3747aecbeca0f3c3b77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.21
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 6454719574428939560, guid: 9e45d6fb6772a3747aecbeca0f3c3b77, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.61
+      value: -1.67
       objectReference: {fileID: 0}
     - target: {fileID: 6454719574428939560, guid: 9e45d6fb6772a3747aecbeca0f3c3b77, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32390,7 +32405,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.06, y: 0.1}
+    oldSize: {x: 6.28, y: 8.98}
     newSize: {x: 6.28, y: 8.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -34884,7 +34899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00018311, y: -1.2492981}
+  m_AnchoredPosition: {x: -0.00018310547, y: -1.2492981}
   m_SizeDelta: {x: 0.00036621, y: -0.4153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5647625046381679559
