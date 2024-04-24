@@ -15,10 +15,11 @@ public class Endscreen : MonoBehaviour
     bool isReady = true;
 
     public GameObject endOne;
+    /*
     public GameObject endTwo;
     public GameObject endThree;
     public GameObject endFour;
-
+    */
     public float sceneSeconds;
     public float startTimer;
     public float lastTimer;
@@ -46,6 +47,7 @@ public class Endscreen : MonoBehaviour
                 EndOne();
                 Timer();
             }
+            /*
             else if (nextScene == 1)
             {
                 EndTwo();
@@ -61,6 +63,7 @@ public class Endscreen : MonoBehaviour
                 EndFour();
                 Timer();
             }
+            */
             else
             {
                 StartScreen();
@@ -91,7 +94,7 @@ public class Endscreen : MonoBehaviour
     {
         endOne.SetActive(true);
     }
-
+    /*
     public void EndTwo()
     {
         endTwo.SetActive(true);
@@ -109,7 +112,7 @@ public class Endscreen : MonoBehaviour
         endFour.SetActive(true);
         endThree.SetActive(false);
     }
-
+    */
     void Timer()
     {
         sceneSeconds -= Time.unscaledDeltaTime;
