@@ -35,9 +35,11 @@ public class EndscreenSliding : MonoBehaviour
             endOne.uvRect = new Rect(endOne.uvRect.position + new Vector2(xAxis, yAxis) * Time.deltaTime, endOne.uvRect.size);
             }
     }
-        if(endOne.uvRect.x >= 0.75)
+        if(endOne.uvRect.x >= 0.7454)
         {
             stopMoving = true;
+            
+
         }
     }
 }
