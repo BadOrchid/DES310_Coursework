@@ -1,34 +1,10 @@
 fileFormatVersion: 2
-guid: b823c0e9a4637fc438de05fbd8e7c784
+guid: 3a5ef3066afeb1d4e9ed94e30f6fe838
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8518036375244801438
-    second: ani_pull_right_p2_0004_0
-  - first:
-      213: -4997117065267465827
-    second: ani_pull_right_p2_0004_1
-  - first:
-      213: -8546193823012452450
-    second: ani_pull_right_p2_0004_2
-  - first:
-      213: 2060808882277209699
-    second: ani_pull_right_p2_0004_3
-  - first:
-      213: 973768573734819888
-    second: ani_pull_right_p2_0004_4
-  - first:
-      213: -1359101660431092290
-    second: ani_pull_right_p2_0004_5
-  - first:
-      213: -6570307661601307134
-    second: ani_pull_right_p2_0004_6
-  - first:
-      213: -6055809854814437968
-    second: ani_pull_right_p2_0004_7
-  - first:
-      213: 5375613717080020305
-    second: ani_pull_right_p2_0004_8
+      213: -4178102646430567060
+    second: ui_end_combined_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -75,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 288
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,26 +94,38 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ani_pull_right_p2_0004
+      name: ui_end_combined_0
       rect:
         serializedVersion: 2
-        x: 114
-        y: 118
-        width: 551
-        height: 897
+        x: 0
+        y: 0
+        width: 7680
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d91b0b7418ca6aab0800000000000000
-      internalID: -4997117065267465827
+      spriteID: c65f26497c56406c0800000000000000
+      internalID: -4178102646430567060
       vertices: []
       indices: 
       edges: []
@@ -145,7 +133,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4fa07871519f02d4b8237073cd75c148
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -153,16 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ani_pull_right_p2_0004: -4997117065267465827
-      ani_pull_right_p2_0004_0: 8518036375244801438
-      ani_pull_right_p2_0004_2: -8546193823012452450
-      ani_pull_right_p2_0004_3: 2060808882277209699
-      ani_pull_right_p2_0004_4: 973768573734819888
-      ani_pull_right_p2_0004_5: -1359101660431092290
-      ani_pull_right_p2_0004_6: -6570307661601307134
-      ani_pull_right_p2_0004_7: -6055809854814437968
-      ani_pull_right_p2_0004_8: 5375613717080020305
-      ani_pull_right_p2_0004_9: -1167837862
+      ui_end_combined_0: -4178102646430567060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
