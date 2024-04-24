@@ -29,15 +29,21 @@ public class PlayPiano : MonoBehaviour
 
     void PlayChord() 
     { 
-        if(Input.GetButtonDown("Player1Interact") && player1InRange)
+        if(player1InRange == true)
         {
-            audioSource.Play();
-            Debug.Log("Human played " + this.name);
+            if (Input.GetButtonDown("Player1Interact"))
+            {
+                audioSource.Play();
+                Debug.Log("Human played " + this.name);
+            }
         }
-        if (Input.GetButtonDown("Player2Interact") && player2InRange)
+        if(player2InRange ==  true)
         {
-            audioSource.Play();
-            Debug.Log("Ghost played " + this.name);
+            if (Input.GetButtonDown("Player2Interact"))
+            {
+                audioSource.Play();
+                Debug.Log("Ghost played " + this.name);
+            }
         }
     }
 
