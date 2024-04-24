@@ -35572,8 +35572,9 @@ MonoBehaviour:
   - {fileID: 1372006138}
   - {fileID: 870323287}
   testBool: 0
+  endSlide: {fileID: 0}
   endOne: {fileID: 6444971061670437136}
-  sceneSeconds: 10
+  sceneSeconds: 40
   startTimer: 20
   lastTimer: 5
 --- !u!114 &8696737914738853770
@@ -35592,8 +35593,9 @@ MonoBehaviour:
   endTwo: {fileID: 0}
   endThree: {fileID: 0}
   endFour: {fileID: 0}
+  stopMoving: 0
   endscreen: {fileID: 8696737914738853769}
-  xAxis: 0.005
+  xAxis: 0.01
   yAxis: 0
 --- !u!1 &8764604369255345347
 GameObject:

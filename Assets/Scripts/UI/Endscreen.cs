@@ -14,6 +14,8 @@ public class Endscreen : MonoBehaviour
     public bool testBool;
     bool isReady = true;
 
+    public EndscreenSliding endSlide;
+
     public GameObject endOne;
     /*
     public GameObject endTwo;
@@ -45,7 +47,6 @@ public class Endscreen : MonoBehaviour
             if (nextScene == 0)
             {
                 EndOne();
-                Timer();
             }
             /*
             else if (nextScene == 1)
@@ -93,6 +94,10 @@ public class Endscreen : MonoBehaviour
     public void EndOne()
     {
         endOne.SetActive(true);
+        if (endSlide.stopMoving == true)
+        {
+            Timer();
+        }
     }
     /*
     public void EndTwo()
