@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class EndscreenSliding : MonoBehaviour
 {
     public RawImage endOne;
+    /*
     public RawImage endTwo;
     public RawImage endThree;
     public RawImage endFour;
-
+    */
     public bool stopMoving = false;
 
     public Endscreen endscreen;
@@ -37,8 +38,6 @@ public class EndscreenSliding : MonoBehaviour
         if(endOne.uvRect.x >= 0.75)
         {
             stopMoving = true;
-
-
         }
     }
 }
