@@ -131,27 +131,6 @@ TextureImporter:
       name: ani_push_right_p2_0007
       rect:
         serializedVersion: 2
-        x: 582
-        y: 1000
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b0ad0176bc071b20800000000000000
-      internalID: 3104964445815546036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ani_push_right_p2_0007_1
-      rect:
-        serializedVersion: 2
         x: 98
         y: 101
         width: 596
@@ -180,8 +159,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ani_push_right_p2_0007: 3104964445815546036
-      ani_push_right_p2_0007_1: -420278017187854209
+      ani_push_right_p2_0007: -420278017187854209
       ani_push_right_p2_0007_10: 8393628544896462560
       ani_push_right_p2_0007_2: 5338160330140979251
       ani_push_right_p2_0007_3: 4898637444028138700
