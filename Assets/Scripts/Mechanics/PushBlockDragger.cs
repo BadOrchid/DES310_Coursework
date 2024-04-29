@@ -13,10 +13,13 @@ public class PushBlockDragger : MonoBehaviour
     private Rigidbody2D pushBlockRB;
     private GameObject playerGameObject;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         playerGameObject = this.gameObject;
+        animator = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,6 +54,7 @@ public class PushBlockDragger : MonoBehaviour
             {
                 // If already dragging, release the block
                 isDragging = false;
+                animator.SetBool("isPulling", false);
                 pushBlockRB = null;
                 Debug.Log("Player let go of block");
             }
@@ -59,6 +63,7 @@ public class PushBlockDragger : MonoBehaviour
                 if (isMatching)
                 {
                     isDragging = true;
+                    animator.SetBool("isPulling", true);
                     Debug.Log("Player grabbed block");
                 }
             }

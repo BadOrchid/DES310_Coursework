@@ -86,8 +86,15 @@ public class TwoPlayerControls : MonoBehaviour
 
             playerRB.velocity = movement * moveSpeed;
 
-            // Sets player animation to walking
-            animator.SetFloat("speed", playerRB.velocity.magnitude);
+            if (animator.GetBool("isPulling") || animator.GetBool("isPushing")) {
+                animator.SetFloat("speed", 0.0f);
+
+            }
+            else {
+                // Sets player animation to walking
+                animator.SetFloat("speed", playerRB.velocity.magnitude);
+
+            }
 
             // Sets player to be facing left or right
             if (playerRB.velocity.x != 0) {
