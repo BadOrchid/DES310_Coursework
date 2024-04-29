@@ -18,7 +18,16 @@ public class Checkpoint : MonoBehaviour
         players = PlayerHelper.Find();
 
         if (checkpointNum == 0) {
-            Save();
+            if (PlayerHelper.CheckType(PlayerType.Human, players[0])) {
+                SavedVariables.humanPos = players[0].transform.position;
+                SavedVariables.ghostPos = players[1].transform.position;
+
+            }
+            else {
+                SavedVariables.humanPos = players[1].transform.position;
+                SavedVariables.ghostPos = players[0].transform.position;
+
+            }
 
         }
 
