@@ -1,24 +1,29 @@
+826e963,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,51 seconds ago
+102a615,FirestarW,Crystal Podiums Human,Set cyrstal podiums to only be turnable by the human
+,63 seconds ago
+c525ac0,BadOrchid,The Last,What would this project be without an unceremonious redo of something to top it all off?
+,5 minutes ago
 26f8aa7,BadOrchid,Revert "Created Commit CSV",This reverts commit 75fe7c0bee62228644c24ff4a3a13089cb2f403e.
-,59 seconds ago
-86e0cfa,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 minutes ago
+,7 minutes ago
+86e0cfa,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,8 minutes ago
 75fe7c0,BadOrchid,Created Commit CSV,Victory at the cost of sanity.
 
 Souls lost. Pride shattered. Enjoy
-,2 minutes ago
+,8 minutes ago
 dfc360b,FirestarW,Fixed checkpoint,Saved variables checkpoint num always reset to 0, now fixed
-,3 minutes ago
+,9 minutes ago
 0550dc7,FirestarW,Settings check,Set ghost back to using controller and not keyboard
 
 Disabled scene loader on camera. Now only works through calls in code and not by pressing 'G'
-,15 minutes ago
+,21 minutes ago
 a9130a5,FirestarW,Fixed failstate not resetting to checkpoint,Checkpoint saved player pos multiple times causing saved pos to be in a position that causes the failstate repeatedly
 
 Starting pos also now has a checkpoint
 
 Player position is saved through checkpoint and not the player
-,31 minutes ago
+,37 minutes ago
 6250658,FirestarW,Fixed ghost rotation animation,Ghost rotation animation was missing exit time
-,44 minutes ago
+,51 minutes ago
 11f9b15,FirestarW,Reset player position after testing,,2 hours ago
 5bb46e3,FirestarW,Fixed rotating pillars ignoring player type,Fixed bug with pillars introduced when adding player animation
 ,2 hours ago
@@ -36,9 +41,9 @@ b4188d4,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Cou
 
 Moved wall lights into its own empty gameobject
 ,2 hours ago
-5715b5f,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 hours ago
+5715b5f,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,3 hours ago
 e8ae63f,FirestarW,Pushing animation pillars,Pillars now also cause push animation to play
-,2 hours ago
+,3 hours ago
 47a8e3a,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,3 hours ago
 8914ec2,CreativeC00kie,UI Changes,Last minute start screen changes teehee
 ,3 hours ago
