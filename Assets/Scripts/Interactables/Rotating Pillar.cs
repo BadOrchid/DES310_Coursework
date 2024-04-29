@@ -51,44 +51,17 @@ public class RotatingPillar : MonoBehaviour
 
     void UserInput() {
         foreach (TwoPlayerControls player in players) {
-            if ((player.type == PlayerType.Human && Input.GetButtonDown("Player1Interact")) || (player.type == PlayerType.Ghost && Input.GetButtonDown("Player2Interact"))) {
-                player.animator.SetTrigger("isRotating");
-                
-                spritesIndex++;
+            // Checks if player is same type as pillar
+            if (player.type == type) {
+                if ((player.type == PlayerType.Human && Input.GetButtonDown("Player1Interact")) || (player.type == PlayerType.Ghost && Input.GetButtonDown("Player2Interact"))) {
+                    player.animator.SetTrigger("isRotating");
 
-                if (spritesIndex == sprites.Length) {
-                    spritesIndex = 0;
+                    spritesIndex++;
 
-                }
+                    if (spritesIndex == sprites.Length) {
+                        spritesIndex = 0;
 
-            }
-
-        }
-
-        // If Player is Human
-        if (colliderType == PlayerType.Human) {
-
-            // Move to next angle when Interact is pressed
-            if (Input.GetButtonDown("Player1Interact")) {
-                spritesIndex++;
-
-                if (spritesIndex == sprites.Length) {
-                    spritesIndex = 0;
-
-                }
-
-            }
-
-            // If Player is Ghost
-        }
-        else if (colliderType == PlayerType.Ghost) {
-
-            // Move to next angle when Interact is pressed
-            if (Input.GetButtonDown("Player2Interact")) {
-                spritesIndex++;
-
-                if (spritesIndex == sprites.Length) {
-                    spritesIndex = 0;
+                    }
 
                 }
 
