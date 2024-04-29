@@ -11111,6 +11111,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8500516534921148714, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500516534921148714, guid: 92f92bf2e114d564ca4cb78f0c3c5a9b, type: 3}
       propertyPath: faceByDefault
       value: 120
       objectReference: {fileID: 0}
@@ -21304,7 +21308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceByDefault: 240
   radius: 0.5
-  type: 0
+  type: 1
   rotation: {x: 0, y: 0, z: 0.8660254, w: -0.50000006}
 --- !u!58 &1509390388
 CircleCollider2D:
