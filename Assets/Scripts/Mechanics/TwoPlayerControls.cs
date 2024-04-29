@@ -64,52 +64,56 @@ public class TwoPlayerControls : MonoBehaviour
     void Update()
     {
 
-        float moveHor;
-        float moveVer;
+        if (!animator.GetBool("isSitting")) {
 
-        if (useKeyboard) {
-            moveHor = Input.GetAxis(horAxisKeyboard);
-            moveVer = Input.GetAxis(verAxisKeyboard);
+            float moveHor;
+            float moveVer;
 
-        } else {
-            moveHor = Input.GetAxis(horAxisName);
-            moveVer = Input.GetAxis(verAxisName);
-
-        }
-
-        Vector2 movement = new Vector2(moveHor, moveVer);
-        movement = Camera.main.transform.TransformDirection(movement);
-        movement.Normalize();
-
-        playerRB.velocity = movement * moveSpeed;
-
-        // Sets player animation to walking
-        animator.SetFloat("speed", playerRB.velocity.magnitude);
-
-        // Sets player to be facing left or right
-        if (playerRB.velocity.x != 0) {
-            if (playerRB.velocity.x > 0) {
-                animator.SetBool("isFacingLeft", false);
+            if (useKeyboard) {
+                moveHor = Input.GetAxis(horAxisKeyboard);
+                moveVer = Input.GetAxis(verAxisKeyboard);
 
             }
             else {
-                animator.SetBool("isFacingLeft", true);
+                moveHor = Input.GetAxis(horAxisName);
+                moveVer = Input.GetAxis(verAxisName);
 
             }
 
-        }
+            Vector2 movement = new Vector2(moveHor, moveVer);
+            movement = Camera.main.transform.TransformDirection(movement);
+            movement.Normalize();
 
-        // If player is moving, play step SFX
-        if (playerRB.velocity.magnitude > 0 || playerRB.velocity.magnitude < 0) {
-            if (!audioSource.isPlaying) {
-                audioSource.Play();
+            playerRB.velocity = movement * moveSpeed;
+
+            // Sets player animation to walking
+            animator.SetFloat("speed", playerRB.velocity.magnitude);
+
+            // Sets player to be facing left or right
+            if (playerRB.velocity.x != 0) {
+                if (playerRB.velocity.x > 0) {
+                    animator.SetBool("isFacingLeft", false);
+
+                }
+                else {
+                    animator.SetBool("isFacingLeft", true);
+
+                }
 
             }
 
-        }
-        else
-        {
-            audioSource.Stop();
+            // If player is moving, play step SFX
+            if (playerRB.velocity.magnitude > 0 || playerRB.velocity.magnitude < 0) {
+                if (!audioSource.isPlaying) {
+                    audioSource.Play();
+
+                }
+
+            }
+            else {
+                audioSource.Stop();
+            }
+
         }
 
         if (Input.GetButtonDown(interactAxisName))

@@ -211,4 +211,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.5
   isFacingLeft: 1
-  offset: {x: 0.1, y: 0.125}
+  humanOffset: {x: 1.4, y: 1.1}
+  ghostOffset: {x: 1.4, y: 1.3}

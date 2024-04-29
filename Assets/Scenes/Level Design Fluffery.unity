@@ -31875,7 +31875,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2768718985312593481, guid: cd698b2637196f844bbeb70da0b5422c, type: 3}
       propertyPath: useKeyboard
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4274733760607847480, guid: cd698b2637196f844bbeb70da0b5422c, type: 3}
       propertyPath: m_Name
