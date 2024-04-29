@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-
     enum PlateType { Block, Pillar, Player, Either }
 
     [SerializeField] PlayerType playerType = PlayerType.None;
