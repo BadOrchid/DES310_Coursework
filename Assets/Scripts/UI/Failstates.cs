@@ -86,6 +86,8 @@ public class Failstates : MonoBehaviour
                 SceneLoader.ReloadScene();
                 panelTimer = initialPanelTimer;
                 failState = false;
+                ghostFail = false;
+                humanFail = false;
             }
         }
     }

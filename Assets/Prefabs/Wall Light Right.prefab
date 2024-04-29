@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1102049403953426347}
   - component: {fileID: 1810236305902942529}
   - component: {fileID: 1288836837885494694}
+  - component: {fileID: 9110865184017185329}
   m_Layer: 0
   m_Name: Wall Light Right
   m_TagString: Untagged
@@ -97,6 +98,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89946b816c8fa084c908bc9b4960241d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  on: 0
+  on: 1
   offSprite: {fileID: -5886615781827619521, guid: ea806567ccb041e4bbbfe2039599c75d, type: 3}
   onSprite: {fileID: 260834792846775895, guid: 4e5f8fd5fb8445f44b591bff96f26877, type: 3}
+--- !u!61 &9110865184017185329
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9186565857704703186}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.1, y: -0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32708332, y: 0.5854167}
+    newSize: {x: 3.14, y: 5.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.32708332, y: 0.5854167}
+  m_EdgeRadius: 0

@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 1
-  offSprite: {fileID: -5886615781827619521, guid: ea806567ccb041e4bbbfe2039599c75d, type: 3}
-  onSprite: {fileID: 260834792846775895, guid: 4e5f8fd5fb8445f44b591bff96f26877, type: 3}
+  offSprite: {fileID: -7137733471597638099, guid: bc5506a99f89ba841884003e5c6b6cf5, type: 3}
+  onSprite: {fileID: 3895280314630900664, guid: 92f6e71f73eac0d45ad84169d5095be5, type: 3}
 --- !u!61 &8209547049687436215
 BoxCollider2D:
   m_ObjectHideFlags: 0

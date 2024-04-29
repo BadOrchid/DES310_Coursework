@@ -131,7 +131,7 @@ public class TwoPlayerControls : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Block") {
+        if (collision.gameObject.tag == "Block" || collision.gameObject.tag == "Pillar") {
             PlayerType blockType = collision.gameObject.GetComponent<PushBlock>().type;
 
             if (blockType == type) {
@@ -147,7 +147,7 @@ public class TwoPlayerControls : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Block") {
+        if (collision.gameObject.tag == "Block" || collision.gameObject.tag == "Pillar") {
             PlayerType blockType = collision.gameObject.GetComponent<PushBlock>().type;
 
             if (blockType == type) {
