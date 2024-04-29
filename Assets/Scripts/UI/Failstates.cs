@@ -8,6 +8,10 @@ public class Failstates : MonoBehaviour
 {
     public bool humanFail;
     public bool ghostFail;
+    private bool failState = false;
+
+    public float panelTimer;
+    private float initialPanelTimer;
 
     [SerializeField] GameObject overlordPanel;
     [SerializeField] GameObject imgHumanFail;
@@ -32,6 +36,7 @@ public class Failstates : MonoBehaviour
     {
         HumanFailState();
         GhostFailState();
+        Timer();
     }
 
     public void HumanFailState()
@@ -65,6 +70,24 @@ public class Failstates : MonoBehaviour
 
         SceneLoader.ReloadScene();
 
+    }
+
+    public void Timer()
+    {
+        if (ghostFail == true || humanFail == true)
+        {
+            failState = true;
+        }
+        if (failState == true)
+        {
+            panelTimer -= Time.unscaledDeltaTime;
+            if (panelTimer <= 0)
+            {
+                SceneLoader.ReloadScene();
+                panelTimer = initialPanelTimer;
+                failState = false;
+            }
+        }
     }
 
     public void Exit()
