@@ -1,0 +1,592 @@
+0550dc7,FirestarW,Settings check,Set ghost back to using controller and not keyboard
+
+Disabled scene loader on camera. Now only works through calls in code and not by pressing 'G'
+,12 minutes ago
+a9130a5,FirestarW,Fixed failstate not resetting to checkpoint,Checkpoint saved player pos multiple times causing saved pos to be in a position that causes the failstate repeatedly
+
+Starting pos also now has a checkpoint
+
+Player position is saved through checkpoint and not the player
+,28 minutes ago
+6250658,FirestarW,Fixed ghost rotation animation,Ghost rotation animation was missing exit time
+,41 minutes ago
+11f9b15,FirestarW,Reset player position after testing,,2 hours ago
+5bb46e3,FirestarW,Fixed rotating pillars ignoring player type,Fixed bug with pillars introduced when adding player animation
+,2 hours ago
+93a65b2,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 hours ago
+26fc458,FirestarW,Player animation,Players now trigger rotating animation while rotating pillars
+
+Fixed issue of animations not playing due to can trigger to self being set to true
+,2 hours ago
+9ce51a1,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 hours ago
+191f9b8,CreativeC00kie,stool delete,minor change
+,2 hours ago
+b4188d4,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 hours ago
+0b1784c,BadOrchid,Fixed hallway doorframe,,2 hours ago
+18c8ac7,FirestarW,Fixed chair offsets,Fixed chair offsets as not all chairs had same scale
+
+Moved wall lights into its own empty gameobject
+,2 hours ago
+5715b5f,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 hours ago
+e8ae63f,FirestarW,Pushing animation pillars,Pillars now also cause push animation to play
+,2 hours ago
+47a8e3a,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,2 hours ago
+8914ec2,CreativeC00kie,UI Changes,Last minute start screen changes teehee
+,2 hours ago
+eb79d38,FirestarW,Player pushing animation,Pushing animation now plays when pushing blocks
+,2 hours ago
+58463da,FirestarW,Player pulling animation,Pulling animation plays when pulling blocks
+,3 hours ago
+f18f1d8,FirestarW,Moved crystal light (starter room),Crystal light now appears to be coming from wall
+,3 hours ago
+494dd10,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,3 hours ago
+b99a5e4,FirestarW,Chair changes,Chairs disable player movement and collision when sat to stop bugs with player moving while sat
+
+Chairs have human and ghost offsets applied to prefabs
+,3 hours ago
+6d9a551,BadOrchid,Merge remote-tracking branch 'origin/JonDoesLastMinuteEditsToUI',,3 hours ago
+1bc88cf,BadOrchid,Wall lights babbbbyyyyyyyy,yup
+,3 hours ago
+19518fb,CreativeC00kie,Jon Saves the Day,Because Jon is a fucking god he has found a way to make controllers work with the final build. There are some bugs however there is still a full playable experience start to end.
+
+Things added:
+- Controllers working for start screen
+
+Things changed:
+- Failstates no longer have buttons and will instead reload the level as soon as a timer is completed
+,4 hours ago
+5ca28e9,CreativeC00kie,Jon Crys,Jon crys trying to get the UI to work; he has the start screen half working and once he gets it working with controllers he will stop crying
+,5 hours ago
+b332975,CreativeC00kie,Still Works,Slight UI resizing that still all works with controllers
+,6 hours ago
+838a638,CreativeC00kie,Works?,Controllers weren't working for some odd reason after the previous few commits but going back fixes the issue. Changes will need to be remade and solved
+,6 hours ago
+30a9ef0,CreativeC00kie,Revert "Level test",This reverts commit 1b04f681cf631320adeabf0fa192443c677ba454.
+,6 hours ago
+b13b140,JonSchaub,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,6 hours ago
+6b040f2,JonSchaub,Test,,6 hours ago
+8c12573,CreativeC00kie,Added assets,Added lights
+,6 hours ago
+bc994d7,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,6 hours ago
+1b04f68,CreativeC00kie,Level test,Controller version, update UI - jon take over
+,7 hours ago
+e352737,BadOrchid,Exclusive collisions for blocks and pillars,,8 hours ago
+24661db,FirestarW,Non puzzle lights hierarchy,Moved non puzzle lights into correct room in hierarchy
+,Wed Apr 24 16:32
+21c5714,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 16:30
+40a5a98,FirestarW,Chair and stool offset,Player position is now correctly offset on chairs and stools
+,Wed Apr 24 16:30
+ed3320d,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 16:18
+9632e45,CreativeC00kie,UI Edits,,Wed Apr 24 16:17
+61abe4c,FirestarW,Sitting on Stools,Stools are now able to be sat on
+Reset prefab positions of stools and chairs to 0,0,0
+
+Chairs and stools will need player position offset to center the player
+,Wed Apr 24 16:10
+453af9c,FirestarW,Audio and UI empty objects,Moved audio and UI to empty game objects to clean up hierarchy
+,Wed Apr 24 16:02
+b7c878a,FirestarW,Created chair Prefab and UI Prefab folder,All armchairs and green chairs can now be sat on
+,Wed Apr 24 15:59
+a8f1bab,FirestarW,Player sitting animation,Players can now sit on chairs
+Only chair in starter room works for now
+
+Chair prefab will be made in next commit
+,Wed Apr 24 15:52
+fef356a,FirestarW,Sitting animation tweak,Set speed to 0 to stop replaying single frame
+,Wed Apr 24 14:50
+d6239a3,FirestarW,Fixed Ghost Pushing Right,,Wed Apr 24 14:47
+12817be,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 14:43
+5cb7998,FirestarW,Ghost Animations fixed,Ghost animations now play properly
+
+Left over extra sprite selections still in most animation sprites
+,Wed Apr 24 14:43
+4ee94c8,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 14:06
+2b749e6,BadOrchid,Piano Kinda works,The Piano plays once, and never again. Needs fixing
+,Wed Apr 24 14:05
+47f6cc4,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 14:04
+d163df3,CreativeC00kie,UI Adjustments again,Jon keeps tweaking the UI
+,Wed Apr 24 14:04
+10438f9,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 13:58
+d222c88,BadOrchid,Created piano script and prefab,,Wed Apr 24 13:58
+71a6fac,FirestarW,Ghost Animator,Ghost animator completed same as human's
+
+Sprites for ghost animations not set correctly, will fix in next commit
+,Wed Apr 24 13:48
+0937d24,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 13:32
+d4a2532,FirestarW,Human animator,Added all animations into animator transitioning between substates with Any State
+,Wed Apr 24 13:32
+8b1acf4,CreativeC00kie,Jon Has a Smart UI Idea,Rather than creating a timer, the end screen moves to a certain point and then starts a timer to transition to the next scene. This means that it's easier to actually work with.
+,Wed Apr 24 13:30
+f107b25,CreativeC00kie,Jon UI Changes,,Wed Apr 24 13:19
+de65a59,CreativeC00kie,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 24 13:04
+1dd14c7,BadOrchid,Non squint paintings,,Wed Apr 24 12:13
+8a243f3,FirestarW,Created Push pillar prefabs,,Tue Apr 23 22:51
+00411c0,FirestarW,Push Pillars and Pressure plates,Fixed plates not detecting pillars
+,Tue Apr 23 22:46
+56437e5,FirestarW,Fixed Push Block Prefab,Fixed push block prefabs scale and collider
+,Tue Apr 23 22:21
+ebbe622,FirestarW,Pillar Failstate and Fix,Pillars now trigger failstate when pushed into pitfall
+
+Fixed failstate using wrong images for character death
+,Tue Apr 23 22:15
+8d17b66,FirestarW,Failstate fixed,Failstate sets timescale to default on awake
+
+Fixes game being frozen
+,Tue Apr 23 22:05
+bad3452,CreativeC00kie,Ballroom Pillar Collisions,Pillars now collide and don't phase onto each other :))
+,Tue Apr 23 19:29
+3e4bc07,CreativeC00kie,Ballroom lvl Update,To design spec added hazard
+,Tue Apr 23 19:18
+79756d0,CreativeC00kie,Update first starter room complete,My boi is now done to spec
+,Tue Apr 23 19:04
+bfa3663,CreativeC00kie,Jazz saves the level design,Jazz, Jon, and Tyler commit brainrot - Better implemented observatory game design and made the light circles invisible
+,Tue Apr 23 18:43
+ac666a8,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Apr 23 17:52
+14dc64b,BadOrchid,Paintings,,Tue Apr 23 17:50
+13664b9,JonSchaub,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Apr 23 17:50
+8b3cdd6,JonSchaub,ScrollingEffectForEndSlides,Scrolling goes brrr
+,Tue Apr 23 17:50
+b7a8284,BadOrchid,Library got tracks,,Tue Apr 23 17:38
+a11b8cd,FirestarW,Player animation clips,Created animation clips for all remaining player animations
+,Tue Apr 23 15:41
+e58c675,FirestarW,Pushing pulled commit,Github has changes that were just pulled to be pushed
+,Tue Apr 23 15:18
+05b5ddf,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Apr 23 15:16
+dad8e7a,FirestarW,Replaying,Enter button on start screen now resets players to starting location
+
+SavedVariables keeps track of players starting position
+,Tue Apr 23 15:16
+67e1c9c,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Apr 23 14:54
+087727d,BadOrchid,Environment innit,,Tue Apr 23 14:54
+f330823,FirestarW,Endscreen,Removed redundant door code
+,Tue Apr 23 14:53
+234e05b,FirestarW,Endscreen,ObjectivesManagers default as not complete and use temp bool to check objectives
+
+Endscreen no longer runs on start
+,Tue Apr 23 14:50
+e88340b,JonSchaub,Failstates Fixed,Failstates Bug Was Fixed
+,Tue Apr 23 14:32
+c46fd8b,FirestarW,Player animations,Updated current player animations with newest assets
+,Tue Apr 23 14:29
+d0db548,FirestarW,ObjectivesManager turn off,Objective manager uses the exit door to turn off checks once both players are through the door
+,Tue Apr 23 14:08
+e46e10a,FirestarW,Failstates,Failstate now triggers from human falling in pitfall and ghost being hit by light
+
+Failstate UI buttons currently not working, unable to test if scene will reload due to this
+,Tue Apr 23 13:54
+5faafe5,JonSchaub,UI Changes,Redid the start scene with Shannons new UI
+,Tue Apr 23 13:12
+006e190,BadOrchid,Accounting for my stupid ass,i am stoopid
+,Tue Apr 23 12:25
+43c2b13,JonSchaub,JonTestsBuildandFixesThings,Issues with the puzzle in the observatory; reimplementing programming from yesterday; making sure it all works properly
+
+Known issue - Some Ghost Walls Still Aren't working
+,Tue Apr 23 12:07
+cd1ff2e,BadOrchid,Imported UI from other branch. Needs testing,,Tue Apr 23 02:59
+1e857e8,BadOrchid,i hate github,,Tue Apr 23 01:47
+5ffa9d1,BadOrchid,Level Adjustments based on new designs,Last thing needed is the sliding block in the library
+,Tue Apr 23 01:47
+d7ce242,FirestarW,Door Delay,Doors now have an adjustable delay before closing once both players are past
+,Mon Apr 22 15:56
+2bcf55c,FirestarW,Rotating Pillars,Rotating pillars now have toggle waitForAllComplete to decided whether to show the completed state when it is completed or all pillars are completed
+,Mon Apr 22 15:32
+febf485,FirestarW,Minor fixes,Reset crystal podium in the Observatory to default facing upwards
+
+Player pressure plates now play sfx when activated
+,Mon Apr 22 15:09
+72588b4,FirestarW,Crystal Light puzzle,Updated crystal podiums to rotate raycast direction and not the gameobject
+
+Crystal Podiums use rotate facing script to do this
+
+Changed colliders on crystal ball and podium
+,Mon Apr 22 14:54
+7d5649b,FirestarW,Crystal Light,Crystal light now starts ray from edge of circle sprite rather than origin.
+
+Should stop crystal light from hitting walls it is against
+,Mon Apr 22 13:02
+fdd2750,BadOrchid,removed redundancy,,Thu Apr 18 00:46
+e7b614c,FirestarW,Ambient Sounds,Set ambient sounds to be on by default
+,Wed Apr 17 16:59
+d355bb7,FirestarW,Ambient Sounds,Added sfx for ambient weather.
+
+Currently just loops rain sfx, and thunder / storm sfx plays every 20 seconds
+
+Can be turned off in inspector before play
+,Wed Apr 17 16:56
+9f60332,FirestarW,Start of ambient sounds,Created prefab for ambient sounds, currently no script functionality
+,Wed Apr 17 16:11
+06f5ab4,FirestarW,Removed Testing Rotating Pillars,,Wed Apr 17 16:03
+7dce3ec,FirestarW,Player Walk SFX,Players now have walking sfx and adjustable volume
+
+Also fixed rotating pillars being set to None instead of Human / Ghost
+,Wed Apr 17 16:01
+bf1e152,FirestarW,Pressure Plate SFX,,Wed Apr 17 15:12
+e575507,BadOrchid,Github is my eternal enemy,,Wed Apr 17 15:10
+4db3a83,BadOrchid,Tracks added to other rooms,,Wed Apr 17 15:10
+362e935,BadOrchid,Fixed Minor Layering issue,,Wed Apr 17 14:57
+1984fa4,BadOrchid,Doors reworked again,,Wed Apr 17 14:53
+64731a9,FirestarW,Revert "Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework",This reverts commit 1ec3f1bb0c58e5bc1242115d497fec80dfa4928e, reversing
+changes made to 07e72823e78cda095233d49a16c6caeecb4b1869.
+,Wed Apr 17 14:38
+1ec3f1b,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Apr 17 14:30
+07e7282,FirestarW,Freeze levers,Objectives manager can now toggle to freeze levers on completion
+
+Renamed isToggle to freezeOnComplete
+,Wed Apr 17 14:30
+d9f6d17,BadOrchid,Doorways fixed,,Wed Apr 17 14:18
+b0462c7,FirestarW,Lever SFX,Levers now have sfx and adjustable volume
+
+Levers also play sound an animation at the same time, but waits till sfx is played before flipping the on bool
+,Wed Apr 17 14:09
+0fda418,FirestarW,Door SFX,Doors now have opening and closing sfx with individual adjustable volume
+,Wed Apr 17 13:52
+b83ba12,BadOrchid,Fixed Block Scaling and Ballroom Tiles,Self explanatory innit
+,Wed Apr 17 12:34
+3ca6f81,BadOrchid,Ghost walls in the librarium,,Tue Apr 16 14:29
+407471f,FirestarW,Reapply "Music Looping",This reverts commit c64d1be20608a1f52da5d02a6a8c40d0f78dfda0.
+,Tue Apr 16 12:47
+49f5c1d,FirestarW,Reapply "Music Player start",This reverts commit 1d505fdc0fd94413fb71fe1bfdfaacf1ab144178.
+,Tue Apr 16 12:47
+1d505fd,FirestarW,Revert "Music Player start",This reverts commit 738e6287ff0f37d445ac3872a7b83b5acba39d32.
+,Tue Apr 16 12:29
+c64d1be,FirestarW,Revert "Music Looping",This reverts commit dd98b5901ecaed4e00b201bd0aef21510f722c76.
+,Tue Apr 16 12:29
+dd98b59,FirestarW,Music Looping,Music now loops between 8 tracks
+,Tue Apr 16 12:20
+738e628,FirestarW,Music Player start,Start of music player
+Only plays one clip atm
+,Tue Apr 16 11:54
+72872ca,BadOrchid,another commit because github is cheeks,,Tue Apr 16 04:13
+ffb4115,BadOrchid,Tracks, Walls, Layers, Depression,Tracks for the pillars
+
+Ghost walls workaround
+
+Player and block layering
+
+Player controls still arent quite there. big sad
+,Tue Apr 16 04:03
+aa2915d,FirestarW,Github being odd,Github has newly added assest just pulled from main to be pushed again...
+,Mon Apr 15 18:59
+d662aa4,BadOrchid,All Assets(?),Should be every asset so far in the project. Ignoring other changes for now
+,Mon Apr 15 18:51
+57fd460,FirestarW,ObjectivesManager,Objectives manager now checks an array of other objectives managers to check if they are completed before doing its own checks
+
+Also has a toggle option that keeps stops checking objectives once complete
+,Mon Apr 15 14:56
+db953ab,FirestarW,Door,Door now takes array of ObjectivesManager's to allow multiple different managers to need to be completed for one door
+,Mon Apr 15 14:25
+e2aa2bb,FirestarW,Objectives,All objective managers now added
+All doors added
+Fixed prefab for player pressure plates
+Added rotating pillars to study
+,Mon Apr 15 14:07
+8462f0e,FirestarW,Hallway 2 and Observatory,Added doors and checkpoint to hallway 2
+
+Quick fix to collision box of crystal podium and crystal ball
+
+Fixed some wall edge colliders going past walls
+,Mon Apr 15 13:01
+aa07efd,FirestarW,Observatory Objectives,Fixed objectives manager in observatory
+,Mon Apr 15 12:27
+b2285d2,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 27 16:51
+e9dd2e5,BadOrchid,New Invisible Walls,,Wed Mar 27 16:51
+a96d9ab,FirestarW,Objectives for Observatory,Added objective manager to observatory
+Added rails to ignore raycast in observatory
+
+Lights dont line up?
+,Wed Mar 27 16:49
+96457f0,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 27 16:39
+8b7c6fa,FirestarW,Re adding changes,Door opens when restart from checkpoint
+,Wed Mar 27 16:39
+1e5f852,FirestarW,Re added scripts to camera,,Wed Mar 27 16:37
+cfa549a,BadOrchid,Audio Import,take a fucking guess
+,Wed Mar 27 16:37
+676d57c,BadOrchid,Merge branch 'pre-ui-merge',,Wed Mar 27 16:27
+15dc6d5,JonSchaub,HHHHHHHHHHHHHH,Commit
+,Wed Mar 27 16:14
+0ce0268,BadOrchid,Revert "Reversion",This reverts commit ae8542f0c0edf5dddcb5b76d28f247ddbf8ade04.
+,Wed Mar 27 16:11
+ae8542f,BadOrchid,Reversion,,Wed Mar 27 16:09
+7835b34,BadOrchid,Merge branch 'pre-ui-merge',,Wed Mar 27 16:04
+778cdda,BadOrchid,Small Tweak,,Wed Mar 27 16:00
+5f02b09,FirestarW,Re added objects lost in merge,Re added checkpoints and saving
+Saving also now reloads player to previous checkpoint
+Problem with the next door not opening though
+,Wed Mar 27 16:00
+e3020be,BadOrchid,Squashed commit of the following:,commit fd3623c9cdf6a9722e06b10e032234088a0ba3b8
+Author: JonSchaub <58255165+JonSchaub@users.noreply.github.com>
+Date:   Wed Mar 27 15:19:43 2024 +0000
+
+    UI Kinda There
+
+    Known Bug: Only Start Menu and Escape work, game pause menu has unknown issue (the code worked on another branch but doesn't on this one even after being fully replaced)
+,Wed Mar 27 15:58
+7aacd93,FirestarW,players save their starting position,,Wed Mar 27 15:40
+47531c8,FirestarW,Checkpoint save,Checkpoint saves player position when reloaded. Also added G to reload Level Design Fluffery
+,Wed Mar 27 15:39
+58b0951,JonSchaub,Merge branch 'ui-jon-tomfoolery',,Wed Mar 27 15:26
+bd3b5ac,BadOrchid,Compensating for github changes,github moment
+,Wed Mar 27 15:21
+fd3623c,JonSchaub,UI Kinda There,Known Bug: Only Start Menu and Escape work, game pause menu has unknown issue (the code worked on another branch but doesn't on this one even after being fully replaced)
+,Wed Mar 27 15:19
+db9c745,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 27 15:13
+0e4911e,BadOrchid,New Block Tracks and Assets,,Wed Mar 27 15:13
+56f94ed,FirestarW,Checkpoint,Detects when both players are inside hallway. Closes first door, waits x seconds and opens next door
+
+To do saving
+,Wed Mar 27 14:57
+9743e1a,FirestarW,Door,Doors now close when both players move into next room
+,Wed Mar 27 14:34
+d4eb15d,BadOrchid,Collision Track added to ballroom,,Wed Mar 27 14:31
+600d723,BadOrchid,Level tweaking again,Plus new assets
+,Wed Mar 27 13:11
+4f3b68d,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 27 12:28
+627cf70,BadOrchid,Level tweaking,Solved layering issues for the rooms and assets.
+,Wed Mar 27 12:26
+dc62f9b,FirestarW,Updated Door class,Updated door class in preparation of detecting when players leave a room
+
+Also prefabbed camera from main scene and added to Level Design Scene
+,Wed Mar 27 12:14
+935e026,FirestarW,Objectives and doors - ToTest saving,Added objectives and doors for ballroom, hallway and part of Observatory
+,Wed Mar 27 11:49
+38329d1,FirestarW,Pit falls,Pitfalls fill in floor (not the prettiest atm) when a block collides (deletes it) and will kill the Human (failstates to be implemented)
+,Wed Mar 27 11:31
+76037d2,BadOrchid,Merge branch 'level-test',,Wed Mar 27 11:25
+824a1c1,FirestarW,ObjectivesManager,Changed objectives manager to check objectives every 0.5 seconds by default instead of every frame. Can be changed per object
+,Wed Mar 27 10:44
+d637674,FirestarW,Keyboard,Added quick fix to switch between keyboard and controller in player inspector
+
+Player 2 can now use arrow keys instead aswell
+,Wed Mar 27 10:32
+b825b33,CreativeC00kie,Lvl Design 2.0,This one has colliders, although the furniture may not :)
+,Tue Mar 26 18:33
+b9e3945,CreativeC00kie,Level Design 2.0,With Windows
+,Tue Mar 26 15:34
+2bd45c8,CreativeC00kie,Level design 1.0, I probably broke some things but look its a thing
+,Tue Mar 26 14:19
+f380b69,CreativeC00kie,Level-fluff-1.0,Got to grips with tile map first version in new scene (level design). Although player character 2 doesn't work idk why i haven't touched scripts
+,Mon Mar 25 18:19
+ab4072e,BadOrchid,Functional Input Manager and Camera Manager,As Above
+,Wed Mar 20 19:13
+3e9a194,FirestarW,Moved Crystal Light to top of objectives,,Wed Mar 20 15:58
+79dda3b,FirestarW,Observatory First Draft,Quick first draft of observatory for play testing
+,Wed Mar 20 15:57
+6f08b16,FirestarW,Rotating Pillars,Added rotating pillars using placeholder sprites.
+
+Pillars will switch between any number of added sprites when the player is in range (uses same code as RotateObject)
+
+Pillars also can be configured to only be useable by the Human, Ghost or Both.
+
+Pillars are also added to objectives manager and when all pillars are in correct state they switch to placeholder pillar complete sprite
+,Tue Mar 19 23:33
+c3f0340,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Mar 19 22:49
+d5ba4ae,BadOrchid,Slightly better but not quite,,Tue Mar 19 22:49
+ec5308e,FirestarW,Pitfalls,Committing testing code for pitfalls, has no effect on rest of build
+,Tue Mar 19 22:19
+bf7825c,BadOrchid,Camera Manager,Kinda mostly works believe it or not. Major work in progress but its actually progress
+,Tue Mar 19 22:12
+3561e4d,BadOrchid,Drag script is "functional" but jank,God only knows how i convert this into a clean and presentable concept. But the foundations are there i suppose
+,Tue Mar 19 20:37
+fb296aa,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Mar 19 19:53
+fae0cbf,BadOrchid,In progress drag script,self explanatory
+,Tue Mar 19 19:52
+be3797e,2102018,Ignore Raycast,Added ignoreRaycast layer to tracks and pressureplate prefabs
+,Tue Mar 19 14:29
+3dd0b85,BadOrchid,Block Track addition,Added a second bc it makes the room more complete. still needs tweaks
+,Tue Mar 19 00:22
+3be2088,BadOrchid,Block Track and Dragger,The first track for the push blocks is effectively working as intended.; needs tweaking according to gamefeel - consensus needed.
+
+Dragger script does not work. who can say for sure why that is? but its in progress.
+,Tue Mar 19 00:14
+98757c6,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Mon Mar 18 21:48
+af60400,BadOrchid,Replaced Assets,Replaced the pillar assets and scaled them up on consulation with Stirling.
+
+Working on tracks for the blocks and pillars. Not complete but getting there. Not committing the scripts yet bc they dont work yippee
+,Mon Mar 18 21:48
+4f30117,FirestarW,SampleScene Floor Gaps,Started work on gaps in floors, inside the SampleScene
+,Mon Mar 18 20:35
+1509f79,FirestarW,Updated Lever.cs UserInput(),Updated Lever's UserInput to work similar to RotateObject's
+
+Checks the Player's type for which controls it should use rather than the name of the lever
+,Mon Mar 18 19:52
+a0684c6,FirestarW,Cleaned RotateObject,Cleaned up unused code and added comments
+,Mon Mar 18 19:41
+edc9dad,FirestarW,Lever and RotateObject Controls,Updated RotateObject and Lever scripts to use Interact buttons rather than directly using E and O
+,Mon Mar 18 19:33
+77b438c,FirestarW,Crystal Podium Control,The Crystal Podiums now detect if the player is within its radius before checking for input.
+
+RotateObject script is now configured to be able to be used for just human, just ghost or both
+,Mon Mar 18 19:25
+efe0e3a,FirestarW,Lever Highlight,Levers animation changed so that when the player is in range of the lever, it changes between the normal and highlighted sprites
+,Mon Mar 18 17:38
+b55a330,FirestarW,Testing Puzzle Lights,Added more Crystal Podiums to Testing Puzzle Lights Scene
+,Fri Mar 15 23:26
+83d544e,FirestarW,Puzzle Lights,Fixed puzzle lights to work using 2D sprites and physics. Demo can be found in Testing Puzzle Lights Scene
+
+Lights project in the 8 cardinal directions parallel to the floor using a RotateObject.cs
+
+Light is rendered using LineRenderer however the light stops at start of colliders eg. bottom of the walls
+,Fri Mar 15 23:03
+f86a724,BadOrchid,Feet tiles and Mirrors moved,Self explanatory innit
+,Wed Mar 13 16:31
+df11f61,FirestarW,Player Idle Animation,Added ghost idle animation with placeholders
+,Wed Mar 13 15:29
+ffb0602,FirestarW,Player Idle Animation,Tweaked transition between states so they go directly between each other
+,Wed Mar 13 15:20
+d2365f3,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 13 15:13
+b1067d3,FirestarW,Player Idle Animation,Human Player now has left and right idle animation. This fixes issue of player not facing left when stopped but player now takes a while to play the walking animation
+,Wed Mar 13 15:13
+f85370a,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 13 14:51
+0cfa6ac,BadOrchid,Level Hitboxes and Floor Adjustment,Should be all functioning now with invis walls in foreground. Flooring also changed to be neater
+,Wed Mar 13 14:51
+6ac75f5,FirestarW,Player Walk animation,Players now animated while walking
+
+Players will not stay facing left once stopped
+,Wed Mar 13 14:47
+bd43abf,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 13 14:22
+0beacda,BadOrchid,Update Main Scene.unity,,Wed Mar 13 14:19
+1a8d604,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Mar 13 13:58
+cb89552,BadOrchid,Ballroom Puzzle Outline & Furnishing,Furniture has been added to all rooms, ballroom has beginnings of puzzle mechanics
+,Wed Mar 13 13:58
+b8d7233,FirestarW,Light Puzzle,Added light puzzle into samplescene
+
+Lights are currently in 3d enviroment due to problems with 2d raycast only going along +z axis
+
+The 3d raycast doesnt always properly hit the target (causes flickering)
+,Wed Mar 13 13:48
+ae4c3b2,BadOrchid,Further Level Adjustment,More changes to come (compartmentalising the level changes from the mechanical changes to prevent unnecessary issues later)
+
+Specific notes on the level:
+
+Invisible walls added in foreground; courtyard still has leavable bounds.
+
+All Interior rooms have proper wall collision, but no doors - require use of existing door prefab, these will be locked based on an area wide objective manager.
+
+Doors need to be adjusted within layers.
+
+Layering still an issue for players. Genuinely no clue how to do this. Truly eludes me.
+,Wed Mar 13 01:50
+fc918bc,FirestarW,Doors,Added doors that open and close when objectives have been completed
+,Tue Mar 12 18:13
+78eeab6,FirestarW,Floor Tiles,Added more floor tile variants
+,Tue Mar 12 17:49
+cabf191,FirestarW,Hallway Floors,Added sprite for hallway floors
+,Tue Mar 12 17:38
+3b399ae,BadOrchid,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Tue Mar 12 16:48
+8327498,BadOrchid,Test Commit to see if things work,Testing
+,Tue Mar 12 16:43
+fa2f1c8,FirestarW,Revert "Doors",This reverts commit 482f69577c9efa938134f55b900c876e6793f5af.
+,Tue Mar 12 16:36
+d7b9111,FirestarW,Revert "Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework",This reverts commit 5145de0597cf1831df8af97685ebf5aa368de400, reversing
+changes made to 482f69577c9efa938134f55b900c876e6793f5af.
+,Tue Mar 12 16:36
+5145de0,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Feb 28 16:10
+482f695,FirestarW,Doors,Created door prefab, consists of Empty gameobject with open and closed door sprites as childern
+
+Door script is attached to the empty gameobject and switches which child is active
+
+Close door also has a collider
+,Wed Feb 28 16:10
+202a9e9,BadOrchid,Added in structure for the rest of levels,Hallways and other rooms have been created. Basic structures, but they require polish.
+
+Camera also follows Player 1 for demo
+,Wed Feb 28 16:09
+5982cfb,BadOrchid,Proper Wall Collision for interior,Interior walls now have actual collisions that behave properly. Doors are still without collision
+,Wed Feb 28 14:05
+928ab38,FirestarW,Tile sprites folder,Moved tile sprites into sprites folder from tiles folder
+,Wed Feb 28 13:50
+ed5fdf5,FirestarW,Tiles folder organisation,Organised tiles folder
+,Wed Feb 28 13:44
+4dc2875,FirestarW,Tile Colliders,Thin pink wallpaper now has no collider
+
+Thin door frame now has no collider
+,Wed Feb 28 13:33
+d8050ae,FirestarW,Door,Changed door to use serializefield for ObjectivesManager
+,Wed Feb 28 13:05
+2c4093b,FirestarW,ObjectivesManager,Added comments to objectives manager
+,Wed Feb 28 13:02
+e092e00,FirestarW,Door Script,Doors now setup ready to do something once objective is complete
+
+Gets ObjectiveManager script in Start, only works if the ObjectiveManager Script is attached to the door's parent at the moment
+,Wed Feb 28 12:55
+25e8760,FirestarW,Ghost Animation,Ghost animated same as player
+,Wed Feb 28 12:42
+21726d0,FirestarW,Merge branch 'main' of https://github.com/BadOrchid/DES310_Coursework,,Wed Feb 28 12:31
+6197ba9,FirestarW,Human Player Animation,Human player has animation for walking right and left (facing forwards). Still need animation for the other two directions and for it to be triggered in code
+,Wed Feb 28 12:30
+ee2262f,BadOrchid,Invisible Walls and Fixed Char Hitboxes,Added invisible walls to the level and adjusted character hitboxes to work with these
+,Wed Feb 28 12:14
+f71234c,FirestarW,Objectives Manager,Fixed complete bool was never set to true after start, so objectives could never be completed. Now works
+,Wed Feb 28 12:05
+f4f8b86,FirestarW,Objectives,Created an empty gameObject called objectives that holds Objective objects (previously named as a plural)
+
+Each objective will check if all levers, plates, ect. inside are set to correct value.
+
+This means each objective has a different set of conditions to complete
+,Wed Feb 28 11:58
+53c2d81,FirestarW,Pressure Plates,Added Player plates for both ghost and human
+
+All pressure plate sprites now sample same size of texture
+,Wed Feb 28 11:51
+ed970b4,FirestarW,Prefabs,Split pressure plate prefab into separate human and ghost prefabs. Fixed a few disconnects to sprites. Fixed sample size of some pressure plate sprites, will fix all pressure plate sprites in next commit. PressurePlate.cs now has option to be a pressure plate for both human, ghost, none and block, player or either
+,Wed Feb 28 11:42
+5584c86,FirestarW,Floor Tiles Sprite,Fixed floor tiles rendering purple due to sprite being disconnected
+,Wed Feb 28 10:30
+a96f6d1,BadOrchid,Added Assets,Added a buuuuunch of assets.
+
+Like everything you could need.
+
+Plus a teeny start on a door script. Not super important
+,Wed Feb 28 01:12
+7d9bec6,BadOrchid,Cleanup and Debug Logs,Self Explanatory; some tidying and implemented debug logs
+,Wed Feb 28 00:14
+44f6fe9,BadOrchid,Mirrors Finally Working,Mirrors actually function as desired.
+
+Some additions to level structure.
+,Tue Feb 27 22:24
+863baa8,FirestarW,Lever Animation,Levers now animated for on and off using unity's built in animator
+,Tue Feb 27 21:22
+2e6d2aa,BadOrchid,Level adjustment,New coloured walls from Stirling, as well as the door being correctly inserted into the wall.
+,Wed Feb 21 22:09
+d6489e5,BadOrchid,Tiles Added - Levers fixed,Levers have been completely fixed
+
+New thicker tiles have been added to address criticisms.
+
+Player move speed changed to address criticisms
+
+More to come.
+,Wed Feb 21 16:55
+1074a5b,BadOrchid,Adjusted Levers & Layout,Levers are now interactable by their respective players
+
+Level layout adjusted.
+
+Mirror objects added in, scripts not quite ready so they aren't in there.
+
+Working on layers, player interactions with wall layers are weird
+,Wed Feb 14 13:45
+446e4aa,FirestarW,Lever Sprites,Fixed the lever wobbling when switched by making lever sprites take a consistent sample of the texture
+
+Fixed Ghost lever using white outline when switched on
+,Wed Feb 14 06:42
+3f3231a,FirestarW,Prefabbed Players,,Wed Feb 14 05:49
+455fbeb,FirestarW,Objectives Prefab,Created an prefab for Objectives that has empty game objects for levers and pressure plates
+,Wed Feb 14 05:15
+e4dbae7,FirestarW,Pressure Plate fixes,Fixed pressure plate not changing sprite when turned on
+
+Pressure Plate now needs same push block type as its own (None, Human, Ghost)
+
+Prefabbed Push Blocks
+
+Missed from last commit, player rigid body set to never asleep to stop collision and inputs with levers being missed. <- this may be able to be changed now that interaction with lever has been changed
+,Wed Feb 14 05:03
+e79fb36,FirestarW,Added some Objectives,Added Pressure Plate and Lever Prefabs
+
+Added Objectives game object to store levers and plates, with arrays that store what objectives are On/Off for the puzzle to complete
+
+Players have been tagged as player and Push blocks as Blocks for lever and plate collisions
+
+Added Enum scripts for PlayerType and ObjectiveType (used in Objectives)
+
+Levers and Plates have option to be none, human or ghost PlayerTypes
+,Wed Feb 14 04:10
+cc35385,BadOrchid,Initial commit,,Tue Feb 13 20:44
