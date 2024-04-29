@@ -31,7 +31,7 @@ public class StartMenu : MonoBehaviour
     {
         SavedVariables.humanPos = SavedVariables.humanStartPos;
         SavedVariables.ghostPos = SavedVariables.ghostStartPos;
-        SavedVariables.checkpointNum = -1;
+        SavedVariables.checkpointNum = 0;
         SceneManager.LoadScene("Level Design Fluffery");
     }
 

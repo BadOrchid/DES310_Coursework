@@ -26,8 +26,6 @@ public class TwoPlayerControls : MonoBehaviour
 
     private void Awake() {
         if (type == PlayerType.Human) {
-            SavedVariables.humanPos = transform.position;
-
             if (!SavedVariables.humanStartPosSet) {
                 SavedVariables.humanStartPos = transform.position;
                 SavedVariables.humanStartPosSet = true;
@@ -36,8 +34,6 @@ public class TwoPlayerControls : MonoBehaviour
 
         }
         else {
-            SavedVariables.ghostPos = transform.position;
-
             if (!SavedVariables.ghostStartPosSet) {
                 SavedVariables.ghostStartPos = transform.position;
                 SavedVariables.ghostStartPosSet = true;

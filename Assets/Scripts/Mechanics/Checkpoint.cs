@@ -17,19 +17,24 @@ public class Checkpoint : MonoBehaviour
 
         players = PlayerHelper.Find();
 
+        if (checkpointNum == 0) {
+            Save();
+
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (checkpointNum != 0) {
+            if (firstDoor.playersPastDoor && SavedVariables.checkpointNum != checkpointNum) {
+                Save();
 
-        if (firstDoor.playersPastDoor)
-        {
+                Invoke("OpenSecondDoor", openAfter);
 
-            Save();
+            }
 
-            Invoke("OpenSecondDoor", openAfter);
-            
         }
 
     }
