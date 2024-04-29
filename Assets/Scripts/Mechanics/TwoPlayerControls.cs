@@ -129,4 +129,34 @@ public class TwoPlayerControls : MonoBehaviour
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Block") {
+            PlayerType blockType = collision.gameObject.GetComponent<PushBlock>().type;
+
+            if (blockType == type) {
+                if (!animator.GetBool("isPulling")) {
+                    animator.SetBool("isPushing", true);
+
+                }
+
+            }
+
+        }
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Block") {
+            PlayerType blockType = collision.gameObject.GetComponent<PushBlock>().type;
+
+            if (blockType == type) {
+                animator.SetBool("isPushing", false);
+
+            }
+
+        }
+
+    }
+
 }
