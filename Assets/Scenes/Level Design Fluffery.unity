@@ -6614,7 +6614,7 @@ GameObject:
   - component: {fileID: 444624749}
   - component: {fileID: 444624748}
   m_Layer: 0
-  m_Name: Crystal Light (2)
+  m_Name: Crystal Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6629,7 +6629,7 @@ Transform:
   m_GameObject: {fileID: 444624746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.8660254, w: -0.5}
-  m_LocalPosition: {x: 0.114, y: 1.686, z: -1}
+  m_LocalPosition: {x: -0.269, y: 1.851, z: -1}
   m_LocalScale: {x: 0.5044, y: 0.5044, z: 0.5044}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9830,7 +9830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024724467717901695, guid: baaed3c311ce11c478e97fe3e595f26e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.039
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 2024724467717901695, guid: baaed3c311ce11c478e97fe3e595f26e, type: 3}
       propertyPath: m_LocalPosition.z

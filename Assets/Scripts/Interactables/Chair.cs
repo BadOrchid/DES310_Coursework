@@ -8,11 +8,13 @@ public class Chair : MonoBehaviour
 
     [SerializeField] float radius = 0.5f;
     [SerializeField] bool isFacingLeft;
-    [SerializeField] Vector2 offset;
+    [SerializeField] Vector2 humanOffset;
+    [SerializeField] Vector2 ghostOffset;
 
     bool playerInChair = false;
 
     List<TwoPlayerControls> players;
+    TwoPlayerControls satPlayer;
 
     Vector3 playerStandingPos;
 
@@ -26,17 +28,20 @@ public class Chair : MonoBehaviour
     void Update()
     {
 
-        if (PlayerInRange()) {
-            UserInput();
+        // Get players in range if no player is in the chair
+        if (!playerInChair) {
+            GetPlayersInRange();
 
         }
+
+        UserInput();
 
 
     }
 
 
     // Checks if Human Player is in range
-    bool PlayerInRange() {
+    bool GetPlayersInRange() {
         // Gets all colliders the circle overlaps
         //Debug.DrawRay(transform.position, new Vector3(1, 0, 0) * radius);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
@@ -70,28 +75,60 @@ public class Chair : MonoBehaviour
     }
 
     void UserInput() {
-        foreach (TwoPlayerControls player in players) {
-            // Toggle sit on chair
-            if ((player.type == PlayerType.Human && Input.GetButtonDown("Player1Interact")) || (player.type == PlayerType.Ghost && Input.GetButtonDown("Player2Interact"))) {
-                // If player is sitting, stand up
-                if (player.animator.GetBool("isSitting")) {
-                    player.animator.SetBool("isSitting", false);
-                    playerInChair = false;
+        // If player is sitting, stand up
+        if (playerInChair) {
+            if ((satPlayer.type == PlayerType.Human && Input.GetButtonDown("Player1Interact")) || (satPlayer.type == PlayerType.Ghost && Input.GetButtonDown("Player2Interact"))) {
+                satPlayer.animator.SetBool("isSitting", false);
+                playerInChair = false;
 
-                    player.transform.position = playerStandingPos;
+                Collider2D[] colliders = satPlayer.GetComponents<Collider2D>();
+
+                foreach (Collider2D collider in colliders) {
+                    collider.enabled = true;
 
                 }
-                // If player is standing
-                else {
-                    // If chair is empty
-                    if (!playerInChair) {
-                        playerStandingPos = player.transform.position;
 
-                        player.transform.position = transform.position + Quaternion.Euler(0, 0, 60) * new Vector2(offset.x * transform.localScale.x, offset.y * transform.localScale.y);
+                satPlayer.transform.position = playerStandingPos;
 
-                        player.animator.SetBool("isFacingLeft", isFacingLeft);
-                        player.animator.SetBool("isSitting", true);
-                        playerInChair = true;
+            }
+
+        }
+        else {
+            foreach (TwoPlayerControls player in players) {
+                // Toggle sit on chair
+                if ((player.type == PlayerType.Human && Input.GetButtonDown("Player1Interact")) || (player.type == PlayerType.Ghost && Input.GetButtonDown("Player2Interact"))) {
+                    // If player is standing
+                    if (!player.animator.GetBool("isSitting")) {
+                        // If chair is empty
+                        if (!playerInChair) {
+                            playerStandingPos = player.transform.position;
+
+                            Collider2D[] colliders = player.GetComponents<Collider2D>();
+
+                            foreach (Collider2D collider in colliders) {
+                                collider.enabled = false;
+
+                            }
+
+                            if (player.type == PlayerType.Human) {
+                                player.transform.position = transform.position + Quaternion.Euler(0, 0, 60) * new Vector2(humanOffset.x * transform.localScale.x, humanOffset.y * transform.localScale.y);
+
+                            }
+                            else {
+                                player.transform.position = transform.position + Quaternion.Euler(0, 0, 60) * new Vector2(ghostOffset.x * transform.localScale.x, ghostOffset.y * transform.localScale.y);
+
+                            }
+
+                            Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
+                            rigidbody2D.velocity = Vector3.zero;
+                            player.animator.SetFloat("speed", 0.0f);
+
+                            player.animator.SetBool("isFacingLeft", isFacingLeft);
+                            player.animator.SetBool("isSitting", true);
+                            playerInChair = true;
+                            satPlayer = player;
+
+                        }
 
                     }
 
