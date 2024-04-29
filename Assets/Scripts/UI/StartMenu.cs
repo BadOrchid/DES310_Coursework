@@ -14,6 +14,7 @@ public class StartMenu : MonoBehaviour
     [SerializeField] Button start;
     [SerializeField] Button options;
     [SerializeField] Button quit;
+    [SerializeField] Button optQuit;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,4 +45,8 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void OptQuit()
+    {
+        canvasOpt.SetActive(false);
+    }
 }
